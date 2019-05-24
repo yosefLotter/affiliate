@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-success">
+  <a class="navbar-brand" href="/" style="color:white;  font-style: italic;">Svenska Lotter </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+<li class="nav-item dropdown">
+
+        <a id="navbar_head_text" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Us Powerball
+        </a>
+
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="{% url 'website:us_powerball' %}">Hur man spelar på Us Powerball</a>
+          <a class="dropdown-item" href="#"> Us Powerball resultat </a>
+          <a class="dropdown-item" href="#">Us Powerball vinnare</a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown">
+
+        <a id="navbar_head_text" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          MegaMillions
+        </a>
+
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="{% url 'website:mega_millions' %}">Hur man spelar på MegaMillions</a>
+          <a class="dropdown-item" href="#"> MegaMillions resultat </a>
+          <a class="dropdown-item" href="#">MegaMillions vinnare</a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown">
+
+        <a id="navbar_head_text" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Cash4life
+        </a>
+
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="{% url 'website:cash4life' %}">Hur man spelar på Cash4Life</a>
+          <a class="dropdown-item" href="#"> Cash4Life resultat </a>
+          <a class="dropdown-item" href="#">Cash4Life vinnare</a>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</nav>

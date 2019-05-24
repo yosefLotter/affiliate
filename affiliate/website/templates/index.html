@@ -1,0 +1,124 @@
+
+{% extends 'base.html' %}
+{% block content %} 
+
+
+
+	<div class="container">
+		<div class="row">
+
+			<div class="col-sm-8">
+				<div id="header" class="mt-5">
+					<h4> <b> Amerikanska lotterier </b></h4>
+					<div class="content">
+						<p>
+							Om du gillar att spela lotto har USA mycket att erbjuda. Läs om tre amerikanska lotterier som drar
+							till sig spelare från hela världen, alla på jakt efter den stora vinsten som kan förändra deras liv för
+							gott.
+						</p>
+						<a href="#" class="btn btn-info"> Läs mera </a>
+					</div>
+				</div>
+
+				<div class="agent mt-5">
+					<h3 id="reviews" style="text-align:center; color:red;"> Reviews on Lotto Exposed </h3>
+					<div class="row">
+						
+
+						<div class="col-sm-4">
+							<p><b> Agents </b></p>
+							<p>
+								Online lottery agents provide convenience and access to the lotteries worldwide. Our reviews can help you to pick the best one for your needs.
+							</p>
+						</div>
+
+						<div class="col-sm-4">
+							<p><b> Lotteries </b></p>
+							<p>
+								We can help you to get acquainted with some of the world’s most prominent lotteries. Just go through our reviews to learn more.
+							</p>
+						</div>
+
+						<div class="col-sm-4">
+							<p><b> Tools </b></p>
+							<p>
+								With so many lottery software available around the web it may be difficult to choose the right one. Our reviews can be a great help.
+							</p>
+						</div>
+					</div>
+				</div>
+
+{# Article box for winner.#}
+				{% for article in winner %}
+					<div id="header" class="mt-5">
+						<h4> <b> Winners </b></h4>
+						<div class="content">
+							<b> {{ article.first_title }} </b>
+							<p>
+								{{ article.snippet }}...
+							</p>
+							{{ article.id }}
+							<a href="{% url 'website:winners' article_id=article.id %}" class="btn btn-info">  Läs mera </a>
+						</div>
+					</div>
+				{% endfor %}
+
+
+
+				<div id="header" class="mt-5">
+					<h4> <b> Winners </b></h4>
+					<div class="content">
+
+						<p>
+							Tre lyckliga par vann tidernas största Powerball jackpott den 13 januari 2016. Jackpotten delades i
+							tre lika delar mellan tre par. Powerball jackpott vinnarna kommer från tre olika stater: John och Lisa
+							Robinson kommer från Tennessee, Maureen Smith och David Kaltschmidt är från Florida och det
+							sista paret Marvin och Mae Acosta är hemmahörande i Kalifornien.
+							Powerball numren som förde lycka med sig var 4, 8, 19, 27, 34 och Powerballnumret 10.
+						</p>
+						<a href="{% url 'website:winners' %}" class="btn btn-info">  Läs mera </a>
+					</div>
+				</div>
+
+
+
+
+				<div id="header" class="mt-5">
+					<h4> <b> Us Powerball  </b></h4>
+					<div class="content">
+						<p>
+							Since its beginnings in 2012, LottoExposed.com has become the largest and most trusted lottery review website in the world. Our primary goal is to provide a safe environment for lottery players to enjoy their game without the fear of scams.
+							<br>
+							<br>
+							Identifying safe lotteries is no easy task. In this competitive market, lotteries have to offer amazing deals to stay in business. This is where Lotto Exposed reviews come in. As experts in the lottery field, our mission is to help to understand which lotteries you can trust and which are scams.
+						</p>
+						<a href="{% url 'website:us_powerball' %}" class="btn btn-info"> Läs mera </a>
+					</div>
+				</div>
+
+			</div>
+
+			<div  class="col-sm-4 mt-5">
+
+				<ul class="list-group">
+				  <li class="list-group-item" style="background-color:#28A745;color:white;"><b> Statistics </b></li>
+				  <li class="list-group-item">Dapibus ac facilisis in</li>
+				  <li class="list-group-item">Morbi leo risus</li>
+				  <li class="list-group-item">Porta ac consectetur ac</li>
+				  <li class="list-group-item">Vestibulum at eros</li>
+				</ul>
+
+				
+
+
+
+			</div>
+
+		</div>
+
+
+	</div>
+
+
+
+{%endblock%}

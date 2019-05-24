@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<div class="container">
+	{% for x in winners %}
+	<ul class="list-group mt-4">
+		
+			<b> {{x.first_title}} </b><br>
+				{{x.first_content}}<br>
+
+			<b> {{x.second_title}} </b><br>
+				{{x.second_content}}<br>
+
+			<b> {{x.third_title}} </b><br>
+				{{x.third_content}}
+		
+	</ul>
+	{% endfor %}
+</div>
+
+
+{% endblock %}
+
+

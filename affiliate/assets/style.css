@@ -1,0 +1,67 @@
+body{
+	background-color: #FFFFFF;
+}
+
+
+.nav-item{
+	list-style-type: none;
+}
+
+
+
+
+
+.dropdown-item a{
+	color:green;
+	background-color: black;
+}
+
+#navbar_head_text{
+	color:white;
+}
+
+
+.content{
+	padding:10px;
+	border-radius:2px;
+	border:1px solid grey;
+	box-shadow: 5px 5px grey;
+	background-color:#F7F7F7
+	
+}
+
+
+/* First Intro for the lottery at the index page */
+#header h4{
+	margin:0px;
+	padding:5px;
+	background-color:#28A745;
+	border-radius:2px;
+	box-shadow: 5px 5px grey;
+	color:white;
+	font-style:italic;
+}
+
+#reviews{
+	font-weight:bold;
+	font-style:italic;
+}
+
+.agent{
+	border:1px solid grey;
+	box-shadow: 5px 5px grey;
+	border-radius:2px;
+}
+
+
+
+.col-sm-4{
+	text-align:center;
+}
+
+.list-group{
+	box-shadow: 5px 5px grey;
+	border-radius:2px;
+}
+
+
