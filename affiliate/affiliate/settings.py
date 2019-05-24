@@ -26,7 +26,7 @@ SECRET_KEY = 'uh9wgj6r8+hi(2e5*yam+00+ule$omu!)s#wd-$cd+ahrj_20d'
 DEBUG = True
 
 ALLOWED_HOSTS = ['yoseflotter.pythonanywhere.com']
-ALLOWED_HOSTS = []
+
 
 
 
