@@ -33,5 +33,5 @@ def winners(request):
 	}
 	return render(request, 'winner.html', context)
 
-def winner_article(request, id):
-	return render(request, 'inner.html')
+def winner_article(request, article_id):
+	return render(request, 'winner.html')
