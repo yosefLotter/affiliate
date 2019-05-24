@@ -34,4 +34,9 @@ def winners(request):
 	return render(request, 'winner.html', context)
 
 def winner_article(request, article_id):
-	return render(request, 'winner.html')
+	winner = Winner.objects.get(pk=article_id)
+	print(winner)
+	context = {
+		'winner': winner
+	}
+	return render(request, 'winner.html', context)
