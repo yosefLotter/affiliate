@@ -12,5 +12,5 @@ urlpatterns = [
 	path('mega_millions/', views.mega_millions, name="mega_millions"),
 	path('cash4life/', views.cash4life, name="cash4life"),
 
-	path('winner/<int:article_id>/', views.winners, name="winners"),
+	path('winner/<int:article_id>/', views.winner_article, name="winners"),
 ]
