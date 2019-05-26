@@ -26,6 +26,9 @@ def mega_millions(request):
 def cash4life(request):
 	return render(request, 'cash4life.html')
 
+def best_lottery(request):
+	return render(request, 'best_lottery.html')
+
 def winners(request):
 	winners = Winner.objects.all()
 	context = {
