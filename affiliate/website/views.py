@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 
-from .models import Winner
+from .models import Winner, Best_lottery, Lottery
 # Create your views here.
 
 
@@ -27,7 +27,12 @@ def cash4life(request):
 	return render(request, 'cash4life.html')
 
 def best_lottery(request):
-	return render(request, 'best_lottery.html')
+	lotteries = Best_lottery.objects.all()
+	print(lotteries)
+	context = {
+		'lotteries': lotteries
+	}
+	return render(request, 'best_lottery.html', context)
 
 def winners(request):
 	winners = Winner.objects.all()

@@ -6,9 +6,7 @@
 	<div class="row">
 
 		<div class="col-sm-1">
-			<p>
-				left
-			</p>
+
 		</div>
 
 		<div class="col-sm-10">
@@ -24,9 +22,9 @@
 			</div>
 
 
-				<div class="lottery_box">
+				<div class="lottery_page">
 					<br>
-					<div class="lottery">
+					<div class="lottery_box">
 						<div class="row">
 
 							<div class="col-sm-1">
@@ -36,7 +34,7 @@
 							<div class="col-sm-9" >
 								<div class="row">
 									<ul class="list mr-5">
-										<li><img src="/static/us.svg" id="us_svg"> <h4 class="mr-3" style="display:inline;"><b style="font-style:italic;">Us Powerball</b></h4></li>
+										<li><img src="/static/us.svg" id="mini_flaga"> <h4 class="mr-3" style="display:inline;"><b style="font-style:italic;">Us Powerball</b></h4></li>
 										<li><a href="{% url 'website:us_powerball' %}"> Read the full review</a></li>
 									</ul>
 
@@ -47,8 +45,8 @@
 
 
 									<ul class="mr-5">
-										<li><b>07 12 43</b></li>
-										<li> HRS MIN SEC</li>
+										<li><b>Datum</b></li>
+										<label> Dragnings Datum </label>
 									</ul>
 									
 									<ul class="mr-5">
@@ -73,9 +71,64 @@
 					</div>
 					<br>
 
+
+
+
+
+{# Test For Django #}
+{% for lottery in lotteries %}
+					<div class="lottery_box">
+						<div class="row">
+
+							<div class="col-sm-1">
+								<img src="{{ lottery.logo.url }}" id="lottery_logo">
+							</div>
+
+							<div class="col-sm-9" >
+								<div class="row">
+									<ul class="list mr-5">
+										<li><img src="{{ lottery.flaga.url }}" id="mini_flaga"> <h4 class="mr-3" style="display:inline;"><b style="font-style:italic;">{{ lottery.name_of_lottery}}</b></h4></li>
+										<li><a href="{% url 'website:us_powerball' %}"> Read the full review</a></li>
+									</ul>
+
+									<ul class="mr-5">
+										<li><b>{{ lottery.winning_amount }}</b></li>
+										<li> check the winning numbers</li>
+									</ul>
+
+
+									<ul class="mr-5">
+										<li><b>{{ lottery.dragnings_datum }}</b></li>
+										<label> Dragnings Datum </label>
+									</ul>
+									
+									<ul class="mr-5">
+										<li><b>Odds</b></li>
+										<li> {{ lottery.odds }}</li>
+									</ul>
+						
+
+									<ul>
+										<li>
+											{{ lottery.content }}
+
+											{{ lottery.lottery.id }}
+										</li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="right">
+								<button class="ticket_button"><a href="https://www.powerball.com/" target="blank">  Buy lottery tickets </a></button>
+								<p class="mt-4"><b> Price range: {{ lottery.price_range }} </b></p>
+							</div>
+						</div>
+					</div>
+					<br>
+		{% endfor %}
 				</div>
 
-				<br>
+
 
 			</div>
 

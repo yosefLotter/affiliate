@@ -98,13 +98,13 @@ ul{
 }
 
 
-.lottery_box{
+.lottery_page{
 	padding:20px;
 	background-color: #E5EDF6;
 
 }
 
-.lottery{
+.lottery_box{
 	background-color:white;
 	padding:20px;
 	border-radius:5px;
@@ -120,8 +120,9 @@ ul{
 	max-width:100%;
 }
 
-#us_svg{
+#mini_flaga{
 	width:22px;
+	height:18px;
 
 }
 
