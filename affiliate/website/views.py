@@ -43,8 +43,20 @@ def winners(request):
 
 def winner_article(request, article_id):
 	winner = Winner.objects.get(pk=article_id)
-	print(winner)
 	context = {
 		'winner': winner
 	}
 	return render(request, 'winner.html', context)
+
+
+
+
+# Test for lottery page.
+
+def lottery_page(request, lottery_id):
+	lottery = Lottery.objects.get(id=lottery_id)
+	print(lottery.name_of_lottery)
+	context = {
+		'lottery': lottery
+	}
+	return render(request, 'lottery_page.html', context)
