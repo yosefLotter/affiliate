@@ -9,30 +9,42 @@ class Lottery(models.Model):
 
 	first_title = models.CharField(max_length=100, blank=True)
 	first_content = models.TextField(blank=True)
+	first_image = models.ImageField(default=None, blank=True)
+
 	second_title = models.CharField(max_length=100, blank=True)
 	second_content = models.TextField(blank=True)
+	second_image = models.ImageField(default=None, blank=True)
+
 	third_title = models.CharField(max_length=500, blank=True)
 	third_content = models.TextField(blank=True)
+	third_image = models.ImageField(default=None, blank=True)
 
 	fourth_title = models.CharField(max_length=100, blank=True)
 	fourth_content = models.TextField(blank=True)
+	fourt_image = models.ImageField(default=None, blank=True)
+
 	fith_title = models.CharField(max_length=100, blank=True)
 	fith_content = models.TextField(blank=True)
+	fifth_image = models.ImageField(default=None, blank=True)
+
 	six_title = models.CharField(max_length=500, blank=True)
 	six_content = models.TextField(blank=True)
+	six_image = models.ImageField(default=None, blank=True)
 
 	seven_title = models.CharField(max_length=500, blank=True)
 	seven_content = models.TextField(blank=True)
+	seven_image = models.ImageField(default=None, blank=True)
+
 	eight_title = models.CharField(max_length=500, blank=True)
 	eight_content = models.TextField(blank=True)
-
+	eight_image = models.ImageField(default=None, blank=True)
 	date = models.DateTimeField(auto_now_add=True)
 
 	def __str__(self):
 		return '{},{},{},{}'.format(
 			self.name_of_lottery,
+			self.first_title,
 			self.first_content,
-			self.second_title,
 			self.date,
 		)
 

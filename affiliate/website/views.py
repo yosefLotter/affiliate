@@ -54,7 +54,7 @@ def winner_article(request, article_id):
 # Test for lottery page.
 
 def lottery_page(request, lottery_id):
-	lottery = Lottery.objects.get(id=lottery_id)
+	#lottery = Lottery.objects.get(id=lottery_id)
 	print(lottery.name_of_lottery)
 	context = {
 		'lottery': lottery
