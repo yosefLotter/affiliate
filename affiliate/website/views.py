@@ -1,38 +1,36 @@
 from django.shortcuts import render, redirect
 
-from .models import Winner, Best_lottery, Lottery
+from .models import Winner, Lottery, Article
 # Create your views here.
 
 
 def index(request):
-	winner = Winner.objects.all().order_by('date')[0:1]
+	return render(request, 'index.html')
 
-	context = {
-		'winner': winner
-	}
-	return render(request, 'index.html', context)
-
-
-def us_powerball(request):
-	winner = Winner.objects.all()[:1].get()
-	context = {
-		'winner':winner
-	}
-	return render(request, 'us_powerball.html', context)
-
-def mega_millions(request):
-	return render(request,  'mega_millions.html')
-
-def cash4life(request):
-	return render(request, 'cash4life.html')
-
+# For Best_lottery Page
 def best_lottery(request):
-	lotteries = Best_lottery.objects.all()
-	print(lotteries)
+	# Testa här lite
+	articles = Article.objects.all()
+	print(articles)
 	context = {
-		'lotteries': lotteries
+		'articles' : articles
 	}
+
 	return render(request, 'best_lottery.html', context)
+# Test for lottery page.
+
+def lottery_page(request, lottery_id):
+	lottery = Article.objects.filter(lottery_id=lottery_id)
+	print(lottery)
+	context = {
+		'lottery': lottery
+	}
+	return render(request, 'lottery_page.html', context)
+
+
+
+
+
 
 def winners(request):
 	winners = Winner.objects.all()
@@ -51,12 +49,3 @@ def winner_article(request, article_id):
 
 
 
-# Test for lottery page.
-
-def lottery_page(request, lottery_id):
-	#lottery = Lottery.objects.get(id=lottery_id)
-	print(lottery.name_of_lottery)
-	context = {
-		'lottery': lottery
-	}
-	return render(request, 'lottery_page.html', context)

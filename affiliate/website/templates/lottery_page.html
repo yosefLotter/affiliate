@@ -7,33 +7,64 @@
 	<div class="col-sm-10">
 		<div class="lottery_page">
 			<div class="lottery_box">
+				{%for content in lottery%}
 
-				<b>{{ lottery.name_of_lottery }}</b>
-				<p>{{ lottery.pot_amount }}</p>
+						<b>{{ content.title }}</b>
+						{{ content.first_content }}
+						{% if content.first_image %}
+							<img src="{{ content.first_image.url }}" id="lottery_logo">
+						{%endif%}
+						<br>
+					<b>{{ content.second_title }}</b>
+					{{ content.second_content }}
+					{% if content.second_image %}
+						<img src="{{ content.second_image.url }}" id="lottery_logo">
+					{%endif%}
+					<br>
 
-				<b>{{ lottery.first_title }}</b>
-				<p>{{ lottery.first_content }}</p>
+					<b>{{ content.third_title }}</b>
+					{{ content.third_content }}
+					{% if content.third_image %}
+						<img src="{{ content.third_image.url }}" id="lottery_logo">
+					{%endif%}
+					<br>
 
-				<b>{{ lottery.second_title }}</b>
-				<p>{{ lottery.second_content }}</p>
+					<b>{{ content.fourth_title }}</b>
+					{{ content.fourth_content }}
+					{% if content.fourth_image %}
+						<img src="{{ content.fourth_image.url }}" id="lottery_logo">
+					{%endif%}
+					<br>
 
-				<b>{{ lottery.third_title }}</b>
-				<p>{{ lottery.third_content }}</p>
+					<b>{{ content.fifth_title }}</b>
+					{{ content.fifth_content }}
+					{% if content.fifth_image %}
+						<img src="{{ content.fifth_image.url }}" id="lottery_logo">
+					{%endif%}
+					<br>
 
-				<b>{{ lottery.fourth_title }}</b>
-				<p>{{ lottery.fourth_content }}</p>
+					<b>{{ content.six_title }}</b>
+					{{ content.six_content }}
+					{% if content.six_image %}
+						<img src="{{ content.six_image.url }}" id="lottery_logo">
+					{%endif%}
+					<br>
 
-				<b>{{ lottery.fith_title }}</b>
-				<p>{{ lottery.fith_content }}</p>
+					<b>{{ content.seven_title }}</b>
+					{{ content.seven_content }}
+					{% if content.seven_image %}
+						<img src="{{ content.seven_image.url }}" id="lottery_logo">
+					{%endif%}
+					<br>
 
-				<b>{{ lottery.six_title }}</b>
-				<p>{{ lottery.six_content }}</p>
+					<b>{{ content.eigth_title }}</b>
+					{{ content.eigth_content }}
+					{% if content.eigth_image %}
+						<img src="{{ content.eigth_image.url }}" id="lottery_logo">
+					{%endif%}
 
-				<b>{{ lottery.seven_title }}</b>
-				<p>{{ lottery.seven_content }}</p>
+				{%endfor%}
 
-				<b>{{ lottery.eight_title }}</b>
-				<p>{{ lottery.eight_content }}</p>
 			</div>
 		</div>
 	</div>

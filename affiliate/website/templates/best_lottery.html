@@ -9,7 +9,7 @@
 		</div>
 
 		<div class="col-sm-10">
-<a href="{% url 'website:lottery_page' %}"> Lottery page </a>
+<a href="#"> Lottery page </a>
 			<div class="welcome mt-3">
 
 				<div class="welcome_content">
@@ -24,41 +24,41 @@
 
 
 				<div class="lottery_page">
-					{% for lottery in lotteries %}
+					{% for article in articles %}
 						<div class="lottery_box">
 							<div class="row">
 
 								<div class="col-sm-1">
-									<img src="{{ lottery.logo.url }}" id="lottery_logo">
+									<img src="{{ article.lottery.logo.url }}" id="lottery_logo">
 								</div>
-
+{{article.lottery_id}}
 								<div class="col-sm-9" >
 									<div class="row">
 										<ul class="list mr-5">
-											<li><img src="{{ lottery.flaga.url }}" id="mini_flaga"> <h4 class="mr-3" style="display:inline;"><b style="font-style:italic;">{{ lottery.name_of_lottery}}</b></h4></li>
-											<li><a href="{% url 'website:lottery_page' lottery_id=lottery.lottery_id %}"> Read the full review</a></li>
+											<li><img src="{{ article.lottery.flaga.url }}" id="mini_flaga"> <h4 class="mr-3" style="display:inline;"><b style="font-style:italic;">{{ article.lottery.name_of_lottery}}</b></h4></li>
+											<li><a href="{% url 'website:lottery_page' lottery_id=article.lottery_id %}"> Read the full review</a></li>
 										</ul>
-
+								
 										<ul class="mr-5">
-											<li><b>{{ lottery.winning_amount }}</b></li>
+											<li><b>{{ article.lottery.jackpot }}</b></li>
 											<li> check the winning numbers</li>
 										</ul>
 
 
 										<ul class="mr-5">
-											<li><b>{{ lottery.dragnings_datum }}</b></li>
+											<li><b>{{  article.lottery.dragnings_datum }}</b></li>
 											<label> Dragnings Datum </label>
 										</ul>
 										
 										<ul class="mr-5">
 											<li><b>Odds</b></li>
-											<li> {{ lottery.odds }}</li>
+											<li> {{  article.lottery.odds }}</li>
 										</ul>
 							
 
 										<ul>
 											<li>
-												{{ lottery.content }}
+												{{  article.lottery.intro_content }}
 											</li>
 										</ul>
 									</div>
@@ -66,7 +66,7 @@
 
 								<div class="right">
 									<button class="ticket_button"><a href="https://www.powerball.com/" target="blank">  Buy lottery tickets </a></button>
-									<p class="mt-4"><b> Price range: {{ lottery.price_range }} </b></p>
+									<p class="mt-4"><b> Price range: {{  article.lottery.price_range }} </b></p>
 								</div>
 							</div>
 						</div>

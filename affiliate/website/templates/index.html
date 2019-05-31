@@ -48,19 +48,13 @@
 					</div>
 				</div>
 
-{# Article box for winner.#}
-				{% for article in winner %}
 					<div id="header" class="mt-5">
 						<h4> <b> Winners </b></h4>
-						<div class="content">
-							<b> {{ article.first_title }} </b>
-							<p>
-								{{ article.snippet }}...
-							</p>
-							<a href="{% url 'website:winners' article_id=article.id %}" class="btn btn-info">  Läs mera </a>
+
+							
 						</div>
 					</div>
-				{% endfor %}
+
 
 
 
@@ -75,7 +69,7 @@
 							sista paret Marvin och Mae Acosta är hemmahörande i Kalifornien.
 							Powerball numren som förde lycka med sig var 4, 8, 19, 27, 34 och Powerballnumret 10.
 						</p>
-						<a href="{% url 'website:winners' %}" class="btn btn-info">  Läs mera </a>
+						<a href="#" class="btn btn-info">  Läs mera </a>
 					</div>
 				</div>
 
@@ -91,7 +85,7 @@
 							<br>
 							Identifying safe lotteries is no easy task. In this competitive market, lotteries have to offer amazing deals to stay in business. This is where Lotto Exposed reviews come in. As experts in the lottery field, our mission is to help to understand which lotteries you can trust and which are scams.
 						</p>
-						<a href="{% url 'website:us_powerball' %}" class="btn btn-info"> Läs mera </a>
+						<a href="#" class="btn btn-info"> Läs mera </a>
 					</div>
 				</div>
 
