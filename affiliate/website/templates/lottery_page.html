@@ -1,70 +1,140 @@
 {% extends 'base.html' %}
 {% block content %}
-
+{% load static %}
 <div class="row">
 	<div class="col-sm-1">
+		<div class="sticky">
+			<button> Buy Ticket </button>
+		</div>
 	</div>
-	<div class="col-sm-10">
+
+	<div class="col-sm-8">
 		<div class="lottery_page">
+		{%for article in lottery %}	
 			<div class="lottery_box">
-				{%for content in lottery%}
+				{% if images.rektangel %}
+				<img src="{{images.rektangel.url}}" class="center" id="rektangel">
+				{% endif %}
 
-						<b>{{ content.title }}</b>
-						{{ content.first_content }}
-						{% if content.first_image %}
-							<img src="{{ content.first_image.url }}" id="lottery_logo">
-						{%endif%}
-						<br>
-					<b>{{ content.second_title }}</b>
-					{{ content.second_content }}
-					{% if content.second_image %}
-						<img src="{{ content.second_image.url }}" id="lottery_logo">
+				<div class="profile_box">
+					<img src="{{article.lottery.flaga.url}}">
+					<h3> {{article.lottery.name_of_lottery}}</h3>
+				</div>
+
+				<div class="welcome_text">
+					<p>{{article.welcome_text}}</p>
+				</div>
+
+				<div class="big_content_right mt-5">
+					<h4>{{article.a_first_title}}</h4>
+					{% if article.a_content_image_right %}
+					<img src="{{article.a_content_image_right.url}}" width="300">
+					{% endif %}
+					<p> {{article.a_top_big_content}}</p>
+				</div>
+
+				<div class="small_content">
+					<h4>{{article.a_first_small_title}}</h4>
+					<p>{{article.a_first_small_content}}</p>
+				</div>
+
+				<div class="small_content">
+					<h4>{{article.a_second_small_title}}</h4>
+					<p>{{article.a_second_small_content}}</p>
+				</div>
+
+				{# image tag from lottery images.#}
+				{% if images.kvadrat %}
+				<img src="{{images.kvadrat.url}}" width="250" class="center">
+				{% endif %}
+				<br>
+
+				<div class="big_content_left mt-5">
+					<h4>{{article.b_second_title}}</h4>
+					{% if article.b_content_image_left %}
+					<img src="{{article.b_content_image_left.url}}" width="200">
+					{% endif %}
+					<p> {{article.b_top_big_content}}</p>
+				</div>
+				<br>
+				<div class="small_content">
+					<h4 class="mt-2">{{article.b_first_small_title}}</h4>
+					<p>{{article.b_first_small_content}}</p>
+				</div>
+				<div class="small_content">
+					<h4 class="mt-2">{{article.b_second_small_title}}</h4>
+					<p>{{article.b_second_small_content}}</p>
+				</div>
+				<br>
+
+				<div class="big_content mt-5">
+					<h4>{{article.c_first_title}}</h4>
+					{% if article.c_content_image_right %}
+					<img src="{{article.c_content_image_right.url}}" width="300" id="big_content_image_right">
 					{%endif%}
-					<br>
+					<p> {{article.c_top_big_content}}</p>
+				</div>
 
-					<b>{{ content.third_title }}</b>
-					{{ content.third_content }}
-					{% if content.third_image %}
-						<img src="{{ content.third_image.url }}" id="lottery_logo">
+				<div class="small_content">
+					<h4>{{article.c_first_small_title}}</h4>
+					<p>{{article.c_first_small_content}}</p>
+				</div>
+
+				<div class="small_content">
+					<h4>{{article.c_second_small_title}}</h4>
+					<p>{{article.c_second_small_content}}</p>
+				</div>
+
+				<div class="big_content mt-5">
+					<h4>{{article.d_first_title}}</h4>
+					{% if article.d_content_image_left %}
+					<img src="{{article.d_content_image_left.url}}" width="300" id="big_content_image_left">
 					{%endif%}
-					<br>
+					<p> {{article.d_top_big_content}}</p>
+				</div>
 
-					<b>{{ content.fourth_title }}</b>
-					{{ content.fourth_content }}
-					{% if content.fourth_image %}
-						<img src="{{ content.fourth_image.url }}" id="lottery_logo">
-					{%endif%}
-					<br>
+				{# image from lottery libary spare#}
+				{% if images.spare %}
+				<img src="{{images.spare.url}}" width="250" class="center">
+				{% endif %}
 
-					<b>{{ content.fifth_title }}</b>
-					{{ content.fifth_content }}
-					{% if content.fifth_image %}
-						<img src="{{ content.fifth_image.url }}" id="lottery_logo">
-					{%endif%}
-					<br>
+				<div class="small_content">
+					<h4>{{article.d_first_small_title}}</h4>
+					<p>{{article.d_first_small_content}}</p>
+				</div>
 
-					<b>{{ content.six_title }}</b>
-					{{ content.six_content }}
-					{% if content.six_image %}
-						<img src="{{ content.six_image.url }}" id="lottery_logo">
-					{%endif%}
-					<br>
+				<div class="small_content">
+					<h4>{{article.d_second_small_title}}</h4>
+					<p>{{article.d_second_small_content}}</p>
+				</div>
 
-					<b>{{ content.seven_title }}</b>
-					{{ content.seven_content }}
-					{% if content.seven_image %}
-						<img src="{{ content.seven_image.url }}" id="lottery_logo">
-					{%endif%}
-					<br>
+			</div>
+		</div>
+		{%endfor%}
+	</div>
 
-					<b>{{ content.eigth_title }}</b>
-					{{ content.eigth_content }}
-					{% if content.eigth_image %}
-						<img src="{{ content.eigth_image.url }}" id="lottery_logo">
-					{%endif%}
-
-				{%endfor%}
-
+	<div class="col-sm-3">
+		<div class="lottery_page">	
+			<div class="lottery_box">
+				<div class="commercial">
+					<div class="commercial_content">
+						<img src="{% static 'top_3_lotteries.png' %}" alt="My image">
+					</div>
+					image as of top 3 lottery 
+					News Article
+					{% for winner in winners %}
+					<div class="winner_box_side">
+						<h4>Winners at Us PowerBall</h4>
+						{% if winner.profil_bild %}
+						<img src="{{winner.profil_bild.url}}" class="center" id="banner">
+						{% endif %}
+						<div class="winner_box_content">
+							<h5 class="mt-1"> {{ winner.welcome_title }} </h5>
+							<p> {{ winner.welcome_text }} </p>
+							<label> Read More </label>
+					</div>
+				{% endfor %}
+				</div>
 			</div>
 		</div>
 	</div>
@@ -72,6 +142,7 @@
 
 
 {% endblock %}
+
 
 
 

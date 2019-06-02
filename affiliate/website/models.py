@@ -23,65 +23,112 @@ class Lottery(models.Model):
 			)
 
 
-class Article(models.Model):
+# Each Lottery has 3 Pictures in a Image-Libaray
+class Lottery_image(models.Model):
 	lottery = models.ForeignKey(Lottery, on_delete=models.CASCADE)
+	rektangel = models.ImageField(default=None, blank=True)
+	kvadrat = models.ImageField(default=None, blank=True)
+	spare = models.ImageField(default=None, blank=True)
 
-	first_title = models.CharField(max_length=100, blank=True)
-	first_content = models.TextField(blank=True)
-	first_image = models.ImageField(default=None, blank=True)
+	def __str__(self):
+		return '{},{},{}'.format(
+			self.rektangel,
+			self.kvadrat,
+			self.spare,
+		)
 
-	second_title = models.CharField(max_length=100, blank=True)
-	second_content = models.TextField(blank=True)
-	second_image = models.ImageField(default=None, blank=True)
 
-	third_title = models.CharField(max_length=500, blank=True)
-	third_content = models.TextField(blank=True)
-	third_image = models.ImageField(default=None, blank=True)
 
-	fourth_title = models.CharField(max_length=100, blank=True)
-	fourth_content = models.TextField(blank=True)
-	fourt_image = models.ImageField(default=None, blank=True)
 
-	fith_title = models.CharField(max_length=100, blank=True)
-	fith_content = models.TextField(blank=True)
-	fifth_image = models.ImageField(default=None, blank=True)
 
-	six_title = models.CharField(max_length=500, blank=True)
-	six_content = models.TextField(blank=True)
+#{{ content.lottery.flaga.url
+# Each Lottery has it own Lottery page with Articles.
+class Article(models.Model):
+	name_of_article = models.CharField(max_length=200)
+	lottery = models.ForeignKey(Lottery, on_delete=models.CASCADE)
+	welcome_text = models.TextField(blank=True)
 
-	seven_title = models.CharField(max_length=500, blank=True)
-	seven_content = models.TextField(blank=True)
+	
+	a_first_title = models.CharField(max_length=300, blank=True)
+	a_top_big_content = models.TextField(blank=True)
+	a_content_image_right = models.ImageField(default=None, blank=True)
 
-	eight_title = models.CharField(max_length=500, blank=True)
-	eight_content = models.TextField(blank=True)
+	a_first_small_title = models.CharField(max_length=300, blank=True)
+	a_first_small_content = models.TextField(blank=True)
+
+	a_second_small_title = models.CharField(max_length=300, blank=True)
+	a_second_small_content = models.TextField(blank=True)
+
+# For middle part of the website.
+	b_second_title = models.CharField(max_length=300, blank=True)
+	b_top_big_content = models.TextField(blank=True)
+	b_content_image_left = models.ImageField(default=None, blank=True)
+
+	b_first_small_title = models.CharField(max_length=300, blank=True)
+	b_first_small_content = models.TextField(blank=True)
+
+	b_second_small_title = models.CharField(max_length=300, blank=True)
+	b_second_small_content = models.TextField(blank=True)
+
+# For Lower Part of the website Article page.
+	c_second_title = models.CharField(max_length=300, blank=True)
+	c_down_big_content = models.TextField(blank=True)
+	c_content_image_right = models.ImageField(default=None, blank=True)
+
+	c_first_small_title = models.CharField(max_length=300, blank=True)
+	c_first_small_content = models.TextField(blank=True)
+
+	c_second_small_title = models.CharField(max_length=300, blank=True)
+	c_second_small_content = models.TextField(blank=True)
+
+# Extra 
+	d_second_title = models.CharField(max_length=300, blank=True)
+	d_down_big_content = models.TextField(blank=True)
+	d_content_image_left = models.ImageField(default=None, blank=True)
+
+	d_first_small_title = models.CharField(max_length=300, blank=True)
+	d_first_small_content = models.TextField(blank=True)
+
+	d_second_small_title = models.CharField(max_length=300, blank=True)
+	d_second_small_content = models.TextField(blank=True)
 
 	date = models.DateTimeField(auto_now_add=True)
 
 	def __str__(self):
-		return '{},{},{},{},{}'.format(
-			self.lottery,
-			self.first_title,
-			self.second_title,
-			self.third_title,
-			self.fourth_title,
-			self.date,
+		return '{},{}'.format(
+			self.lottery.name_of_lottery,
+			self.lottery.name_of_article,
 		)
+
 
 
 
 # For Winner Page
 class Winner(models.Model):
 	lottery = models.ForeignKey(Lottery, on_delete=models.CASCADE)
-	name_of_lottery = models.CharField(max_length=100)
 	amount_they_won = models.CharField(max_length=400, blank=True)
-	#intro = models.CharField(max_length=400, blank=True)
-	first_title = models.CharField(max_length=500, blank=True)
-	first_content = models.TextField(blank=True)
-	second_title = models.CharField(max_length=500, blank=True)
-	second_content = models.TextField(blank=True)
-	third_title = models.CharField(max_length=500, blank=True)
-	third_content = models.TextField(blank=True)
+	profil_bild = models.ImageField(default=None, blank=True)
+
+	welcome_title = models.CharField(max_length=100, blank=True)
+	welcome_text = models.TextField(blank=True)
+
+	a_title = models.CharField(max_length=200, blank=True)
+	a_content = models.TextField(blank=True)
+
+	b_title = models.CharField(max_length=200, blank=True)
+	b_content = models.TextField(blank=True)
+
+	c_title = models.CharField(max_length=200, blank=True)
+	c_content = models.TextField(blank=True)
+
+	d_title = models.CharField(max_length=200, blank=True)
+	d_content = models.TextField(blank=True)
+
+	bild = models.ImageField(default=None, blank=True)
 	date = models.DateTimeField(auto_now_add=True)
 
 	def __str__(self):
-		return '{},{}'.format(self.name_of_lottery, self.first_title)
+		return '{},{}'.format(
+			self.lottery,
+			self.welcome_title,
+		)

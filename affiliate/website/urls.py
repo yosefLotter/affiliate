@@ -12,8 +12,7 @@ urlpatterns = [
 
 
 
-	path('winner/', views.winners, name="winners"),
-	path('winner/<int:article_id>/', views.winner_article, name="winners"),
+
 
 	path('lottery_page/', views.lottery_page, name='lottery_page'),
 	path('lottery_page/<int:lottery_id>', views.lottery_page, name='lottery_page'),

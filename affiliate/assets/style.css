@@ -2,6 +2,16 @@ body{
 	background-color: #FFFFFF;
 }
 
+.col-sm-1{
+	padding:0px;
+}
+.col-sm-3{
+	background-color: #E5EDF6;
+}
+
+.col-sm-8{
+	padding:0px;
+}
 
 .nav-item{
 	list-style-type: none;
@@ -57,9 +67,6 @@ body{
 
 
 
-.col-sm-4{
-	text-align:center;
-}
 
 .list-group{
 	box-shadow: 5px 5px grey;
@@ -68,13 +75,12 @@ body{
 
 
 
-/* page lotteries */
+/* page Best_lotteries */
 .welcome{
 	background-color:#096BB6;
 }
 
 .welcome_content{
-
 	padding:10px;
 	color:white;
 	font-size:15px;
@@ -97,8 +103,12 @@ ul{
 	list-style: none;
 }
 
+li{
+	list-style:none;
+}
 
 .lottery_page{
+	border-right:1px solid #414141;
 	padding:20px;
 	background-color: #E5EDF6;
 
@@ -114,16 +124,14 @@ ul{
 
 #lottery_logo{
 	position:auto;
-
-
 	max-height:100px;
 	max-width:100%;
 }
 
+
 #mini_flaga{
 	width:22px;
 	height:18px;
-
 }
 
 
@@ -136,4 +144,132 @@ ul{
 	width:100%;
 }
 
+/* To make the Image to be in the center of the div box. Using it in at Lottery article Page Banner */
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+/* For image Rektangel */
+#rektangel{
+	width:600px;
+	height:100px;
+}
+/* includes a flag and a name of the lottery. Using it at Best Lottery page and lottery article page. */
+.profile_box h3{
+	font-weight:bold;
+	font-style: italic;
+	color:#414141;
+}
+.profile_box img{
+	margin:10px;
+	width:22px;
+	float:left;
+	
+}
 
+/* For Winner profile_bild */
+#banner{
+	margin:0px;
+	width:500px;
+	height:100px;
+	max-width:100%;
+	max-height:100%;
+}
+
+/* For Lotterys Article Page */
+/* big_content include Title and wrapping text around image on rigt side. */
+.big_content_right{
+	color:#414141;
+
+}
+.big_content_right h4{
+	font-style: italic;
+	font-weight:bold;
+}
+.big_content_right img{
+	float:right;
+}
+.big_content_left{
+
+	color:#414141;
+
+}
+.big_content_left h4{
+	font-style: italic;
+	font-weight:bold;
+}
+.big_content_left img{
+	margin:1px;
+	float:left;
+}
+/* For Lotterys Article Page Includes only Title and text*/
+.small_content h4{
+	font-weight:bold;
+	font-style: italic;
+	color:#414141;
+
+}
+
+/* Lottery Article For Right Side */
+.commercial{
+	
+}
+/* Lottery Article For Right Side includes a banner top 3 lottery */
+.commercial_content{
+	border:1px solid #414141;
+}
+
+
+/* Lottery Article For Right Side */
+
+.winner_box_side{
+	border:1px solid #414141;
+	border-radius:5px;
+}
+/* Lottery Article For Right Side */
+.winner_box_side img{
+	width:100px;
+	height:100px;
+
+}
+/* Lottery Article For Right Side */
+.winner_box_side h4{
+	margin:0px;
+	padding:5px;
+	background-color:#096BB6;
+	color:#F7F7F7;
+	font-style:italic;
+	font-weight:bold;
+
+}
+
+/* Lottery Article For Right Side */
+.winner_box_content{
+	padding:5px;
+	color:#414141;
+
+}
+.winner_box_content h5{
+	font-style:italic;
+	font-weight:bold;
+}
+.winner_box_content p{
+	font-style:italic;
+}
+
+
+/* sticky button for the side to buy ticket. Lottery Article Page */
+div.sticky{
+  position: sticky;
+  top: 0;
+}
+
+.sticky button{
+	padding:5px;
+	color:white;
+	background-color:green;
+	width:100%;
+	border-radius:5px;
+}
