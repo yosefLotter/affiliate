@@ -95,9 +95,8 @@ class Article(models.Model):
 	date = models.DateTimeField(auto_now_add=True)
 
 	def __str__(self):
-		return '{},{}'.format(
+		return '{}'.format(
 			self.lottery.name_of_lottery,
-			self.lottery.name_of_article,
 		)
 
 
@@ -117,12 +116,16 @@ class Winner(models.Model):
 
 	b_title = models.CharField(max_length=200, blank=True)
 	b_content = models.TextField(blank=True)
-
+	b_image = models.ImageField(default=None, blank=True)
+	
 	c_title = models.CharField(max_length=200, blank=True)
 	c_content = models.TextField(blank=True)
 
 	d_title = models.CharField(max_length=200, blank=True)
 	d_content = models.TextField(blank=True)
+
+	e_title = models.CharField(max_length=200, blank=True)
+	e_content = models.TextField(blank=True)
 
 	bild = models.ImageField(default=None, blank=True)
 	date = models.DateTimeField(auto_now_add=True)

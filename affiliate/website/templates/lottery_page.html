@@ -118,12 +118,12 @@
 			<div class="lottery_box">
 				<div class="commercial">
 					<div class="commercial_content">
+						<p> commercial kvadrat box </p>
 						<img src="{% static 'top_3_lotteries.png' %}" alt="My image">
 					</div>
-					image as of top 3 lottery 
-					News Article
+
 					{% for winner in winners %}
-					<div class="winner_box_side">
+					<div class="winner_box_side mt-2">
 						<h4>Winners at Us PowerBall</h4>
 						{% if winner.profil_bild %}
 						<img src="{{winner.profil_bild.url}}" class="center" id="banner">
@@ -131,7 +131,7 @@
 						<div class="winner_box_content">
 							<h5 class="mt-1"> {{ winner.welcome_title }} </h5>
 							<p> {{ winner.welcome_text }} </p>
-							<label> Read More </label>
+							<a href="{% url 'website:winner_page' winner_id=winner.id  %}"> Read More </a>
 					</div>
 				{% endfor %}
 				</div>

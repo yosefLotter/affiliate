@@ -10,10 +10,11 @@ urlpatterns = [
 	#For the best_lottery page
 	path('best_lottery/', views.best_lottery, name='best_lottery'),
 
-
-
-
-
 	path('lottery_page/', views.lottery_page, name='lottery_page'),
 	path('lottery_page/<int:lottery_id>', views.lottery_page, name='lottery_page'),
+
+
+	path('winner_page/', views.winner_page, name='winner_page'),
+	path('winner_page/<int:winner_id>/', views.winner_page, name='winner_page'),
+
 ]

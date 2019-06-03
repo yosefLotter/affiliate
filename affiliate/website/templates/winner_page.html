@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class="row">
+	<div class="col-sm-1">
+		<div class="sticky">
+			<button> Buy Ticket </button>
+		</div>
+	</div>
+
+	<div class="col-sm-8">
+		<div class="lottery_page">
+		
+{% for winner in winners %}
+			<div class="lottery_box">
+
+
+				<div>
+					<img src="{{ winner.lottery.logo.url}}" width="150">
+					<h3> </h3>
+				</div>
+
+				<div class="small_content">
+					<h4></h4>
+					<p></p>
+				</div>
+
+				<div class="small_content">
+					<h4>{{ winner.welcome_title }}</h4>
+					<p>{{winner.welcome_text}}</p>
+				</div>
+
+				<div class="small_content">
+					<h4>{{ winner.a_title }}</h4>
+					<p>{{ winner.a_content }}</p>
+				</div>
+
+				<div class="big_content_right mt-5">
+					<h4>{{ winner.b_title }}</h4>
+					{% if winner.b_image %}
+						<img src="{{ winner.b_image.url }}" width="300">
+					{% endif %}					
+					<p>{{ winner.b_content }}</p>
+				</div>
+
+				
+				
+
+
+				<div class="small_content">
+					<h4>{{ winner.c_title }}</h4>
+					<p>{{winner.c_content }}</p>
+				</div>
+				{# image tag from lottery images.#}
+				
+				<img src="" width="200" class="center">
+				
+				<br>
+
+				<div class="big_content_left mt-5">
+					<h4>{{ winner.d_title }}</h4>
+					
+					<img src="" width="200">
+					
+					<p>{{ winner.d_content }}</p>
+				</div>
+				<br>
+				<div class="small_content">
+					<h4 class="mt-2">{{ winner.e_title }}</h4>
+					<p>{{ winner.e_content }}</p>
+				</div>
+			</div>
+		</div>
+{% endfor %}
+	</div>
+
+	<div class="col-sm-3">
+		<div class="lottery_page">	
+			<div class="lottery_box">
+				<div class="commercial">
+					<div class="commercial_content">
+						<p> commercial kvadrat box </p>
+						<img src="{% static 'top_3_lotteries.png' %}" alt="My image">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
