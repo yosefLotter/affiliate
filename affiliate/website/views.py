@@ -19,8 +19,9 @@ def best_lottery(request):
 
 def lottery_page(request, lottery_id):
 	lottery = Article.objects.filter(lottery_id=lottery_id)
-	images = Lottery_image.objects.get(lottery_id=lottery_id)
+	images = Lottery_image.objects.filter(lottery_id=lottery_id).all()
 	winners = Winner.objects.filter(lottery_id=lottery_id)
+	print(images)
 	context = {
 		'lottery': lottery,
 		'images': images,

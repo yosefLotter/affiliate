@@ -12,10 +12,11 @@
 		<div class="lottery_page">
 		{%for article in lottery %}	
 			<div class="lottery_box">
-				{% if images.rektangel %}
-				<img src="{{images.rektangel.url}}" class="center" id="rektangel">
-				{% endif %}
-
+				{% for image in images %}
+					{% if image.rektangel %}
+					<img src="{{image.rektangel.url}}" class="center" id="rektangel">
+					{% endif %}
+					{% endfor %}
 				<div class="profile_box">
 					<img src="{{article.lottery.flaga.url}}">
 					<h3> {{article.lottery.name_of_lottery}}</h3>
@@ -44,9 +45,11 @@
 				</div>
 
 				{# image tag from lottery images.#}
-				{% if images.kvadrat %}
-				<img src="{{images.kvadrat.url}}" width="250" class="center">
-				{% endif %}
+				{% for image in images %}
+					{% if image.kvadrat %}
+					<img src="{{image.kvadrat.url}}" width="250" class="center">
+					{% endif %}
+				{% endfor %}
 				<br>
 
 				<div class="big_content_left mt-5">
