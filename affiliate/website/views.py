@@ -21,7 +21,6 @@ def lottery_page(request, lottery_id):
 	lottery = Article.objects.filter(lottery_id=lottery_id)
 	images = Lottery_image.objects.filter(lottery_id=lottery_id).all()
 	winners = Winner.objects.filter(lottery_id=lottery_id)
-	print(images)
 	context = {
 		'lottery': lottery,
 		'images': images,
@@ -39,8 +38,10 @@ def winner_page(request):
 
 def winner_page(request, winner_id):
 	winners = Winner.objects.filter(pk=winner_id)
+	lottery_images = Lottery_image.objects.filter(lottery_id=winner_id)
 	context = {
-		'winners':winners,
+		'winners': winners,
+		'lottery_images': lottery_images,
 	}
 	return render(request, 'winner_page.html', context)
 

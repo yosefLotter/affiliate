@@ -2,13 +2,14 @@
 {% block content %}
 {% load static %}
 <div class="row">
-	<div class="col-sm-1">
+	<div class="col-lg-1">
 		<div class="sticky">
 			<button> Buy Ticket </button>
 		</div>
 	</div>
 
-	<div class="col-sm-8">
+	<div class="col-lg-8">
+		<p> YOSSSI</p>
 		<div class="lottery_page">
 		{%for article in lottery %}	
 			<div class="lottery_box">
@@ -29,7 +30,7 @@
 				<div class="big_content_right mt-5">
 					<h4>{{article.a_first_title}}</h4>
 					{% if article.a_content_image_right %}
-					<img src="{{article.a_content_image_right.url}}" width="300">
+					<img src="{{article.a_content_image_right.url}}" width="300" class="mr-2">
 					{% endif %}
 					<p> {{article.a_top_big_content}}</p>
 				</div>
@@ -50,7 +51,7 @@
 					<img src="{{image.kvadrat.url}}" width="250" class="center">
 					{% endif %}
 				{% endfor %}
-				<br>
+
 
 				<div class="big_content_left mt-5">
 					<h4>{{article.b_second_title}}</h4>
@@ -59,7 +60,7 @@
 					{% endif %}
 					<p> {{article.b_top_big_content}}</p>
 				</div>
-				<br>
+
 				<div class="small_content">
 					<h4 class="mt-2">{{article.b_first_small_title}}</h4>
 					<p>{{article.b_first_small_content}}</p>
@@ -68,7 +69,6 @@
 					<h4 class="mt-2">{{article.b_second_small_title}}</h4>
 					<p>{{article.b_second_small_content}}</p>
 				</div>
-				<br>
 
 				<div class="big_content mt-5">
 					<h4>{{article.c_first_title}}</h4>
@@ -116,27 +116,26 @@
 		{%endfor%}
 	</div>
 
-	<div class="col-sm-3">
+	<div class="col-lg-3">
 		<div class="lottery_page">	
 			<div class="lottery_box">
 				<div class="commercial">
 					<div class="commercial_content">
-						<p> commercial kvadrat box </p>
 						<img src="{% static 'top_3_lotteries.png' %}" alt="My image">
 					</div>
-
 					{% for winner in winners %}
-					<div class="winner_box_side mt-2">
-						<h4>Winners at Us PowerBall</h4>
-						{% if winner.profil_bild %}
-						<img src="{{winner.profil_bild.url}}" class="center" id="banner">
-						{% endif %}
-						<div class="winner_box_content">
-							<h5 class="mt-1"> {{ winner.welcome_title }} </h5>
-							<p> {{ winner.welcome_text }} </p>
-							<a href="{% url 'website:winner_page' winner_id=winner.id  %}"> Read More </a>
-					</div>
-				{% endfor %}
+						<div class="winner_box_side mt-2">
+							<h4>Winners at Us PowerBall</h4>
+							{% if winner.profil_bild %}
+								<img src="{{winner.profil_bild.url}}" class="center" id="banner">
+							{% endif %}
+							<div class="winner_box_content">
+								<h5 class="mt-1"> {{ winner.welcome_title }} </h5>
+								<p> {{ winner.welcome_text }} </p>
+								<a href="{% url 'website:winner_page' winner_id=winner.id  %}"> Read More </a>
+							</div>
+						</div>
+					{% endfor %}
 				</div>
 			</div>
 		</div>

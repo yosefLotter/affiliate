@@ -2,14 +2,27 @@ body{
 	background-color: #FFFFFF;
 }
 
-.col-sm-1{
+p{
+	font-family: 'PT Serif', serif;
+}
+h3{
+	font-family: 'PT Serif', serif;
+	font-weight:bold;
+}
+h4{
+	font-family: 'PT Serif', serif;
+	font-weight:bold;
+}
+.col-lg-1{
 	padding:0px;
 }
-.col-sm-3{
+.col-lg-3{
 	background-color: #E5EDF6;
+	padding:0px;
 }
 
-.col-sm-8{
+.col-lg-8{
+	padding:0px;
 	padding:0px;
 }
 
@@ -94,11 +107,16 @@ body{
 		margin:0px;
 }
 
-
+.welcome_text{
+	padding:5px;
+}
 /* List of lotteries */
 
 
 ul{
+	font-family: 'Raleway', sans-serif;
+	font-style:italic;
+	padding:0px;
 	margin:0px;
 	list-style: none;
 }
@@ -153,6 +171,7 @@ li{
 }
 /* For image Rektangel */
 #rektangel{
+	max-width:100%;
 	width:600px;
 	height:100px;
 }
@@ -166,9 +185,14 @@ li{
 	margin:10px;
 	width:22px;
 	float:left;
-	
 }
-
+/* For Best lottery Page the button and the text bellow*/
+.best_lottery_right{
+	text-align:center;
+}
+.best_lottery_right a{
+	color:white;
+}
 
 
 /* For Winner profile_bild */
