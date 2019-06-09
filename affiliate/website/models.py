@@ -135,3 +135,15 @@ class Winner(models.Model):
 			self.lottery,
 			self.welcome_title,
 		)
+
+
+# For the First Page
+class First_page(models.Model):
+	welcome_title = models.CharField(max_length=100, blank=True)
+	welcome_content = models.TextField(blank=True)
+	title = models.CharField(max_length=100, blank=True)
+	content = models.TextField(blank=True)
+	def __str__(self):
+		return '{}'.format(
+			self.welcome_title
+		)

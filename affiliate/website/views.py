@@ -1,11 +1,16 @@
 from django.shortcuts import render, redirect
 
-from .models import  Lottery, Lottery_image, Article, Winner
+from .models import  Lottery, Lottery_image, Article, Winner, First_page
 # Create your views here.
 
 
 def index(request):
-	return render(request, 'index.html')
+	content = First_page.objects.all()
+	context = {
+		'content' : content
+	}
+
+	return render(request, 'index.html', context)
 
 # For Best_lottery Page
 def best_lottery(request):

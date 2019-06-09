@@ -2,16 +2,10 @@ body{
 	background-color: #FFFFFF;
 }
 
-p{
-	font-family: 'PT Serif', serif;
-}
-h3{
-	font-family: 'PT Serif', serif;
-	font-weight:bold;
-}
-h4{
-	font-family: 'PT Serif', serif;
-	font-weight:bold;
+
+
+.row{
+	margin:0px;
 }
 .col-lg-1{
 	padding:0px;
@@ -55,6 +49,9 @@ h4{
 	
 }
 
+.margin_0{
+	margin:0px;
+}
 
 /* First Intro for the lottery at the index page */
 #header h4{
@@ -153,7 +150,10 @@ li{
 }
 
 
-
+#test{
+	margin:0px;
+	color:red;
+}
 .ticket_button{
 	margin:10px;
 	padding:5px;
@@ -185,13 +185,6 @@ li{
 	margin:10px;
 	width:22px;
 	float:left;
-}
-/* For Best lottery Page the button and the text bellow*/
-.best_lottery_right{
-	text-align:center;
-}
-.best_lottery_right a{
-	color:white;
 }
 
 
