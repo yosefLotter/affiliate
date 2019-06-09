@@ -1,6 +1,8 @@
 body{
 	background-color: #FFFFFF;
+	font-family: "Times New Roman", Times, serif;
 }
+
 
 
 
@@ -61,19 +63,9 @@ body{
 	border-radius:2px;
 	box-shadow: 5px 5px grey;
 	color:white;
-	font-style:italic;
 }
 
-#reviews{
-	font-weight:bold;
-	font-style:italic;
-}
 
-.agent{
-	border:1px solid grey;
-	box-shadow: 5px 5px grey;
-	border-radius:2px;
-}
 
 
 
@@ -94,14 +86,13 @@ body{
 	padding:10px;
 	color:white;
 	font-size:15px;
-	font-style:italic;
 	letter-spacing:1px;
 	line-height:19px;
 }
 
 .welcome_content h4{
 	font-weight:bold;
-		margin:0px;
+	margin:0px;
 }
 
 .welcome_text{
@@ -111,8 +102,6 @@ body{
 
 
 ul{
-	font-family: 'Raleway', sans-serif;
-	font-style:italic;
 	padding:0px;
 	margin:0px;
 	list-style: none;
@@ -150,16 +139,17 @@ li{
 }
 
 
-#test{
-	margin:0px;
-	color:red;
-}
 .ticket_button{
 	margin:10px;
-	padding:5px;
+	padding:3px;
 	background-color:#64A836;
-	color:white;
 	width:100%;
+}
+.ticket_button a{
+
+	color:white;
+	letter-spacing:1px;
+
 }
 
 /* To make the Image to be in the center of the div box. Using it in at Lottery article Page Banner */

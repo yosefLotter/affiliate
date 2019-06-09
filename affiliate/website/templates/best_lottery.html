@@ -32,34 +32,35 @@
 								<div class="col-lg-9" >
 									<div class="row">
 										<ul class="col-sm-4">
-											<li> Jackpot </li>
+											<b> Jackpot </b>
 											<li> {{ article.lottery.jackpot }} </li>
 							
 										</ul>
 								
 										<ul class="col-sm-4">
-											<p class="margin_0">Dragnings Datum </p>
+											<b class="margin_0">Dragning</b>
 											<p>{{  article.lottery.dragnings_datum }}</p>
 										</ul>
 
 
 
 										<ul class="col-sm-4">
-											<li>Odds</li>
+											<b>Odds</b>
 											<li> {{  article.lottery.odds }}</li>
 										</ul>
 							</div>
 
-										<ul class="mt-2">
+										<ul>
 											<li>
 												{{  article.lottery.intro_content }}
+												<label  style="color:blue;"><a href="{% url 'website:lottery_page' lottery_id=article.lottery_id %}"> Läs mer..</a> </label>
 											</li>
 										</ul>
 									
 								</div>
 
 								<div class="col-lg-2">
-									<button class="ticket_button mt-5"><a href="https://www.powerball.com/" target="blank" style="color:white;">  Satsa nu </a></button>
+									<button class="ticket_button mt-4"><a href="https://www.powerball.com/" target="blank">  Satsa nu </a></button>
 								</div>
 							</div>
 						</div>
