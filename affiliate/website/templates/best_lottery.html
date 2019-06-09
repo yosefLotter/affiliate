@@ -11,9 +11,13 @@
 			<div class="welcome mt-3">
 
 				<div class="welcome_content">
-					<h4> What is the best Lottery to play? </h4>
+					<h4> Undrar du vilket lotto som är bäst att spela på?? </h4>
 					<p>
-						Wondering what the best lottery to play is? With so many options to choose from nowadays thanks to the many online lottery sites that provide access to dozens of games from around the world, it can be hard to know what makes one lottery better than another. Luckily, we've carefully researched the most popular, fairest, and cheapest games that exist so that you don't have to! We've looked at each lottery jackpot, odds of winning the lottery, ticket prices, how easy the game mechanics are to grasp, whether the game has any caps on its jackpots or rollovers, whether winnings are taxed, and what unique features it has. Ultimately, we look at the value and fun that each game offers and give our verdict on whether we think it's worth playing overall. And on that note, we wish you the best of luck!
+						Man kan gradera ett lotteri efter dess jackpottar, vinnarodds, pris för spelrader, skatter och så vidare.
+						Många spelare tittar på jackpottarnas storlek eftersom de drömmer om att vinna en hisnande jackpot
+						för att sedan uppfylla alla sina drömmar. Här nedan kan du se en lista på de 10 lotterier som brukar
+						ha de högsta jackpottarna. Överst är det lotteri som brukar ha de största jackpottarna och på andra
+						plats det lotteri som brukar ha näst största jackpotten och så vidare.		
 					</p>
 				</div>
 			
@@ -45,13 +49,13 @@
 
 
 										<ul class="col-sm-4">
-											<b>Odds</b>
+											<b>Jackpotodds</b>
 											<li> {{  article.lottery.odds }}</li>
 										</ul>
 							</div>
 
-										<ul>
-											<li>
+										<ul class="test">
+											<li >
 												{{  article.lottery.intro_content }}
 												<label  style="color:blue;"><a href="{% url 'website:lottery_page' lottery_id=article.lottery_id %}"> Läs mer..</a> </label>
 											</li>

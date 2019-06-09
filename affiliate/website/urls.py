@@ -17,4 +17,6 @@ urlpatterns = [
 	path('winner_page/', views.winner_page, name='winner_page'),
 	path('winner_page/<int:winner_id>/', views.winner_page, name='winner_page'),
 
+	path('faq_questions/', views.faq_questions, name='faq_questions'),
+
 ]

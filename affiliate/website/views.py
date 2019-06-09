@@ -17,9 +17,11 @@ def best_lottery(request):
 	context = {
 		'articles' : articles
 	}
-
 	return render(request, 'best_lottery.html', context)
 
+
+def faq_questions(request):
+	return render(request, 'faq.html')
 
 def lottery_page(request, lottery_id):
 	lottery = Article.objects.filter(lottery_id=lottery_id)
