@@ -5,11 +5,10 @@ from .models import  Lottery, Lottery_image, Article, Winner, First_page
 
 
 def index(request):
-	content = First_page.objects.all()
-	context = {
-		'content' : content
-	}
-
+	# content = First_page.objects.all()
+	# context = {
+	# 	'content' : content
+	# }
 	return render(request, 'index.html', context)
 
 # For Best_lottery Page
