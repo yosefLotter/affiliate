@@ -9,7 +9,7 @@ def index(request):
 	# context = {
 	# 	'content' : content
 	# }
-	return render(request, 'index.html', context)
+	return render(request, 'index.html')
 
 # For Best_lottery Page
 def best_lottery(request):
