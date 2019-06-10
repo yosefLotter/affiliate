@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['yoseflotter.pythonanywhere.com']
 
-ALLOWED_HOSTS = []
+
 
 # Application definition
 
