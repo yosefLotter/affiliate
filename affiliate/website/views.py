@@ -11,13 +11,17 @@ def index(request):
 	# }
 	return render(request, 'index.html')
 
+def europe_list(request):
+	return render(request, 'europe_list.html')
+
 # For Best_lottery Page
-def best_lottery(request):
+# Ta bort ARTICLE SKA VAR LOTTERY!!! 
+def highest_jackpots(request):
 	articles = Article.objects.all()
 	context = {
 		'articles' : articles
 	}
-	return render(request, 'best_lottery.html', context)
+	return render(request, 'highest_jackpots.html', context)
 
 
 def faq_questions(request):

@@ -5,22 +5,23 @@ from django.db import models
 # For Lottery Page the content
 class Lottery(models.Model):
 	name_of_lottery = models.CharField(max_length=100)
+	continent = models.CharField(max_length=100)
 	jackpot = models.CharField(max_length=40)
 	odds = models.CharField(max_length=100)
 	dragnings_datum = models.CharField(max_length=400)
 	intro_content = models.TextField(max_length=500, blank=True)
-	price_range = models.CharField(max_length=50)
 	logo = models.ImageField(default=None, blank=True)
 	flaga = models.ImageField(default=None, blank=True)
+
 
 	def __str__(self):
 		return '{},{},{},{},{}'.format(
 			self.name_of_lottery,
+			self.continent,
 			self.jackpot,
 			self.odds,
 			self.dragnings_datum,
-			self.price_range,
-			)
+		)
 
 
 # Each Lottery has 3 Pictures in a Image-Libaray

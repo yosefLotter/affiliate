@@ -22,22 +22,14 @@ body{
 	padding:0px;
 }
 
-.nav-item{
-	list-style-type: none;
-}
 
 
-#color{
+#color_blue{
 	background-color:#096BB6;
 }
 
 
-.dropdown-item a{
-	color:green;
-	background-color: black;
-}
-
-#navbar_head_text{
+.navbar a{
 	color:white;
 }
 
@@ -48,7 +40,6 @@ body{
 	border:1px solid grey;
 	box-shadow: 5px 5px grey;
 	background-color:#F7F7F7
-	
 }
 
 .margin_0{
@@ -281,4 +272,16 @@ div.sticky{
 	background-color:green;
 	width:100%;
 	border-radius:5px;
+}
+
+
+
+
+/* For FAQ Page */
+.faq_box{
+	border-radius:2px;
+	width:1000px;
+	max-width:100%;
+	padding:5px;
+	background-color:#E5EDF6;
 }
