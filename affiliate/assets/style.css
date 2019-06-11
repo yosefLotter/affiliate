@@ -28,7 +28,9 @@ body{
 	background-color:#096BB6;
 }
 
-
+.navbar{
+	max-width:100%;
+}
 .navbar a{
 	color:white;
 }
@@ -46,34 +48,16 @@ body{
 	margin:0px;
 }
 
-/* First Intro for the lottery at the index page */
-#header h4{
-	margin:0px;
-	padding:5px;
-	background-color:#096BB6;
-	border-radius:2px;
-	box-shadow: 5px 5px grey;
-	color:white;
-}
 
 
 
-
-
-
-.list-group{
-	box-shadow: 5px 5px grey;
-	border-radius:2px;
-}
-
-
-
-/* page Best_lotteries */
+/* page Highest Jackpotts */
 .welcome{
 	background-color:#096BB6;
 }
 
 .welcome_content{
+	
 	padding:10px;
 	color:white;
 	font-size:15px;
@@ -110,7 +94,7 @@ li{
 }
 
 .lottery_box{
-	background-color:#FAFAFA;
+	background-color:#FFFF;
 	padding:20px;
 	border-radius:5px;
 }
@@ -280,9 +264,22 @@ div.sticky{
 
 /* For FAQ Page */
 .faq_box{
-	border-radius:2px;
+	border-radius:5px;
 	width:1000px;
 	max-width:100%;
+	
+	
+}
+.faq_box p{
+	margin:5px;
 	padding:5px;
-	background-color:#E5EDF6;
+	background-color:#FFFF;
+}
+
+
+
+/* for Hihgest JAckpott */
+.wrapper{
+	max-width:100%;
+	margin:15px;
 }
