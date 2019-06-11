@@ -1,5 +1,5 @@
 body{
-	background-color: #FFFFFF;
+	background-color: #ECF0F1;
 	font-family: "Times New Roman", Times, serif;
 }
 
@@ -110,7 +110,7 @@ li{
 }
 
 .lottery_box{
-	background-color:white;
+	background-color:#FAFAFA;
 	padding:20px;
 	border-radius:5px;
 }
@@ -119,6 +119,7 @@ li{
 
 #lottery_logo{
 	position:auto;
+	width:80px;
 	max-height:100px;
 	max-width:100%;
 }

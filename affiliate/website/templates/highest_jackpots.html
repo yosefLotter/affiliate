@@ -2,12 +2,8 @@
 {% block content %} 
 
 
-	<div class="row">
 
-		<div class="col-sm-1">
-		</div>
-
-		<div class="col-sm-10">
+		<div class="container">
 			<div class="welcome mt-3">
 
 				<div class="welcome_content">
@@ -25,39 +21,38 @@
 
 
 
-				<div class="lottery_page">
-					{% for article in articles %}
-						<div class="lottery_box">
-							<div class="row">
 
+					{% for lottery in lotteries %}
+						<div class="lottery_box mt-2">
+							<div class="row">
 								<div class="col-lg-1">
-									<img src="{{ article.lottery.logo.url }}" id="lottery_logo">
+									<img src="{{ lottery.logo.url }}" id="lottery_logo" class="center">
 								</div>
 								<div class="col-lg-9" >
 									<div class="row">
 										<ul class="col-sm-4">
 											<b> Jackpot </b>
-											<li> {{ article.lottery.jackpot }} </li>
+											<li> {{ lottery.jackpot }} </li>
 							
 										</ul>
 								
 										<ul class="col-sm-4">
 											<b class="margin_0">Dragning</b>
-											<p>{{  article.lottery.dragnings_datum }}</p>
+											<p>{{  lottery.dragnings_datum }}</p>
 										</ul>
 
 
 
 										<ul class="col-sm-4">
 											<b>Jackpotodds</b>
-											<li> {{  article.lottery.odds }}</li>
+											<li> {{  lottery.odds }}</li>
 										</ul>
 							</div>
 
 										<ul class="test">
 											<li >
-												{{  article.lottery.intro_content }}
-												<label  style="color:blue;"><a href="{% url 'website:lottery_page' lottery_id=article.lottery_id %}"> Läs mer..</a> </label>
+												{{  lottery.intro_content }}
+												<label  style="color:blue;"> Läs mer..</a> </label>
 											</li>
 										</ul>
 									
@@ -70,7 +65,7 @@
 						</div>
 						<br>
 					{% endfor %}
-				</div>
+
 		</div>
 	</div>
 {%endblock%}
