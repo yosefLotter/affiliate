@@ -12,10 +12,7 @@ body{
 .col-lg-1{
 	padding:0px;
 }
-.col-lg-3{
-	background-color: #E5EDF6;
-	padding:0px;
-}
+
 
 .col-lg-8{
 	padding:0px;
@@ -157,7 +154,7 @@ li{
 /* For Winner profile_bild */
 #banner{
 	margin:0px;
-	width:500px;
+	width:1000px;
 	height:100px;
 	max-width:100%;
 	max-height:100%;
@@ -206,41 +203,36 @@ li{
 	border:1px solid #414141;
 }
 
-
-/* Lottery Article For Right Side */
-
-.winner_box_side{
-	border:1px solid #414141;
-	border-radius:5px;
-}
-/* Lottery Article For Right Side */
-.winner_box_side img{
-	width:100px;
-	height:100px;
+.winner_box{
 
 }
-/* Lottery Article For Right Side */
-.winner_box_side h4{
+.winner_box h4{
 	margin:0px;
 	padding:5px;
 	background-color:#096BB6;
-	color:#F7F7F7;
-	font-style:italic;
+	color:white;
 	font-weight:bold;
-
+	border-top-right-radius:10px;
 }
+.winner_box h5{
+	padding:5px;
+	margin:0px;
+	background-color:#FAFAFA;
+	font-weight:bold;
+	font-style:italic;
+}
+
 
 /* Lottery Article For Right Side */
 .winner_box_content{
+	border-bottom-right-radius:10px;
 	padding:5px;
-	color:#414141;
+	background-color:white;
 
 }
-.winner_box_content h5{
-	font-style:italic;
-	font-weight:bold;
-}
+
 .winner_box_content p{
+	color:black;
 	font-style:italic;
 }
 
@@ -273,7 +265,7 @@ div.sticky{
 .faq_box p{
 	margin:5px;
 	padding:5px;
-	background-color:#FFFF;
+
 }
 
 
@@ -282,4 +274,5 @@ div.sticky{
 .wrapper{
 	max-width:100%;
 	margin:15px;
+	padding:5px;
 }

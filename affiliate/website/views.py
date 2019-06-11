@@ -18,7 +18,6 @@ def europe_list(request):
 # Ta bort ARTICLE SKA VAR LOTTERY!!! 
 def highest_jackpots(request):
 	lotteries = Lottery.objects.all()
-	print(lotteries)
 	context = {
 		'lotteries' : lotteries
 	}
@@ -26,7 +25,11 @@ def highest_jackpots(request):
 
 
 def faq_questions(request):
-	return render(request, 'faq.html')
+	winners = Winner.objects.filter(lottery_id=1)
+	context = {
+		'winners':winners
+	}
+	return render(request, 'faq.html', context)
 
 def lottery_page(request, lottery_id):
 	lottery = Article.objects.filter(lottery_id=lottery_id)
