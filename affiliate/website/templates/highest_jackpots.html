@@ -25,31 +25,31 @@
 					{% for lottery in lotteries %}
 						<div class="lottery_box mt-2">
 							<div class="row">
-								<div>
+								<div class="col-lg-1">
 									<img src="{{ lottery.logo.url }}" id="lottery_logo" class="center">
 								</div>
-								<div>
+								<div class="col-lg-9" >
 									<div class="row">
-										<ul>
+										<ul class="col-sm-4">
 											<b> Jackpot </b>
 											<li> {{ lottery.jackpot }} </li>
 							
 										</ul>
 								
-										<ul>
+										<ul class="col-sm-4">
 											<b class="margin_0">Dragning</b>
 											<p>{{  lottery.dragnings_datum }}</p>
 										</ul>
 
 
 
-										<ul>
+										<ul class="col-sm-4">
 											<b>Jackpotodds</b>
 											<li> {{  lottery.odds }}</li>
 										</ul>
 							</div>
 
-										<ul>
+										<ul class="test">
 											<li >
 												{{  lottery.intro_content }}
 												<label style="color:blue;"> <a href="{% url 'website:lottery_page' lottery_id=lottery.id  %}"> Läs mer.. </a> </label>
@@ -58,7 +58,7 @@
 									
 								</div>
 
-								<div>
+								<div class="col-lg-2">
 									<button class="ticket_button mt-4"><a href="https://www.powerball.com/" target="blank">  Satsa nu </a></button>
 								</div>
 							</div>
