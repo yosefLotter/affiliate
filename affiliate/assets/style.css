@@ -279,7 +279,7 @@ div.sticky{
 }
 
 .lotterier_mini_list{
-
+	max-width:100%;
 	background-color:white;
 	border-bottom-right-radius:10px;
 }
@@ -296,4 +296,15 @@ div.sticky{
 	margin-left:10px;
 	float:left;
 	margin-right:10px;
+}
+
+
+
+
+.a_hover_box:hover{
+	cursor:pointer;
+	border-radius:10px;
+	background-color:#F5F5F5;
+	transform:scale(1.05);
+
 }

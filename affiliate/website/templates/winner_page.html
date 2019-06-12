@@ -25,11 +25,7 @@
 					<h4>{{ winner.welcome_title }}</h4>
 					<p>{{winner.welcome_text}}</p>
 				</div>
-				{% for image in lottery_images %}
-				{% if image.rektangel %}
-				<img src="{{ image.rektangel.url }}" class="center">
-				{% endif %}
-				{% endfor %}
+
 				<div class="small_content">
 					<h4>{{ winner.a_title }}</h4>
 					<p>{{ winner.a_content }}</p>
@@ -77,34 +73,43 @@
 	</div>
 
 	<div class="col-lg-3">
-		<div class="wrapper">	
-			<div class="lottery_box">
-				<div class="commercial">
-					<div class="commercial_content">
-						<img src="{% static 'top_3_lotteries.png' %}" alt="My image">
-					</div>
-				</div>
-			</div>
 
+			<div class="lotterier_mini_list mt-3">
+				<h4>Lotterier på nätet</h4>
+				{% for lottery in lotteries %}
 
-				
-
-					<div class="lotterier_mini_list mt-3">
-						<h4>Lotterier på nätet</h4>
-						{% for lottery in lotteries %}
+				<div class="a_hover_box">
+					<a>
 						<img src="{{ lottery.logo.url }}" width="50">
 						<ul>
 							<li><b> {{ lottery.name_of_lottery }}</b></li>
-							<li><a href="#">Paragrah</a> </li>
+							<li>huhu</li>
 						</ul>
 						<br>
-						{% endfor %}
-					</div>
+					</a>
+				</div>
+				{% endfor %}
+			</div>
 
 
-					
 
+			<div class="lotterier_mini_list mt-3">
+				<h4>Lotterier på nätet</h4>
+				{% for lottery in lotteries %}
 
+				<div class="a_hover_box">
+					<a>
+						<img src="{{ lottery.logo.url }}" width="50">
+						<ul>
+							<li><b> {{ lottery.name_of_lottery }}</b></li>
+							<span><li>vann en Powerball jackpott på 768,4 miljoner $ den 27 mars 2019. Vinsten är den tredje största </li>
+							
+						</ul>
+						<br>
+					</a>
+				</div>
+				{% endfor %}
+			</div>
 
 
 
