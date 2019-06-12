@@ -27,7 +27,7 @@
 				</div>
 				{% for image in lottery_images %}
 				{% if image.rektangel %}
-				<img src="{{ image.rektangel.url }}" width="200" class="center">
+				<img src="{{ image.rektangel.url }}" class="center">
 				{% endif %}
 				{% endfor %}
 				<div class="small_content">
@@ -54,7 +54,7 @@
 				{# image tag from lottery images.#}
 				{% for image in lottery_images %}
 				{% if image.kvadrat %}
-				<img src="{{ image.kvadrat.url }}" width="200" class="center">
+				<img src="{{ image.kvadrat.url }}" width="100" class="center">
 				{% endif %}
 				{% endfor %}
 				<br>
@@ -77,7 +77,7 @@
 	</div>
 
 	<div class="col-lg-3">
-		<div class="lottery_page">	
+		<div class="wrapper">	
 			<div class="lottery_box">
 				<div class="commercial">
 					<div class="commercial_content">
@@ -85,6 +85,29 @@
 					</div>
 				</div>
 			</div>
+
+
+				
+
+					<div class="lotterier_mini_list mt-3">
+						<h4>Lotterier på nätet</h4>
+						{% for lottery in lotteries %}
+						<img src="{{ lottery.logo.url }}" width="50">
+						<ul>
+							<li><b> {{ lottery.name_of_lottery }}</b></li>
+							<li><a href="#">Paragrah</a> </li>
+						</ul>
+						<br>
+						{% endfor %}
+					</div>
+
+
+					
+
+
+
+
+
 		</div>
 	</div>
 </div>

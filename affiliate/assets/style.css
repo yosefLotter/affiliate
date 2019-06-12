@@ -70,7 +70,7 @@ body{
 .welcome_text{
 	padding:5px;
 }
-/* List of lotteries */
+
 
 
 ul{
@@ -84,14 +84,10 @@ li{
 }
 
 .lottery_page{
-	border-right:1px solid #414141;
-	padding:20px;
-	background-color: #E5EDF6;
-
+	margin:20px;
 }
 
 .lottery_box{
-
 	background-color:#FFFF;
 	padding:20px;
 	border-radius:5px;
@@ -268,7 +264,11 @@ div.sticky{
 	padding:5px;
 
 }
-
+.faq_box h5{
+	font-style:italic;
+	font-weight:bold;
+	color:#414141;
+}
 
 
 /* for Hihgest JAckpott */
@@ -276,4 +276,24 @@ div.sticky{
 	max-width:100%;
 	margin:15px;
 	padding:5px;
+}
+
+.lotterier_mini_list{
+
+	background-color:white;
+	border-bottom-right-radius:10px;
+}
+
+.lotterier_mini_list h4{
+	border-top-right-radius:10px;
+	padding:5px;
+	font-style:italic;
+	font-weight:bold;
+	background-color:#096BB6;
+	color:white;
+}
+.lotterier_mini_list img{
+	margin-left:10px;
+	float:left;
+	margin-right:10px;
 }

@@ -5,17 +5,12 @@ from .models import  Lottery, Lottery_image, Article, Winner, First_page
 
 
 def index(request):
-	# content = First_page.objects.all()
-	# context = {
-	# 	'content' : content
-	# }
 	return render(request, 'index.html')
 
 def europe_list(request):
 	return render(request, 'europe_list.html')
 
 # For Best_lottery Page
-# Ta bort ARTICLE SKA VAR LOTTERY!!! 
 def highest_jackpots(request):
 	lotteries = Lottery.objects.all()
 	context = {
@@ -25,7 +20,7 @@ def highest_jackpots(request):
 
 
 def faq_questions(request):
-	winners = Winner.objects.filter(lottery_id=1)
+	winners = Winner.objects.all()[:3]
 	context = {
 		'winners':winners
 	}
@@ -53,9 +48,11 @@ def winner_page(request):
 def winner_page(request, winner_id):
 	winners = Winner.objects.filter(pk=winner_id)
 	lottery_images = Lottery_image.objects.filter(lottery_id=winner_id)
+	lotteries = Lottery.objects.all()
 	context = {
 		'winners': winners,
 		'lottery_images': lottery_images,
+		'lotteries': lotteries
 	}
 	return render(request, 'winner_page.html', context)
 
