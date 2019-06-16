@@ -2,8 +2,8 @@
   <a class="navbar-brand" href="/">LottoTellus</a>
   <a class="navbar-brand" href="{% url 'website:europe_list' %}">Europa</a>
   <a class="navbar-brand" href="#">Asien</a>
-  <a class="navbar-brand" href="#">Sydamerika</a>
-  <a class="navbar-brand" href="#">Amerika</a>
+  <a class="navbar-brand" href="{% url 'website:sydamerika_list' %}">Sydamerika</a>
+  <a class="navbar-brand" href="{% url 'website:amerika_list' %}">Amerika</a>
   <a  class="navbar-brand" href="{% url 'website:highest_jackpots' %}"> Highest Jackpotts </a>
   <a class="navbar-brand" href="{% url 'website:faq_questions' %}">Faq Frågor</a>
 </nav>
