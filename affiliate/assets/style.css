@@ -308,3 +308,9 @@ div.sticky{
 	transform:scale(1.05);
 
 }
+
+
+@viewport {
+  width: device-width ;
+  zoom: 1.0 ;
+} 
