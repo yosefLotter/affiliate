@@ -3,9 +3,6 @@
 {% load static %}
 <div class="row">
 	<div class="col-lg-1">
-		<div class="sticky">
-			<button> Satsa nu </button>
-		</div>
 	</div>
 
 	<div class="col-lg-8">
@@ -13,7 +10,7 @@
 		
 {% for winner in winners %}
 
-			<div class="lottery_box">
+			<div class="white_wrapper mt-3">
 
 
 				<div>
@@ -74,45 +71,40 @@
 
 	<div class="col-lg-3">
 
-			<div class="lotterier_mini_list mt-3">
-				<h4>Lotterier på nätet</h4>
-				{% for lottery in mini_list_lotteries %}
 
-				<div class="a_hover_box">
-					<a>
-						<img src="{{ lottery.logo.url }}" width="50">
-						<ul>
-							<li><b> {{ lottery.name_of_lottery }}</b></li>
-							<li>huhu</li>
-						</ul>
-						<br>
-					</a>
+
+			<div class="welcome mt-3">
+				<div class="welcome_content">
+					<h4>Top 5 Lotterier på nätet</h4>
 				</div>
-				{% endfor %}
 			</div>
 
 
-
-			<div class="lotterier_mini_list mt-3">
-				<h4>Lotterier på nätet</h4>
-				{% for lottery in mini_list_lotteries %}
-
+		<div class="lotterier_mini_list">
+			
+			{% for lottery in mini_list_lotteries %}
 				<div class="a_hover_box">
 					<a>
 						<img src="{{ lottery.logo.url }}" width="50">
 						<ul>
 							<li><b> {{ lottery.name_of_lottery }}</b></li>
-							<span><li>vann en Powerball jackpott på 768,4 miljoner $ den 27 mars 2019. Vinsten är den tredje största </li>
+							<span><li>vann en Powerball jackpott på 768,4 miljoner $ den 27 mars 2019. Vinsten är den tredje största </li></span>
 							
 						</ul>
 						<br>
 					</a>
 				</div>
-				{% endfor %}
-			</div>
+				<hr>
+			{% endfor %}
+		</div>
 
-
-
+		<div class="list_of_links mt-3">
+			<h4> Bla Bla Bla </h4>
+			<ul>
+				<li><a href="#">  Undrar du vilket lotto som är bäst att spela på??  </a></li><hr>
+				<li><a href="#">  Spela lotto med vår lottoguide </a></li><hr>
+				<li><a href="#"> Här nedan finner du svar på de vanligast ställda frågorna om hur man spelar lotto online. </a></li><hr>
+			</ul>
 		</div>
 	</div>
 </div>

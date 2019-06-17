@@ -77,7 +77,7 @@ def winner_page(request):
 def winner_page(request, winner_id):
 	winners = Winner.objects.filter(pk=winner_id)
 	lottery_images = Lottery_image.objects.filter(lottery_id=winner_id)
-	mini_list_lotteries = Lottery.objects.all()[:10]
+	mini_list_lotteries = Lottery.objects.all()[:5]
 	context = {
 		'winners': winners,
 		'lottery_images': lottery_images,

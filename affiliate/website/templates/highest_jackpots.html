@@ -7,20 +7,20 @@
 	</div>
 
 	<div class="col-lg-8">
-
-
-			<div class="welcome mt-3">
-				<div class="welcome_content">
-					<h4> Undrar du vilket lotto som är bäst att spela på?? </h4>
-					<p class="welcome_text">
-						Man kan gradera ett lotteri efter dess jackpottar, vinnarodds, pris för spelrader, skatter och så vidare.
-						Många spelare tittar på jackpottarnas storlek eftersom de drömmer om att vinna en hisnande jackpot
-						för att sedan uppfylla alla sina drömmar. Här nedan kan du se en lista på de 10 lotterier som brukar
-						ha de högsta jackpottarna. Överst är det lotteri som brukar ha de största jackpottarna och på andra
-						plats det lotteri som brukar ha näst största jackpotten och så vidare.		
-					</p>
-				</div>
+		<div class="welcome mt-3">
+			<div class="welcome_content">
+				<h4> Undrar du vilket lotto som är bäst att spela på?? </h4>
+				<p class="welcome_text">
+					Man kan gradera ett lotteri efter dess jackpottar, vinnarodds, pris för spelrader, skatter och så vidare.
+					Många spelare tittar på jackpottarnas storlek eftersom de drömmer om att vinna en hisnande jackpot
+					för att sedan uppfylla alla sina drömmar. Här nedan kan du se en lista på de 10 lotterier som brukar
+					ha de högsta jackpottarna. Överst är det lotteri som brukar ha de största jackpottarna och på andra
+					plats det lotteri som brukar ha näst största jackpotten och så vidare.		
+				</p>
 			</div>
+		</div>
+
+		<div class="lottery_list">
 			{% for lottery in lotteries %}
 			<div class="lottery_box mt-1">
 				<div class="row">
@@ -48,7 +48,7 @@
 							</ul>
 				</div>
 
-				<ul class="test">
+				<ul>
 					<li >
 						{{  lottery.intro_content }}
 						<label style="color:blue;"> <a href="{% url 'website:lottery_page' lottery_id=lottery.id  %}"> Läs mer.. </a> </label>
@@ -64,7 +64,7 @@
 		</div>
 		<br>
 		{% endfor %}
-		</div>
+
 	</div>
 
 	<div class="col-lg-2">
