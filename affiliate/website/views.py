@@ -5,7 +5,11 @@ from .models import  Lottery, Lottery_image, Article, Winner, First_page
 
 
 def index(request):
-	return render(request, 'index.html')
+	mini_list_lotteries = Lottery.objects.all()[:5]
+	context = {
+		'mini_list_lotteries':mini_list_lotteries,
+	}
+	return render(request, 'index.html', context)
 
 # Europa sida
 def europe_list(request):
@@ -14,6 +18,13 @@ def europe_list(request):
 		'europe_list': europe_list,
 	}
 	return render(request, 'europe_list.html', context)
+
+def asien_list(request):
+	asien_list = Lottery.objects.filter(continent='Asien')
+	context = {
+		'asien_list':asien_list,
+	}
+	return render(request, 'asien_list.html', context)
 
 
 def sydamerika_list(request):
@@ -66,11 +77,11 @@ def winner_page(request):
 def winner_page(request, winner_id):
 	winners = Winner.objects.filter(pk=winner_id)
 	lottery_images = Lottery_image.objects.filter(lottery_id=winner_id)
-	lotteries = Lottery.objects.all()
+	mini_list_lotteries = Lottery.objects.all()[:10]
 	context = {
 		'winners': winners,
 		'lottery_images': lottery_images,
-		'lotteries': lotteries
+		'mini_list_lotteries': mini_list_lotteries
 	}
 	return render(request, 'winner_page.html', context)
 
