@@ -50,6 +50,8 @@ body{
 
 /* page Highest Jackpotts */
 .welcome{
+	border-top-right-radius:5px;
+	border-top-left-radius:5px;
 	background-color:#096BB6;
 }
 
@@ -271,8 +273,15 @@ div.sticky{
 }
 
 
-/* for Hihgest JAckpott */
 .wrapper{
+	width:80%;
+	max-width:100%;
+	margin-left:auto;
+	margin-right:auto;
+	padding:5px;
+}
+
+.wrapper_faq{
 	max-width:100%;
 	margin:15px;
 	padding:5px;
@@ -308,9 +317,14 @@ div.sticky{
 	transform:scale(1.05);
 
 }
-
-
+.a_hover_box a{
+	text-decoration: none;
+	color:black;
+}
 @viewport {
   width: device-width ;
   zoom: 1.0 ;
 } 
+
+
+

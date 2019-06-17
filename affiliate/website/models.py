@@ -39,14 +39,11 @@ class Lottery_image(models.Model):
 		)
 
 
-
-
-
-#{{ content.lottery.flaga.url
 # Each Lottery has it own Lottery page with Articles.
 class Article(models.Model):
 	name_of_article = models.CharField(max_length=200)
 	lottery = models.ForeignKey(Lottery, on_delete=models.CASCADE)
+	
 	welcome_text = models.TextField(blank=True)
 
 	
