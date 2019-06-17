@@ -1,11 +1,15 @@
 {% extends 'base.html' %}
-{% block content %} 
+{% block content %}
+{% load static %}
+<div class="row">
+	<div class="col-lg-2">
+		<p> </p>
+	</div>
+
+	<div class="col-lg-8">
 
 
-<div class="wrapper">
-		
 			<div class="welcome mt-3">
-
 				<div class="welcome_content">
 					<h4> Undrar du vilket lotto som är bäst att spela på?? </h4>
 					<p class="welcome_text">
@@ -16,10 +20,9 @@
 						plats det lotteri som brukar ha näst största jackpotten och så vidare.		
 					</p>
 				</div>
-			
 			</div>
-		{% for lottery in lotteries %}
-			<div class="lottery_box mt-2">
+			{% for lottery in lotteries %}
+			<div class="lottery_box mt-1">
 				<div class="row">
 					<div class="col-lg-1">
 						<img src="{{ lottery.logo.url }}" id="lottery_logo" class="center">
@@ -45,24 +48,30 @@
 							</ul>
 				</div>
 
-							<ul class="test">
-								<li >
-									{{  lottery.intro_content }}
-									<label style="color:blue;"> <a href="{% url 'website:lottery_page' lottery_id=lottery.id  %}"> Läs mer.. </a> </label>
-								</li>
-							</ul>
+				<ul class="test">
+					<li >
+						{{  lottery.intro_content }}
+						<label style="color:blue;"> <a href="{% url 'website:lottery_page' lottery_id=lottery.id  %}"> Läs mer.. </a> </label>
+					</li>
+				</ul>
 						
-					</div>
+				</div>
 
-					<div class="col-lg-2">
-						<button class="ticket_button mt-4"><a href="https://www.powerball.com/" target="blank">  Satsa nu </a></button>
-					</div>
+				<div class="col-lg-2">
+					<button class="ticket_button mt-4"><a href="https://www.powerball.com/" target="blank">  Satsa nu </a></button>
 				</div>
 			</div>
-			<br>
+		</div>
+		<br>
 		{% endfor %}
-
 		</div>
 	</div>
-{%endblock%}
+
+	<div class="col-lg-2">
+	</div>
+</div>
+
+
+{% endblock %}
+
 

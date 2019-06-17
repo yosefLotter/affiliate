@@ -23,7 +23,9 @@ body{
 }
 
 
-
+.content_wrapper{
+	padding:5px;
+}
 #color_blue{
 	background-color:#096BB6;
 }
@@ -264,11 +266,12 @@ div.sticky{
 	
 }
 .faq_box p{
-	margin:5px;
+	margin-left:5px;
 	padding:5px;
 
 }
 .faq_box h5{
+	margin:0px;
 	font-style:italic;
 	font-weight:bold;
 	color:#414141;

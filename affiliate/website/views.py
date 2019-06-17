@@ -87,7 +87,9 @@ def winner_page(request, winner_id):
 
 def faq_questions(request):
 	winners = Winner.objects.all()[:3]
+	mini_list_lotteries = Lottery.objects.all()[:5]
 	context = {
-		'winners':winners
+		'winners':winners,
+		'mini_list_lotteries':mini_list_lotteries
 	}
 	return render(request, 'faq.html', context)
