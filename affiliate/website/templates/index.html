@@ -45,6 +45,24 @@
 					Som du ser är det bara 
 				</p>
 				
+				<div class="test_box">
+					<div class="row">
+
+						
+							{% for lottery in lotteries %}
+								<div class="circle_image">
+									<img src="{{ lottery.logo.url }}" class="center">
+								</div>
+							{% endfor %}
+
+						</div>
+
+				</div>
+
+
+
+
+
 			</div>
 		</div>
 	</div>
@@ -68,7 +86,7 @@
 			</div>
 
 			<div class="list_of_links mt-2">
-				<h4> Bla Bla Bla </h4>
+				<h4> Artiklar </h4>
 				<ul>
 					<li><a href="#">  Undrar du vilket lotto som är bäst att spela på??  </a></li><hr>
 					<li><a href="#">  Spela lotto med vår lottoguide </a></li><hr>

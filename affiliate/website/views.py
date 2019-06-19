@@ -5,8 +5,11 @@ from .models import  Lottery, Lottery_image, Article, Winner, First_page
 
 
 def index(request):
+	# For the circle image...
+	lotteries = Lottery.objects.all()[:4]
 	mini_list_lotteries = Lottery.objects.all()[:5]
 	context = {
+		'lotteries':lotteries,
 		'mini_list_lotteries':mini_list_lotteries,
 	}
 	return render(request, 'index.html', context)

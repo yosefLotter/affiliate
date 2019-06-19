@@ -1,68 +1,78 @@
 {% extends 'base.html' %}
-{% block content %} 
+{% block content %}
+{% load static %}
+<div class="row">
+	<div class="col-lg-2">
+		<p> </p>
+	</div>
 
+	<div class="col-lg-8">
 
-<div class="wrapper">
-		
-			<div class="welcome mt-3">
-
-				<div class="welcome_content">
-					<h4> Sydamerika </h4>
-					<p class="welcome_text">
-						Det är inte många som förknippar Sydamerika med lotto, men där finns faktiskt en hel del spännande lotterier. Sydamerikanska jackpottar kommer inte i närheten av amerikanska rekordjackpottar, men de är ändå i den storleken att de kan ändra vinnarens liv och oddsen för att vinna är bättre. Mega Sena rekordjackpotten är på 72 miljoner $ och vanns i maj 2019.	
-					</p>
-				</div>
-			
+		<div class="welcome mt-3">
+			<div class="welcome_content">
+				<h4> Sydamerika bästa lotterier </h4>
+				<p class="welcome_text">
+					Det är inte många som förknippar Sydamerika med lotto, men där finns faktiskt en hel del spännande lotterier. Sydamerikanska jackpottar kommer inte i närheten av amerikanska rekordjackpottar, men de är ändå i den storleken att de kan ändra vinnarens liv och oddsen för att vinna är bättre. Mega Sena rekordjackpotten är på 72 miljoner $ och vanns i maj 2019.
+				</p>
 			</div>
+		</div>
 
+		<div class="lottery_list">
+			{% for lottery in sydamerika_list %}
+				<div class="lottery_box mt-2">
+					<div class="row">
 
-
-
-					{% for lottery in sydamerika_list %}
-						<div class="lottery_box mt-2">
-							<div class="row">
-								<div class="col-lg-1">
-									<img src="{{ lottery.logo.url }}" id="lottery_logo" class="center">
-								</div>
-								<div class="col-lg-9" >
-									<div class="row">
-										<ul class="col-sm-4">
-											<b> Jackpot </b>
-											<li> {{ lottery.jackpot }} </li>
-							
-										</ul>
-								
-										<ul class="col-sm-4">
-											<b class="margin_0">Dragning</b>
-											<p>{{  lottery.dragnings_datum }}</p>
-										</ul>
-
-
-
-										<ul class="col-sm-4">
-											<b>Jackpotodds</b>
-											<li> {{  lottery.odds }}</li>
-										</ul>
-							</div>
-
-										<ul class="test">
-											<li >
-												{{  lottery.intro_content }}
-												<label style="color:blue;"> <a href="{% url 'website:lottery_page' lottery_id=lottery.id  %}"> Läs mer.. </a> </label>
-											</li>
-										</ul>
-									
-								</div>
-
-								<div class="col-lg-2">
-									<button class="ticket_button mt-4"><a href="https://www.powerball.com/" target="blank">  Satsa nu </a></button>
-								</div>
-							</div>
+						<div class="col-lg-1">
+							<img src="{{ lottery.logo.url }}" id="lottery_logo" class="center">
 						</div>
-						<br>
-					{% endfor %}
 
+						<div class="col-lg-9" >
+
+							<div class="row">
+								<ul class="col-sm-4">
+									<b> Jackpot </b>
+									<li> {{ lottery.jackpot }} </li>
+					
+								</ul>
+						
+								<ul class="col-sm-4">
+									<b class="margin_0">Dragning</b>
+									<p>{{  lottery.dragnings_datum }}</p>
+								</ul>
+
+
+
+								<ul class="col-sm-4">
+									<b>Jackpotodds</b>
+									<li> {{  lottery.odds }}</li>
+								</ul>
+							</div>
+
+							<ul class="test">
+								<li >
+									{{  lottery.intro_content }}
+									<label style="color:blue;"> <a href="{% url 'website:lottery_page' lottery_id=lottery.id  %}"> Läs mer.. </a> </label>
+								</li>
+							</ul>
+						
+						</div>
+
+
+						<div class="col-lg-2">
+							<button class="ticket_button mt-4"><a href="https://www.powerball.com/" target="blank">  Satsa nu </a></button>
+						</div>
+					</div>
+
+				</div>
+			{% endfor %}
 		</div>
 	</div>
-{%endblock%}
+		
+	<div class="col-lg-2">
+	</div>
+</div>
+
+
+{% endblock %}
+
 
