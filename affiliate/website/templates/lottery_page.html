@@ -7,115 +7,115 @@
 	</div>
 
 	<div class="col-lg-8">
+		<div class='page_wrapper'>
+			{%for article in lottery %}	
+				<div class="white_wrapper mt-3">
+					{% for image in images %}
+						{% if image.rektangel %}
+						<img src="{{image.rektangel.url}}" class="center" id="rektangel">
+						{% endif %}
+						{% endfor %}
+					<div class="profile_box">
+						<img src="{{article.lottery.logo.url}}"><br>
+						<h3> {{article.lottery.name_of_lottery}}</h3>
+					</div>
 
-		{%for article in lottery %}	
-			<div class="white_wrapper mt-3">
-				{% for image in images %}
-					{% if image.rektangel %}
-					<img src="{{image.rektangel.url}}" class="center" id="rektangel">
-					{% endif %}
+					<div class="welcome_text">
+						<p>{{article.welcome_text}}</p>
+					</div>
+
+					<div class="big_content_right mt-5">
+						<h4>{{article.a_first_title}}</h4>
+						{% if article.a_content_image_right %}
+						<img src="{{article.a_content_image_right.url}}" width="300" class="mr-2">
+						{% endif %}
+						<p> {{article.a_top_big_content}}</p>z
+					</div>
+
+					<div class="small_content">
+						<h4>{{article.a_first_small_title}}</h4>
+						<p>{{article.a_first_small_content}}</p>
+					</div>
+
+					<div class="small_content">
+						<h4>{{article.a_second_small_title}}</h4>
+						<p>{{article.a_second_small_content}}</p>
+					</div>
+
+					{# image tag from lottery images.#}
+					{% for image in images %}
+						{% if image.kvadrat %}
+						<img src="{{image.kvadrat.url}}" width="500" class="center">
+						{% endif %}
 					{% endfor %}
-				<div class="profile_box">
-					<img src="{{article.lottery.flaga.url}}">
-					<h3> {{article.lottery.name_of_lottery}}</h3>
-				</div>
 
-				<div class="welcome_text">
-					<p>{{article.welcome_text}}</p>
-				</div>
 
-				<div class="big_content_right mt-5">
-					<h4>{{article.a_first_title}}</h4>
-					{% if article.a_content_image_right %}
-					<img src="{{article.a_content_image_right.url}}" width="300" class="mr-2">
+					<div class="big_content_left mt-5">
+						<h4>{{article.b_second_title}}</h4>
+						{% if article.b_content_image_left %}
+						<img src="{{article.b_content_image_left.url}}" width="200">
+						{% endif %}
+						<p> {{article.b_top_big_content}}</p>
+					</div>
+
+					<div class="small_content">
+						<h4 class="mt-2">{{article.b_first_small_title}}</h4>
+						<p>{{article.b_first_small_content}}</p>
+					</div>
+					<div class="small_content">
+						<h4 class="mt-2">{{article.b_second_small_title}}</h4>
+						<p>{{article.b_second_small_content}}</p>
+					</div>
+
+					<div class="big_content mt-5">
+						<h4>{{article.c_first_title}}</h4>
+						{% if article.c_content_image_right %}
+						<img src="{{article.c_content_image_right.url}}" width="300" id="big_content_image_right">
+						{%endif%}
+						<p> {{article.c_top_big_content}}</p>
+					</div>
+
+					<div class="small_content">
+						<h4>{{article.c_first_small_title}}</h4>
+						<p>{{article.c_first_small_content}}</p>
+					</div>
+
+					<div class="small_content">
+						<h4>{{article.c_second_small_title}}</h4>
+						<p>{{article.c_second_small_content}}</p>
+					</div>
+
+					<div class="big_content mt-5">
+						<h4>{{article.d_first_title}}</h4>
+						{% if article.d_content_image_left %}
+						<img src="{{article.d_content_image_left.url}}" width="300" id="big_content_image_left">
+						{%endif%}
+						<p> {{article.d_top_big_content}}</p>
+					</div>
+
+					{# image from lottery libary spare#}
+					{% if images.spare %}
+					<img src="{{images.spare.url}}" width="250" class="center">
 					{% endif %}
-					<p> {{article.a_top_big_content}}</p>z
+
+					<div class="small_content">
+						<h4>{{article.d_first_small_title}}</h4>
+						<p>{{article.d_first_small_content}}</p>
+					</div>
+
+					<div class="small_content">
+						<h4>{{article.d_second_small_title}}</h4>
+						<p>{{article.d_second_small_content}}</p>
+					</div>
+
 				</div>
-
-				<div class="small_content">
-					<h4>{{article.a_first_small_title}}</h4>
-					<p>{{article.a_first_small_content}}</p>
-				</div>
-
-				<div class="small_content">
-					<h4>{{article.a_second_small_title}}</h4>
-					<p>{{article.a_second_small_content}}</p>
-				</div>
-
-				{# image tag from lottery images.#}
-				{% for image in images %}
-					{% if image.kvadrat %}
-					<img src="{{image.kvadrat.url}}" width="500" class="center">
-					{% endif %}
-				{% endfor %}
-
-
-				<div class="big_content_left mt-5">
-					<h4>{{article.b_second_title}}</h4>
-					{% if article.b_content_image_left %}
-					<img src="{{article.b_content_image_left.url}}" width="200">
-					{% endif %}
-					<p> {{article.b_top_big_content}}</p>
-				</div>
-
-				<div class="small_content">
-					<h4 class="mt-2">{{article.b_first_small_title}}</h4>
-					<p>{{article.b_first_small_content}}</p>
-				</div>
-				<div class="small_content">
-					<h4 class="mt-2">{{article.b_second_small_title}}</h4>
-					<p>{{article.b_second_small_content}}</p>
-				</div>
-
-				<div class="big_content mt-5">
-					<h4>{{article.c_first_title}}</h4>
-					{% if article.c_content_image_right %}
-					<img src="{{article.c_content_image_right.url}}" width="300" id="big_content_image_right">
-					{%endif%}
-					<p> {{article.c_top_big_content}}</p>
-				</div>
-
-				<div class="small_content">
-					<h4>{{article.c_first_small_title}}</h4>
-					<p>{{article.c_first_small_content}}</p>
-				</div>
-
-				<div class="small_content">
-					<h4>{{article.c_second_small_title}}</h4>
-					<p>{{article.c_second_small_content}}</p>
-				</div>
-
-				<div class="big_content mt-5">
-					<h4>{{article.d_first_title}}</h4>
-					{% if article.d_content_image_left %}
-					<img src="{{article.d_content_image_left.url}}" width="300" id="big_content_image_left">
-					{%endif%}
-					<p> {{article.d_top_big_content}}</p>
-				</div>
-
-				{# image from lottery libary spare#}
-				{% if images.spare %}
-				<img src="{{images.spare.url}}" width="250" class="center">
-				{% endif %}
-
-				<div class="small_content">
-					<h4>{{article.d_first_small_title}}</h4>
-					<p>{{article.d_first_small_content}}</p>
-				</div>
-
-				<div class="small_content">
-					<h4>{{article.d_second_small_title}}</h4>
-					<p>{{article.d_second_small_content}}</p>
-				</div>
-
-			</div>
+			{%endfor%}
 		</div>
-		{%endfor%}
-
+	</div>
 
 	<div class="col-lg-3">
-
-		{% for winner in winners %}
+		<div class='page_wrapper'>
+			{% for winner in winners %}
 			<div class="winner_box  mt-3">
 				<h4>Winners at Us PowerBall</h4>
 				{% if winner.profil_bild %}
@@ -127,17 +127,17 @@
 					<a href="{% url 'website:winner_page' winner_id=winner.id  %}"> Läs mer.. </a>
 				</div>
 			</div>
-		{% endfor %}
-		
-		<div class="list_of_links mt-2">
-			<h4> Bla Bla Bla </h4>
-			<ul>
-				<li><a href="#">  Undrar du vilket lotto som är bäst att spela på??  </a></li><hr>
-				<li><a href="#">  Spela lotto med vår lottoguide </a></li><hr>
-				<li><a href="#"> Här nedan finner du svar på de vanligast ställda frågorna om hur man spelar lotto online. </a></li><hr>
-			</ul>
+			{% endfor %}
+			
+			<div class="list_of_links mt-2">
+				<h4> Bla Bla Bla </h4>
+				<ul>
+					<li><a href="#">  Undrar du vilket lotto som är bäst att spela på??  </a></li><hr>
+					<li><a href="#">  Spela lotto med vår lottoguide </a></li><hr>
+					<li><a href="#"> Här nedan finner du svar på de vanligast ställda frågorna om hur man spelar lotto online. </a></li><hr>
+				</ul>
+			</div>
 		</div>
-
 	</div>
 </div>
 
