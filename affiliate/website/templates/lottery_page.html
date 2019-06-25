@@ -130,11 +130,11 @@
 			{% endfor %}
 			
 			<div class="list_of_links mt-2">
-				<h4> Bla Bla Bla </h4>
+				<h4> Artiklar </h4>
 				<ul>
-					<li><a href="#">  Undrar du vilket lotto som är bäst att spela på??  </a></li><hr>
-					<li><a href="#">  Spela lotto med vår lottoguide </a></li><hr>
-					<li><a href="#"> Här nedan finner du svar på de vanligast ställda frågorna om hur man spelar lotto online. </a></li><hr>
+					<li><a href="{% url 'website:highest_jackpots' %}">  Undrar du vilket lotto som är bäst att spela på??  </a></li><hr>
+					<li><a href="{% url 'website:index' %}">  Spela lotto med vår lottoguide </a></li><hr>
+					<li><a href="{% url 'website:faq_questions' %}"> Här nedan finner du svar på de vanligast ställda frågorna om hur man spelar lotto online. </a></li><hr>
 				</ul>
 			</div>
 		</div>

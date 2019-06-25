@@ -26,16 +26,18 @@ body{
 
 
 .content_wrapper{
+	max-width:100%;
+	width:850px;
 	padding:5px;
 }
+
 #color_blue{
 	background-color:#096BB6;
 }
 
-.navbar{
-	max-width:100%;
-}
-.navbar a{
+#navbarNavAltMarkup a{
+	font-weight:bold;
+	margin-right:180px;
 	color:white;
 }
 
@@ -223,7 +225,6 @@ li{
 	background-color:#096BB6;
 	color:white;
 	font-weight:bold;
-	border-top-right-radius:10px;
 }
 .winner_box h5{
 	padding:5px;
@@ -303,11 +304,9 @@ div.sticky{
 .lotterier_mini_list{
 	max-width:100%;
 	background-color:white;
-	border-bottom-right-radius:10px;
 }
 
 .lotterier_mini_list h4{
-	border-top-right-radius:10px;
 	padding:5px;
 	font-style:italic;
 	font-weight:bold;
@@ -325,12 +324,14 @@ div.sticky{
 
 .a_hover_box:hover{
 	cursor:pointer;
-	border-radius:10px;
 	background-color:#F5F5F5;
 	transform:scale(1.05);
 
 }
+
+
 .a_hover_box a{
+	outline: none;
 	text-decoration: none;
 	color:black;
 }

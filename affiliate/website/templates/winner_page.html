@@ -70,41 +70,32 @@
 	</div>
 
 	<div class="col-lg-3">
+		<div class='page_wrapper'>
+			<div class="lotterier_mini_list mt-3">
+				<h4>Lotterier på nätet</h4>
+				{% for lottery in mini_list_lotteries %}
 
-
-
-			<div class="welcome mt-3">
-				<div class="welcome_content">
-					<h4>Top 5 Lotterier på nätet</h4>
-				</div>
-			</div>
-
-
-		<div class="lotterier_mini_list">
-			
-			{% for lottery in mini_list_lotteries %}
 				<div class="a_hover_box">
-					<a>
+					<a href="{% url 'website:lottery_page' lottery_id=lottery.id %}">
 						<img src="{{ lottery.logo.url }}" width="50">
 						<ul>
 							<li><b> {{ lottery.name_of_lottery }}</b></li>
-							<span><li>vann en Powerball jackpott på 768,4 miljoner $ den 27 mars 2019. Vinsten är den tredje största </li></span>
-							
+							<li>max text 75</li>
 						</ul>
 						<br>
 					</a>
 				</div>
-				<hr>
-			{% endfor %}
-		</div>
+				{% endfor %}
+			</div>
 
-		<div class="list_of_links mt-3">
-			<h4> Bla Bla Bla </h4>
-			<ul>
-				<li><a href="#">  Undrar du vilket lotto som är bäst att spela på??  </a></li><hr>
-				<li><a href="#">  Spela lotto med vår lottoguide </a></li><hr>
-				<li><a href="#"> Här nedan finner du svar på de vanligast ställda frågorna om hur man spelar lotto online. </a></li><hr>
-			</ul>
+			<div class="list_of_links mt-2">
+				<h4> Artiklar</h4>
+				<ul>
+					<li><a href="{% url 'website:highest_jackpots' %}">  Undrar du vilket lotto som är bäst att spela på??  </a></li><hr>
+					<li><a href="{% url 'website:index' %}">  Spela lotto med vår lottoguide </a></li><hr>
+					<li><a href="{% url 'website:faq_questions' %}"> Här nedan finner du svar på de vanligast ställda frågorna om hur man spelar lotto online. </a></li><hr>
+				</ul>
+			</div>
 		</div>
 	</div>
 </div>

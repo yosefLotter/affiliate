@@ -1,9 +1,17 @@
-<nav  class="navbar" id="color_blue">
-  <a class="navbar-brand" href="/">LottoTellus</a>
-  <a class="navbar-brand" href="{% url 'website:europe_list' %}">Europa</a>
-  <a class="navbar-brand" href="{% url 'website:asien_list' %}">Asien</a>
-  <a class="navbar-brand" href="{% url 'website:sydamerika_list' %}">Sydamerika</a>
-  <a class="navbar-brand" href="{% url 'website:amerika_list' %}">Amerika</a>
-  <a  class="navbar-brand" href="{% url 'website:highest_jackpots' %}"> Highest Jackpotts </a>
-  <a class="navbar-brand" href="{% url 'website:faq_questions' %}">Faq Frågor</a>
+<nav class="navbar navbar-dark  navbar-expand-lg" id="color_blue">
+  <a class="navbar-brand mr-5" href="/">LottoTellus</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="{% url 'website:europe_list' %}">Europa</a>
+      <a class="nav-item nav-link" href="{% url 'website:asien_list' %}">Asien</a>
+      <a class="nav-item nav-link" href="{% url 'website:sydamerika_list' %}">Sydamerika</a>
+       <a class="nav-item nav-link" href="{% url 'website:amerika_list' %}">Amerika</a>
+      <a class="nav-item nav-link" href="{% url 'website:highest_jackpots' %}"> Highest Jackpotts </a>
+      <a class="nav-item nav-link" href="{% url 'website:faq_questions' %}">Faq Frågor</a>
+
+    </div>
+  </div>
 </nav>
