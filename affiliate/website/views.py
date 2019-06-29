@@ -12,8 +12,8 @@ def index(request):
 	mini_list_lotteries = Lottery.objects.all()[:4]
 	#winner = Winner.objects.all().last()
 	context = {
-		#'mini_list_lotteries': mini_list_lotteries,
-		'winner': winner,
+		'mini_list_lotteries': mini_list_lotteries,
+		#'winner': winner,
 	}
 	return render(request, 'index.html', context)
 
