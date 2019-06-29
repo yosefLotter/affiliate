@@ -1,26 +1,55 @@
-body{
-	background-color: #ECF0F1;
+body{ 
+	height:100%;
+	background-color:#ECF0F1;;
 	font-family: "Times New Roman", Times, serif;
+
 }
 
-.page_wrapper{
-	padding:0px 10px 10px 10px;
+@viewport {
+  width: device-width ;
+  zoom: 1.0 ;
+} 
+
+h3{
+	font-weight:bold;
+	font-style: italic;
+	color:#414141;
 }
+
+
+
+.white_wrapper{
+	margin:0px;
+	padding:0px;
+	background-color:#FFFF;
+	padding:20px;
+	border-radius:15px;
+}
+
+.text_center{
+	text-align:center;
+}
+.lottery_page_content_wrapper{
+	padding:5px 150px 5px 90px;
+}
+
 
 .row{
 	margin:0px;
 }
-
 .col-lg-1{
+	margin:0px;
 	padding:0px;
 }
+
+
+
 .col-lg-3{
 	margin:0px;
 	padding:5px;
 }
-
 .col-lg-8{
-	padding:0px;
+	margin:0px;
 	padding:0px;
 }
 
@@ -29,6 +58,7 @@ body{
 	max-width:100%;
 	width:850px;
 	padding:5px;
+	margin:0px;
 }
 
 #color_blue{
@@ -39,26 +69,6 @@ body{
 	font-weight:bold;
 	margin-right:180px;
 	color:white;
-}
-
-
-.content{
-	padding:10px;
-	border-radius:2px;
-	border:1px solid grey;
-	box-shadow: 5px 5px grey;
-	background-color:#F7F7F7
-}
-
-.margin_0{
-	margin:0px;
-}
-
-
-.white_wrapper{
-	background-color:#FFFF;
-	padding:20px;
-	border-radius:15px;
 }
 
 
@@ -86,19 +96,12 @@ body{
 }
 
 
-
-ul{
-	padding:0px;
-	margin:0px;
-	list-style: none;
+.no_bullets ul{
+	list-style-type:none;
 }
-
-li{
-	list-style:none;
+.no_bullets{
+	list-style-type:none;
 }
-
-
-
 .lottery_list{
 	margin:5px;
 }
@@ -113,16 +116,11 @@ li{
 
 #lottery_logo{
 	position:auto;
-	width:80px;
+	width:150px;
 	max-height:100px;
 	max-width:100%;
 }
 
-
-#mini_flaga{
-	width:22px;
-	height:18px;
-}
 
 
 .ticket_button{
@@ -132,7 +130,6 @@ li{
 	width:100%;
 }
 .ticket_button a{
-
 	color:white;
 	letter-spacing:1px;
 
@@ -145,125 +142,15 @@ li{
   margin-right: auto;
   width: 50%;
 }
-/* For image Rektangel */
-#rektangel{
-	max-width:100%;
-	width:600px;
-	height:100px;
+
 }
 /* includes a flag and a name of the lottery. Using it at Best Lottery page and lottery article page. */
-.profile_box h3{
-	font-weight:bold;
-	font-style: italic;
-	color:#414141;
-}
+
 .profile_box img{
 	margin:10px;
 	width:50px;
 	float:left;
 }
-
-
-/* For Winner profile_bild */
-#banner{
-	margin:0px;
-	width:1000px;
-	height:100px;
-	max-width:100%;
-	max-height:100%;
-}
-
-/* For Lotterys Article Page */
-/* big_content include Title and wrapping text around image on rigt side. */
-.big_content_right{
-	color:#414141;
-
-}
-.big_content_right h4{
-	font-style: italic;
-	font-weight:bold;
-}
-.big_content_right img{
-	float:right;
-}
-.big_content_left{
-
-	color:#414141;
-
-}
-.big_content_left h4{
-	font-style: italic;
-	font-weight:bold;
-}
-.big_content_left img{
-	margin:1px;
-	float:left;
-}
-/* For Lotterys Article Page Includes only Title and text*/
-.small_content h4{
-	font-weight:bold;
-	font-style: italic;
-	color:#414141;
-
-}
-
-/* Lottery Article For Right Side */
-.commercial{
-	
-}
-/* Lottery Article For Right Side includes a banner top 3 lottery */
-.commercial_content{
-	border:1px solid #414141;
-}
-
-.winner_box{
-
-}
-.winner_box h4{
-	margin:0px;
-	padding:5px;
-	background-color:#096BB6;
-	color:white;
-	font-weight:bold;
-}
-.winner_box h5{
-	padding:5px;
-	margin:0px;
-	background-color:#FAFAFA;
-	font-weight:bold;
-	font-style:italic;
-}
-
-
-/* Lottery Article For Right Side */
-.winner_box_content{
-	border-bottom-right-radius:10px;
-	padding:5px;
-	background-color:white;
-
-}
-
-.winner_box_content p{
-	color:black;
-	font-style:italic;
-}
-
-
-/* sticky button for the side to buy ticket. Lottery Article Page */
-div.sticky{
-  position: sticky;
-  top: 0;
-}
-
-.sticky button{
-	padding:5px;
-	color:white;
-	background-color:green;
-	width:100%;
-	border-radius:5px;
-}
-
-
 
 
 /* For FAQ Page */
@@ -285,25 +172,16 @@ div.sticky{
 	font-weight:bold;
 	color:#414141;
 }
+/* End of FAQ Page*/
 
 
-.wrapper{
-	width:80%;
-	max-width:100%;
-	margin-left:auto;
-	margin-right:auto;
-	padding:5px;
-}
-
-.wrapper_faq{
-	max-width:100%;
-	margin:15px;
-	padding:5px;
-}
-
+/* Using In Winner_Page*/
 .lotterier_mini_list{
 	max-width:100%;
 	background-color:white;
+}
+.lotterier_mini_list ul{
+		list-style: none;
 }
 
 .lotterier_mini_list h4{
@@ -318,27 +196,18 @@ div.sticky{
 	float:left;
 	margin-right:10px;
 }
-
-
-
-
 .a_hover_box:hover{
 	cursor:pointer;
 	background-color:#F5F5F5;
-	transform:scale(1.05);
+	transform:scale(1.02);
 
 }
-
-
 .a_hover_box a{
 	outline: none;
 	text-decoration: none;
 	color:black;
 }
-@viewport {
-  width: device-width ;
-  zoom: 1.0 ;
-} 
+
 
 
 
@@ -367,5 +236,180 @@ div.sticky{
 	padding:5px;
 	background-color:#FAFAFA;
 	color:#414141;
+}
+
+/*FOR INDEX PAGE*/
+
+.index_content{
+	overflow:hidden;
+	margin-left: auto;
+  	margin-right: auto;
+	width:1000px;
+	max-width:100%;
+}
+.special_dot_list ul{
+
+	list-style-type:disc;
+}
+/* THIS IS FOR LOTTERY_PAGE.HTML THAT I WILL TRANSFER SINGLE PAGE OF CSS*/
+
+ .page_wrapper{
+	padding:0px 10px 10px 10px;
+}
+.white_papper{
+	background-color:#FFFF;
+	padding:20px;
+	border-radius:15px;
+	margin-bottom:50px;
+	max-height:100%;
+}
+/* Part Header_box at Lottery Page.*/
+#logo{
+	width:140px;
+	max-width:100%;
+}
+.text_center{
+	text-align:center;
+}
+.header_logo img{
+	width:140px;
+	max-width:100%;
+
+}
+/* Makes Image Center In Mobile/Ipad*/
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.info_content div{
+	margin-top:10px;
+	text-align:center;
+	width:33.33%;
+	float:left;
+}
+.info_content h6{
+	font-size:18px;
+	color:#414141;
+}
+.jackpot_box p{
+	margin:5px;
+	color:#414141;
+}
+
+.dragnings_box p{
+	margin:5px;
+	color:#414141;
+}
+.Jackpotodds p{
+	margin:5px;
+	color:#414141;
+}
+.clear{
+	clear:both;
+}
+/* For White papper*/
+.content_box{
+	overflow:hidden;
+	margin-left: auto;
+  	margin-right: auto;
+	width:900px;
+	max-width:100%;
+
+}
+.lottery_content h4{
+	margin:0px;
+	font-weight:bold;
+	font-style: italic;
+	color:#414141;
+}
+.lottery_content p{
+	margin-left:5px;
+	color:#414141;
+}
+.lottery_content img{
+	float:right;
+}
+/* For Winners in Lottery Page*/
+.winner_page{
+	border-radius:5px;
+	background-color:white;
+
+}
+.winner_content:hover{
+	cursor:pointer;
+	background-color:#F5F5F5;
+	transform:scale(1.02);
+
+}
+.winner_page a{
+	outline: none;
+	text-decoration: none;
+	color:black;
+}
+.winner_page img{
+	padding:5px;
+	border-radius:10px;
+	width:420px;
+	height:120px;
+	max-width:100%;
+	max-height:100%;
+}
+.winner_header{
+	padding:5px;
+	color:#FAFAFA;
+	background-color:#096BB6;
+}
+.winner_header h4{
+	color:#FAFAFA;
+	font-size:25px;
+	font-weight:bold;
+}
+
+.winner_content h5{
+	color:#414141;
+	margin-left:10px;
+	margin-bottom:0px;
+	background-color:#FAFAFA;
+
+}
+.winner_content p{
+	color:#414141;
+	margin:0px 5px 0px 15px;
+}
+
+
+.list_of_links ul{
+	list-style-type:none;
+}
+.list_of_links a{
+	color:#414141;
+}
+/* END OF LOTTERY PAGE*/
+
+
+/* For Footer Page*/
+#footer{
+	height:200px;
+   	position:relative;
+   	left: 0;
+   	bottom: 0;
+   	width: 100%;
+   	background-color:#A9A9A9;
+   	color: #FAFAFA;
+   	text-align: center;
+
+}
+
+.image_box{
+	margin:0px;
+}
+.image_box img{
+	margin:0px 40px 0px 0px;
+	width:200px;
+}
+.image_box label{
+	margin-top:0px;
 }
 

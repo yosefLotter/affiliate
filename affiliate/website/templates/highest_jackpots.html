@@ -1,77 +1,79 @@
 {% extends 'base.html' %}
 {% block content %}
 {% load static %}
+
 <div class="row">
 	<div class="col-lg-2">
 		<p> </p>
 	</div>
 
 	<div class="col-lg-8">
+
 		<div class="welcome mt-3">
 			<div class="welcome_content">
-				<h4> Undrar du vilket lotto som är bäst att spela på?? </h4>
+				<h4> Amerika bästa lotterier </h4>
 				<p class="welcome_text">
-					Man kan gradera ett lotteri efter dess jackpottar, vinnarodds, pris för spelrader, skatter och så vidare.
-					Många spelare tittar på jackpottarnas storlek eftersom de drömmer om att vinna en hisnande jackpot
-					för att sedan uppfylla alla sina drömmar. Här nedan kan du se en lista på de 10 lotterier som brukar
-					ha de högsta jackpottarna. Överst är det lotteri som brukar ha de största jackpottarna och på andra
-					plats det lotteri som brukar ha näst största jackpotten och så vidare.		
+					I Amerika finns det en uppsjö av både små och stora lotterier och här kan du läsa om de populäraste lotterierna. När du har bekantat dig med dem är du säkert redo för att pröva lyckan och kanske finner du en egen favorit bland dem.
 				</p>
 			</div>
 		</div>
 
 		<div class="lottery_list">
 			{% for lottery in lotteries %}
-			<div class="lottery_box mt-1">
-				<div class="row">
-					<div class="col-lg-1">
-						<img src="{{ lottery.logo.url }}" id="lottery_logo" class="center">
-					</div>
-					<div class="col-lg-9" >
-						<div class="row">
-							<ul class="col-sm-4">
-								<b> Jackpot </b>
-								<li> {{ lottery.jackpot }} </li>
-				
-							</ul>
+				<div class="lottery_box mt-2">
+					<div class="row">
+
+						<div class="col-lg-1">
+							<img src="{{ lottery.logo.url }}" id="lottery_logo" class="center">
+						</div>
+
+						<div class="col-lg-9" >
+
+							<div class="row no_bullets">
+								<ul class="col-sm-4">
+									<b> Jackpot </b>
+									<li> {{ lottery.jackpot }} </li>
 					
-							<ul class="col-sm-4">
-								<b class="margin_0">Dragning</b>
-								<p>{{  lottery.dragnings_datum }}</p>
-							</ul>
-
-
-
-							<ul class="col-sm-4">
-								<b>Jackpotodds</b>
-								<li> {{  lottery.odds }}</li>
-							</ul>
-				</div>
-
-				<ul>
-					<li >
-						{{  lottery.intro_content }}
-						<label style="color:blue;"> <a href="{% url 'website:lottery_page' lottery_id=lottery.id  %}"> Läs mer.. </a> </label>
-					</li>
-				</ul>
+								</ul>
 						
-				</div>
+								<ul class="col-sm-4">
+									<b class="margin_0">Dragning</b>
+									<p>{{  lottery.dragnings_datum }}</p>
+								</ul>
 
-				<div class="col-lg-2">
-					<button class="ticket_button mt-4"><a href="https://www.powerball.com/" target="blank">  Satsa nu </a></button>
+
+
+								<ul class="col-sm-4">
+									<b>Jackpotodds</b>
+									<li> {{  lottery.odds }}</li>
+								</ul>
+							</div>
+
+							<ul class="no_bullets">
+								<li>
+									{{  lottery.intro_content }}
+									<label style="color:blue;"> <a href="{% url 'website:lottery_detail' slug=lottery.slug  %}"> Läs mer.. </a> </label>
+								</li>
+							</ul>
+						
+						</div>
+
+
+						<div class="col-lg-2">
+							<button class="ticket_button mt-4"><a href="https://www.powerball.com/" target="blank">  Satsa nu </a></button>
+						</div>
+					</div>
+
 				</div>
-			</div>
+			{% endfor %}
 		</div>
-		<br>
-		{% endfor %}
-
 	</div>
-
+		
 	<div class="col-lg-2">
 	</div>
 </div>
 
-
+{% include "footer.html" %}
 {% endblock %}
 
 

@@ -51,7 +51,7 @@
 							<ul class="test">
 								<li >
 									{{  lottery.intro_content }}
-									<label style="color:blue;"> <a href="{% url 'website:lottery_page' lottery_id=lottery.id  %}"> Läs mer.. </a> </label>
+									<label style="color:blue;"> <a href="{% url 'website:lottery_detail' slug=lottery.slug  %}"> Läs mer.. </a> </label>
 								</li>
 							</ul>
 						
@@ -72,7 +72,7 @@
 	</div>
 </div>
 
-
+{% include "footer.html" %}
 {% endblock %}
 
 

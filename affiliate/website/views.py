@@ -1,28 +1,31 @@
 from django.shortcuts import render, redirect
 
-from .models import  Lottery, Lottery_image, Article, Winner, First_page
+from .models import  Lottery, Winner, Customer
 # Create your views here.
 
 
+
+def extra_lottery_page(request):
+	return render(request, 'extra_lottery_page.html')
+
 def index(request):
-	# For the circle image...
-	lotteries = Lottery.objects.all()[:4]
-	mini_list_lotteries = Lottery.objects.all()[:5]
+	mini_list_lotteries = Lottery.objects.all()[:4]
+	winner = Winner.objects.all().last()
 	context = {
-		'lotteries':lotteries,
-		'mini_list_lotteries':mini_list_lotteries,
+		'mini_list_lotteries': mini_list_lotteries,
+		'winner': winner,
 	}
 	return render(request, 'index.html', context)
 
 # Europa sida
-def europe_list(request):
+def europe(request):
 	europe_list = Lottery.objects.filter(continent='Europa')
 	context = {
 		'europe_list': europe_list,
 	}
 	return render(request, 'europe_list.html', context)
 
-def asien_list(request):
+def asien(request):
 	asien_list = Lottery.objects.filter(continent='Asien')
 	context = {
 		'asien_list':asien_list,
@@ -30,7 +33,7 @@ def asien_list(request):
 	return render(request, 'asien_list.html', context)
 
 
-def sydamerika_list(request):
+def sydamerika(request):
 	sydamerika_list = Lottery.objects.filter(continent='Sydamerika')
 	context = {
 		'sydamerika_list': sydamerika_list,
@@ -39,7 +42,7 @@ def sydamerika_list(request):
 
 
 
-def amerika_list(request):
+def amerika(request):
 	amerika_list = Lottery.objects.filter(continent='Amerika')
 	context = {
 		'amerika_list': amerika_list,
@@ -57,34 +60,22 @@ def highest_jackpots(request):
 
 
 
-
-def lottery_page(request, lottery_id):
-	lottery = Article.objects.filter(lottery_id=lottery_id)
-	images = Lottery_image.objects.filter(lottery_id=lottery_id).all()
-	winners = Winner.objects.filter(lottery_id=lottery_id)
+def lottery_detail(request, slug):
+	lottery = Lottery.objects.get(slug=slug)
+	winners = Winner.objects.filter(lottery_id=lottery.id)
 	context = {
 		'lottery': lottery,
-		'images': images,
 		'winners': winners,
 	}
 	return render(request, 'lottery_page.html', context)
 
 
-
-
-
-
-def winner_page(request):
-	return render(request, 'winner_page.html')
-
-def winner_page(request, winner_id):
-	winners = Winner.objects.filter(pk=winner_id)
-	lottery_images = Lottery_image.objects.filter(lottery_id=winner_id)
+def winner_page(request, slug):
+	winner = Winner.objects.get(slug=slug)
 	mini_list_lotteries = Lottery.objects.all()[:5]
 	context = {
-		'winners': winners,
-		'lottery_images': lottery_images,
-		'mini_list_lotteries': mini_list_lotteries
+	 	'winner': winner,
+	 	'mini_list_lotteries': mini_list_lotteries
 	}
 	return render(request, 'winner_page.html', context)
 
