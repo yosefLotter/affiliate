@@ -25,7 +25,9 @@
 					<div class="row no_bullets">
 
 						<div class="col-lg-1">
+							{% if lottery.logo %}
 							<img src="{{ lottery.logo.url }}" id="lottery_logo" class="center">
+							{% endif %}
 						</div>
 
 						<div class="col-lg-9" >
