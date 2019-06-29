@@ -10,7 +10,7 @@ def extra_lottery_page(request):
 
 def index(request):
 	mini_list_lotteries = Lottery.objects.all()[:4]
-	#winner = Winner.objects.all().last()
+	winner = Winner.objects.all().last()
 	context = {
 		'mini_list_lotteries': mini_list_lotteries,
 		#'winner': winner,
