@@ -7,10 +7,10 @@ class Lottery(models.Model):
 	slug = models.SlugField(unique=True)
 	name_of_lottery = models.CharField(max_length=100)
 	continent = models.CharField(max_length=100)
-	jackpot = models.CharField(max_length=40)
-	odds = models.CharField(max_length=100)
+	jackpot = models.CharField(max_length=40, blank=True)
+	odds = models.CharField(max_length=100, blank=True)
 	dragnings_datum = models.CharField(max_length=400)
-	pris_biljett = models.CharField(max_length=100)
+	pris_biljett = models.CharField(max_length=100, blank=True)
 	intro_content = models.TextField(max_length=500, blank=True)
 	logo = models.ImageField(default=None, blank=True)
 
@@ -45,6 +45,11 @@ class Lottery(models.Model):
 
 	k_title = models.CharField(max_length=200, blank=True)
 	k_content = models.TextField(blank=True)
+
+
+	l_title = models.CharField(max_length=200, blank=True)
+	l_content = models.TextField(blank=True)
+
 
 
 	def __str__(self):

@@ -28,7 +28,7 @@
 
 						<div class="col-lg-9" >
 
-							<div class="row">
+							<div class="row no_bullets">
 								<ul class="col-sm-4">
 									<b> Jackpot </b>
 									<li> {{ lottery.jackpot }} </li>
@@ -48,7 +48,7 @@
 								</ul>
 							</div>
 
-							<ul class="test">
+							<ul class="no_bullets">
 								<li >
 									{{  lottery.intro_content }}
 									<label style="color:blue;"> <a href="{% url 'website:lottery_page' lottery_id=lottery.id  %}"> Läs mer.. </a> </label>
