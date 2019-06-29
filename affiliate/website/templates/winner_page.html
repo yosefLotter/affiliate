@@ -14,7 +14,9 @@
 
 				<div class="header_box">
 					<div class="header_logo">
+						{% if winner.lottery_logo %}
 						<img src="{{ winner.lottery.logo.url }}" class="center">
+						{% endif %}
 					</div>
 				</div>
 
