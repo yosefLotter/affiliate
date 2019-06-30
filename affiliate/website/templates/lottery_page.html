@@ -49,12 +49,12 @@
 						{% if lottery.a_content_image_right %}
 						<img src="{{ lottery.a_content_image_right.url }}" width="300" class="mr-2">
 						{% endif %}
-						<p> {{ lottery.a_content }}</p>
+						<p> {{ lottery.a_content|safe  }}</p>
 					</div>
 
 					<div class="lottery_content mt-4">
 						<h4> {{ lottery.b_title }}</h4>
-						<p> {{ lottery.b_content }}</p>
+						<p> {{ lottery.b_content|safe  }}</p>
 					</div>
 
 					<div class="lottery_content mt-4">
