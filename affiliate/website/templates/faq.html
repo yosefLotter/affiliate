@@ -115,8 +115,9 @@
 					</ul>
 				</div>
 			</div>
-			<div class="lotterier_mini_list mt-3">
+			<div class="lotterier_mini_list mt-2">
 				{% for lottery in mini_list_lotteries %}
+				<h4>Lotterier på nätet</h4>
 				<div class="a_hover_box">
 					<a href="{% url 'website:lottery_detail' slug=lottery.slug %}">
 						<img src="{{ lottery.logo.url }}" width="50" class="mt-2">
@@ -131,6 +132,7 @@
 				<center> Se hela listan </center>
 				<hr>
 			</div>
+
 			<div class="winner_page  mt-2">
 				{% for winner in winners %}
 				{% if winner.profil_bild %}
