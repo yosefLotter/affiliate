@@ -2,6 +2,11 @@
 {% block content %}
 {% load static %}
 
+<div class='body_content'>
+<div class='body_main'>
+
+
+
 
 <div class="row">
 	<div class="col-lg-1">
@@ -111,7 +116,7 @@
 
 	<div class="col-lg-3">
 		<div class='page_wrapper'>
-
+			
 			<div class="lotterier_mini_list mt-3">
 				<h4>Lotterier på nätet</h4>
 				{% for lottery in mini_list_lotteries %}
@@ -164,7 +169,8 @@
 	</div>
 </div>
 
-
+</div>
+</div>
 {% include "footer.html" %}
 {% endblock %}
 

@@ -17,7 +17,6 @@ h3{
 }
 
 
-
 .white_wrapper{
 	margin:0px;
 	padding:0px;
@@ -155,7 +154,6 @@ h3{
 
 /* For FAQ Page */
 .faq_box{
-	border-radius:5px;
 	width:1000px;
 	max-width:100%;
 	
@@ -179,6 +177,7 @@ h3{
 .lotterier_mini_list{
 	max-width:100%;
 	background-color:white;
+	border-radius:10px;
 }
 .lotterier_mini_list ul{
 		list-style: none;
@@ -365,15 +364,12 @@ h3{
 	max-width:100%;
 	max-height:100%;
 }
-.winner_header{
-	padding:5px;
-	color:#FAFAFA;
-	background-color:#096BB6;
-}
-.winner_header h4{
-	color:#FAFAFA;
-	font-size:25px;
+
+.winner_label{
+	font-style:italic;
 	font-weight:bold;
+	margin:10px;
+	color:#DE2F48;
 }
 
 .winner_content h5{
@@ -400,7 +396,8 @@ h3{
 
 /* For Footer Page*/
 #footer{
-	height:200px;
+	margin-top:200px;
+	height:350px;
    	position:relative;
    	left: 0;
    	bottom: 0;
@@ -412,16 +409,43 @@ h3{
 }
 
 .image_box{
-	margin:20px;
+	margin:0px;
 }
-
 .image_box img{
-	margin-right:30px;
-	margin-left: 30px;
+	margin:0px 40px 0px 0px;
 	width:200px;
-	max-height:100%;
+}
+.image_box label{
+	margin-top:0px;
+}
+.image_box p{
+	max-width:100%;
+	width:1000px;
 }
 
-.image_box p{
-	padding:0px 50px 0px 50px;
+
+
+
+
+
+/* TABEL LISTA  */
+
+table{
+	width:800px;
+	max-width:100%;
+
+}
+.table_headline{
+	font-weight:bold;
+	font-style:italic;
+	color:#414141;
+}
+
+table p{
+	color:#414141;
+}
+
+
+tbody{
+	text-align:center;
 }

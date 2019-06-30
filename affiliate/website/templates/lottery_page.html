@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+
 <div class="row">
 	<div class="col-lg-1">
 
@@ -58,52 +59,52 @@
 
 					<div class="lottery_content mt-4">
 						<h4> {{ lottery.c_title }}</h4>
-						<p> {{ lottery.c_content }}</p>
+						<p> {{ lottery.c_content|safe }}</p>
 					</div>
 
 					<div class="lottery_content mt-4">
 						<h4> {{ lottery.d_title }}</h4>
-						<p> {{ lottery.d_content }}</p>
+						<p> {{ lottery.d_content|safe  }}</p>
 					</div>
 
 					<div class="lottery_content mt-4">
 						<h4> {{ lottery.e_title }}</h4>
-						<p> {{ lottery.e_content }}</p>
+						<p> {{ lottery.e_content|safe  }}</p>
 					</div>
 
 					<div class="lottery_content mt-4">
 						<h4> {{ lottery.f_title }}</h4>
-						<p> {{ lottery.f_content }}</p>
+						<p> {{ lottery.f_content|safe }}</p>
 					</div>
 
 					<div class="lottery_content mt-4">
 						<h4> {{ lottery.g_title }}</h4>
-						<p> {{ lottery.g_content }}</p>
+						<p> {{ lottery.g_content|safe }}</p>
 					</div>
 
 					<div class="lottery_content mt-4">
 						<h4> {{ lottery.h_title }}</h4>
-						<p> {{ lottery.h_content }}</p>
+						<p> {{ lottery.h_content|safe }}</p>
 					</div>
 
 					<div class="lottery_content mt-4">
 						<h4> {{ lottery.i_title }}</h4>
-						<p> {{ lottery.i_content }}</p>
+						<p> {{ lottery.i_content|safe }}</p>
 					</div>
 
 					<div class="lottery_content mt-4">
 						<h4> {{ lottery.j_title }}</h4>
-						<p> {{ lottery.j_content }}</p>
+						<p> {{ lottery.j_content|safe }}</p>
 					</div>
 
 					<div class="lottery_content mt-4">
 						<h4> {{ lottery.k_title }}</h4>
-						<p> {{ lottery.k_content }}</p>
+						<p> {{ lottery.k_content|safe }}</p>
 					</div>
 
 					<div class="lottery_content mt-4">
 						<h4> {{ lottery.l_title }}</h4>
-						<p> {{ lottery.l_content }}</p>
+						<p> {{ lottery.l_content|safe }}</p>
 					</div>
 				</div>
 			</div>
@@ -115,6 +116,7 @@
 
 			
 			<div class="winner_page  mt-2">
+				<label class="winner_label"> Vinnare </label>
 				{% for winner in winners %}
 				{% if winner.profil_bild %}
 					<img class="center" src="{{winner.profil_bild.url}}">
@@ -148,27 +150,6 @@
 
 
 
-
-
-
-					<div class="clear"></div>
-
-
-
-
-					<div class="lottery_content mt-4">
-						<h4> {{ lottery.g_title }}</h4>
-						<p> {{ lottery.g_content }}</p>
-					</div>
-
-					<div class="lottery_content mt-4">
-						<h4> {{ lottery.h_title }}</h4>
-						<p> {{ lottery.h_content }}</p>
-					</div>
-
-					<div class="lottery_content mt-4">
-						<h4> {{ lottery.k_title }}</h4>
-						<p> {{ lottery.k_content }}</p>
-					</div>
-
 		
+
+
