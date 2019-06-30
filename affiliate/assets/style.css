@@ -196,6 +196,15 @@ h3{
 	float:left;
 	margin-right:10px;
 }
+
+.a_hover_box img{
+	height:45px;
+}
+
+.a_hover_box ul{
+	margin-bottom:0px;
+}
+
 .a_hover_box:hover{
 	cursor:pointer;
 	background-color:#F5F5F5;
@@ -222,8 +231,8 @@ h3{
 
 }
 .list_of_links a{
-	margin:5px;
-	padding:10px;
+	margin:0px;
+
 	color:#414141;
 	text-decoration:none;
 }

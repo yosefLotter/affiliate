@@ -10,7 +10,7 @@ def extra_lottery_page(request):
 
 def index(request):
 	mini_list_lotteries = Lottery.objects.all()[:4]
-	winners = Winner.objects.all()
+	winners = Winner.objects.all()[:0]
 	context = {
 		'mini_list_lotteries': mini_list_lotteries,
 		'winners': winners,
@@ -72,6 +72,7 @@ def lottery_detail(request, slug):
 
 def winner_page(request, slug):
 	winner = Winner.objects.get(slug=slug)
+	print(winner.lottery.logo)
 	mini_list_lotteries = Lottery.objects.all()[:5]
 	context = {
 	 	'winner': winner,

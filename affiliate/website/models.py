@@ -14,7 +14,7 @@ class Lottery(models.Model):
 	intro_content = models.TextField(max_length=500, blank=True)
 	logo = models.ImageField(default=None, blank=True)
 
-	mini_content = models.TextField(blank=True)
+	mini_content = models.CharField(max_length=100, blank=True)
 	welcome_text = models.TextField(blank=True)
 
 	a_title = models.CharField(max_length=200, blank=True)
@@ -43,9 +43,15 @@ class Lottery(models.Model):
 	h_title = models.CharField(max_length=200, blank=True)
 	h_content = models.TextField(blank=True)
 
+	i_title = models.CharField(max_length=200, blank=True)
+	i_content = models.TextField(blank=True)
+
+
+	j_title = models.CharField(max_length=200, blank=True)
+	j_content = models.TextField(blank=True)
+
 	k_title = models.CharField(max_length=200, blank=True)
 	k_content = models.TextField(blank=True)
-
 
 	l_title = models.CharField(max_length=200, blank=True)
 	l_content = models.TextField(blank=True)
@@ -110,6 +116,9 @@ class Customer(models.Model):
 
 class Tabell(models.Model):
 	lottery = models.ForeignKey(Lottery, on_delete=models.CASCADE)
+
+	content = models.TextField(blank=True)
+
 	a_Vinstnivå = models.CharField(max_length=100, blank=True) 
 	a_vinnarodds = models.CharField(max_length=100, blank=True)
 	a_Matchningar = models.CharField(max_length=100, blank=True)
@@ -142,6 +151,14 @@ class Tabell(models.Model):
 	h_Matchningar = models.CharField(max_length=100, blank=True)
 	h_vinnarodds = models.CharField(max_length=100, blank=True)
 
+	i_Vinstnivå = models.CharField(max_length=100, blank=True)
+	i_Matchningar = models.CharField(max_length=100, blank=True)
+	i_vinnarodds = models.CharField(max_length=100, blank=True)
+
+	j_Vinstnivå = models.CharField(max_length=100, blank=True)
+	j_Matchningar = models.CharField(max_length=100, blank=True)
+	j_vinnarodds = models.CharField(max_length=100, blank=True)
+
 	k_Vinstnivå = models.CharField(max_length=100, blank=True)
 	k_Matchningar = models.CharField(max_length=100, blank=True)
 	k_vinnarodds = models.CharField(max_length=100, blank=True)
@@ -150,6 +167,17 @@ class Tabell(models.Model):
 	l_Matchningar = models.CharField(max_length=100, blank=True)
 	l_vinnarodds = models.CharField(max_length=100, blank=True)
 
+	m_Vinstnivå = models.CharField(max_length=100, blank=True)
+	m_Matchningar = models.CharField(max_length=100, blank=True)
+	m_vinnarodds = models.CharField(max_length=100, blank=True)
+
+	n_Vinstnivå = models.CharField(max_length=100, blank=True)
+	n_Matchningar = models.CharField(max_length=100, blank=True)
+	n_vinnarodds = models.CharField(max_length=100, blank=True)
+
+	o_Vinstnivå = models.CharField(max_length=100, blank=True)
+	o_Matchningar = models.CharField(max_length=100, blank=True)
+	o_vinnarodds = models.CharField(max_length=100, blank=True)
 
 
 
