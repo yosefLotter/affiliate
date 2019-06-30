@@ -105,7 +105,7 @@
 
 	<div class="col-lg-3">
 		<div class="page_wrapper">
-
+			<div class="white_papper mt-3">
 				<div class="list_of_links mt-2">
 					<h4> Artiklar </h4>
 					<ul>
@@ -114,11 +114,9 @@
 						<li><a href="{% url 'website:faq_questions' %}"> Här nedan finner du svar på de vanligast ställda frågorna om hur man spelar lotto online. </a></li><hr>
 					</ul>
 				</div>
-
+				
 				<div class="lotterier_mini_list mt-3">
-					<h4>Lotterier på nätet</h4>
 					{% for lottery in mini_list_lotteries %}
-
 					<div class="a_hover_box">
 						<a href="{% url 'website:lottery_detail' slug=lottery.slug %}">
 							<img src="{{ lottery.logo.url }}" width="50" class="mt-2">
