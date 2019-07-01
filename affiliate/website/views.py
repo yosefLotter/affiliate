@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 
-from .models import  Lottery, Winner, Customer, Tabell
+from .models import  Lottery, Winner, Customer
 # Create your views here.
 
 

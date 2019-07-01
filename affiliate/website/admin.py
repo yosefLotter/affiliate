@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Lottery, Winner, Customer, Tabell
+from .models import Lottery, Winner, Customer
 
 admin.site.register(Lottery),
 
@@ -8,4 +8,4 @@ admin.site.register(Winner),
 
 admin.site.register(Customer),
 
-admin.site.register(Tabell),
+#admin.site.register(Tabell),

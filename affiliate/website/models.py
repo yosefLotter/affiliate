@@ -1,6 +1,6 @@
 from django.db import models
 
-
+from ckeditor.fields import RichTextField
 
 # For Lottery Page the content
 class Lottery(models.Model):
@@ -29,7 +29,9 @@ class Lottery(models.Model):
 	c_content = models.TextField(blank=True)
 
 	d_title = models.CharField(max_length=200, blank=True)
-	d_content = models.TextField(blank=True)
+
+	#d_content = models.RichTextField(blank=True)
+	project_code = RichTextField(verbose_name='Code',null=True,blank=True)
 
 	e_title = models.CharField(max_length=200, blank=True)
 	e_content = models.TextField(blank=True)
@@ -114,70 +116,70 @@ class Customer(models.Model):
 		)
 
 
-class Tabell(models.Model):
-	lottery = models.ForeignKey(Lottery, on_delete=models.CASCADE)
+# class Tabell(models.Model):
+# 	lottery = models.ForeignKey(Lottery, on_delete=models.CASCADE)
 
-	content = models.TextField(blank=True)
+# 	content = models.TextField(blank=True)
 
-	a_Vinstnivå = models.CharField(max_length=100, blank=True) 
-	a_vinnarodds = models.CharField(max_length=100, blank=True)
-	a_Matchningar = models.CharField(max_length=100, blank=True)
+# 	a_Vinstnivå = models.CharField(max_length=100, blank=True) 
+# 	a_vinnarodds = models.CharField(max_length=100, blank=True)
+# 	a_Matchningar = models.CharField(max_length=100, blank=True)
 
-	b_Vinstnivå = models.CharField(max_length=100, blank=True)
-	b_Matchningar = models.CharField(max_length=100, blank=True)
-	b_vinnarodds = models.CharField(max_length=100, blank=True)
+# 	b_Vinstnivå = models.CharField(max_length=100, blank=True)
+# 	b_Matchningar = models.CharField(max_length=100, blank=True)
+# 	b_vinnarodds = models.CharField(max_length=100, blank=True)
 
-	c_Vinstnivå = models.CharField(max_length=100, blank=True)
-	c_Matchningar = models.CharField(max_length=100, blank=True)
-	c_vinnarodds = models.CharField(max_length=100, blank=True)
+# 	c_Vinstnivå = models.CharField(max_length=100, blank=True)
+# 	c_Matchningar = models.CharField(max_length=100, blank=True)
+# 	c_vinnarodds = models.CharField(max_length=100, blank=True)
 	
-	d_Vinstnivå = models.CharField(max_length=100, blank=True)
-	d_Matchningar = models.CharField(max_length=100, blank=True)
-	d_vinnarodds = models.CharField(max_length=100, blank=True)
+# 	d_Vinstnivå = models.CharField(max_length=100, blank=True)
+# 	d_Matchningar = models.CharField(max_length=100, blank=True)
+# 	d_vinnarodds = models.CharField(max_length=100, blank=True)
 
-	e_Vinstnivå = models.CharField(max_length=100, blank=True)
-	e_Matchningar = models.CharField(max_length=100, blank=True)
-	e_vinnarodds = models.CharField(max_length=100, blank=True)
+# 	e_Vinstnivå = models.CharField(max_length=100, blank=True)
+# 	e_Matchningar = models.CharField(max_length=100, blank=True)
+# 	e_vinnarodds = models.CharField(max_length=100, blank=True)
 
-	f_Vinstnivå = models.CharField(max_length=100, blank=True)
-	f_Matchningar = models.CharField(max_length=100, blank=True)
-	f_vinnarodds = models.CharField(max_length=100, blank=True)
+# 	f_Vinstnivå = models.CharField(max_length=100, blank=True)
+# 	f_Matchningar = models.CharField(max_length=100, blank=True)
+# 	f_vinnarodds = models.CharField(max_length=100, blank=True)
 
-	g_Vinstnivå = models.CharField(max_length=100, blank=True)
-	g_Matchningar = models.CharField(max_length=100, blank=True)
-	g_vinnarodds = models.CharField(max_length=100, blank=True)
+# 	g_Vinstnivå = models.CharField(max_length=100, blank=True)
+# 	g_Matchningar = models.CharField(max_length=100, blank=True)
+# 	g_vinnarodds = models.CharField(max_length=100, blank=True)
 
-	h_Vinstnivå = models.CharField(max_length=100, blank=True)
-	h_Matchningar = models.CharField(max_length=100, blank=True)
-	h_vinnarodds = models.CharField(max_length=100, blank=True)
+# 	h_Vinstnivå = models.CharField(max_length=100, blank=True)
+# 	h_Matchningar = models.CharField(max_length=100, blank=True)
+# 	h_vinnarodds = models.CharField(max_length=100, blank=True)
 
-	i_Vinstnivå = models.CharField(max_length=100, blank=True)
-	i_Matchningar = models.CharField(max_length=100, blank=True)
-	i_vinnarodds = models.CharField(max_length=100, blank=True)
+# 	i_Vinstnivå = models.CharField(max_length=100, blank=True)
+# 	i_Matchningar = models.CharField(max_length=100, blank=True)
+# 	i_vinnarodds = models.CharField(max_length=100, blank=True)
 
-	j_Vinstnivå = models.CharField(max_length=100, blank=True)
-	j_Matchningar = models.CharField(max_length=100, blank=True)
-	j_vinnarodds = models.CharField(max_length=100, blank=True)
+# 	j_Vinstnivå = models.CharField(max_length=100, blank=True)
+# 	j_Matchningar = models.CharField(max_length=100, blank=True)
+# 	j_vinnarodds = models.CharField(max_length=100, blank=True)
 
-	k_Vinstnivå = models.CharField(max_length=100, blank=True)
-	k_Matchningar = models.CharField(max_length=100, blank=True)
-	k_vinnarodds = models.CharField(max_length=100, blank=True)
+# 	k_Vinstnivå = models.CharField(max_length=100, blank=True)
+# 	k_Matchningar = models.CharField(max_length=100, blank=True)
+# 	k_vinnarodds = models.CharField(max_length=100, blank=True)
 
-	l_Vinstnivå = models.CharField(max_length=100, blank=True)
-	l_Matchningar = models.CharField(max_length=100, blank=True)
-	l_vinnarodds = models.CharField(max_length=100, blank=True)
+# 	l_Vinstnivå = models.CharField(max_length=100, blank=True)
+# 	l_Matchningar = models.CharField(max_length=100, blank=True)
+# 	l_vinnarodds = models.CharField(max_length=100, blank=True)
 
-	m_Vinstnivå = models.CharField(max_length=100, blank=True)
-	m_Matchningar = models.CharField(max_length=100, blank=True)
-	m_vinnarodds = models.CharField(max_length=100, blank=True)
+# 	m_Vinstnivå = models.CharField(max_length=100, blank=True)
+# 	m_Matchningar = models.CharField(max_length=100, blank=True)
+# 	m_vinnarodds = models.CharField(max_length=100, blank=True)
 
-	n_Vinstnivå = models.CharField(max_length=100, blank=True)
-	n_Matchningar = models.CharField(max_length=100, blank=True)
-	n_vinnarodds = models.CharField(max_length=100, blank=True)
+# 	n_Vinstnivå = models.CharField(max_length=100, blank=True)
+# 	n_Matchningar = models.CharField(max_length=100, blank=True)
+# 	n_vinnarodds = models.CharField(max_length=100, blank=True)
 
-	o_Vinstnivå = models.CharField(max_length=100, blank=True)
-	o_Matchningar = models.CharField(max_length=100, blank=True)
-	o_vinnarodds = models.CharField(max_length=100, blank=True)
+# 	o_Vinstnivå = models.CharField(max_length=100, blank=True)
+# 	o_Matchningar = models.CharField(max_length=100, blank=True)
+# 	o_vinnarodds = models.CharField(max_length=100, blank=True)
 
 
 
