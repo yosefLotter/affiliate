@@ -31,7 +31,9 @@ class Lottery(models.Model):
 	d_title = models.CharField(max_length=200, blank=True)
 
 	#d_content = models.RichTextField(blank=True)
-	project_code = RichTextField(verbose_name='Code',null=True,blank=True)
+	#project_code = RichTextField(verbose_name='Code',null=True,blank=True)
+
+	project_code = RichTextField(blank=True, null=True)
 
 	e_title = models.CharField(max_length=200, blank=True)
 	e_content = models.TextField(blank=True)
