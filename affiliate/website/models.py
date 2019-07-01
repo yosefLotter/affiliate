@@ -1,6 +1,8 @@
 from django.db import models
 
 from ckeditor.fields import RichTextField
+from django_bleach.models import BleachField
+
 
 # For Lottery Page the content
 class Lottery(models.Model):
@@ -33,7 +35,7 @@ class Lottery(models.Model):
 	#d_content = models.RichTextField(blank=True)
 	#project_code = RichTextField(verbose_name='Code',null=True,blank=True)
 
-	project_code = RichTextField(blank=True, null=True)
+	content = BleachField()
 
 	e_title = models.CharField(max_length=200, blank=True)
 	e_content = models.TextField(blank=True)

@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-
+{% load bleach_tags %}
 <div class="row">
 	<div class="col-lg-1">
 
@@ -41,7 +41,7 @@
 
 
 				<div class="content_box">
-
+					{{ lottery.content|safe }}
 					<h3><b> {{ lottery.name_of_lottery }} </b></h3>
 					<p>{{ lottery.welcome_text }}</p>
 
@@ -56,7 +56,7 @@
 					<div class="lottery_content mt-4">
 						<h4> {{ lottery.b_title }}</h4>
 						<p> {{ lottery.b_content|safe  }}</p>
-						{{ project_code|safe  }}
+						<p>{{ project_code|bleach }} </p>
 					</div>
 
 					<div class="lottery_content mt-4">
