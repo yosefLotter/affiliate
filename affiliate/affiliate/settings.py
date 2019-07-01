@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['yoseflotter.pythonanywhere.com']
 
-ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -122,7 +122,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = '/static/'
-
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR,'assets'),
