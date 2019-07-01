@@ -1,6 +1,5 @@
 from django.db import models
 
-from ckeditor.fields import RichTextField
 from django_bleach.models import BleachField
 
 
@@ -17,50 +16,46 @@ class Lottery(models.Model):
 	logo = models.ImageField(default=None, blank=True)
 
 	mini_content = models.CharField(max_length=100, blank=True)
-	welcome_text = models.TextField(blank=True)
+	welcome_text = BleachField(blank=True)
 
 	a_title = models.CharField(max_length=200, blank=True)
-	a_content = models.TextField(blank=True)
+	a_content = BleachField(blank=True)
 	a_content_image_right = models.ImageField(default=None, blank=True)
 
 	b_title = models.CharField(max_length=200, blank=True)
-	b_content = models.TextField(blank=True)
+	b_content = BleachField(blank=True)
 	b_image = models.ImageField(default=None, blank=True)
 	
 	c_title = models.CharField(max_length=200, blank=True)
-	c_content = models.TextField(blank=True)
+	c_content = BleachField(blank=True)
 
 	d_title = models.CharField(max_length=200, blank=True)
-
-	#d_content = models.RichTextField(blank=True)
-	#project_code = RichTextField(verbose_name='Code',null=True,blank=True)
-
-	content = BleachField()
+	d_content = BleachField(blank=True)
 
 	e_title = models.CharField(max_length=200, blank=True)
-	e_content = models.TextField(blank=True)
+	e_content = BleachField(blank=True)
 
 	f_title = models.CharField(max_length=200, blank=True)
-	f_content = models.TextField(blank=True)
+	f_content = BleachField(blank=True)
 
 	g_title = models.CharField(max_length=200, blank=True)
-	g_content = models.TextField(blank=True)
+	g_content = BleachField(blank=True)
 
 	h_title = models.CharField(max_length=200, blank=True)
-	h_content = models.TextField(blank=True)
+	h_content = BleachField(blank=True)
 
 	i_title = models.CharField(max_length=200, blank=True)
-	i_content = models.TextField(blank=True)
+	i_content = BleachField(blank=True)
 
 
 	j_title = models.CharField(max_length=200, blank=True)
-	j_content = models.TextField(blank=True)
+	j_content = BleachField(blank=True)
 
 	k_title = models.CharField(max_length=200, blank=True)
-	k_content = models.TextField(blank=True)
+	k_content = BleachField(blank=True)
 
 	l_title = models.CharField(max_length=200, blank=True)
-	l_content = models.TextField(blank=True)
+	l_content = BleachField(blank=True)
 
 
 

@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['yoseflotter.pythonanywhere.com']
 
-#ALLOWED_HOSTS = []
+ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'website',
-    'ckeditor',
     'django_bleach',
 ]
 
@@ -134,6 +133,6 @@ MEDIA_URL ='/media/'
 
 # Test B
 
-BLEACH_ALLOWED_TAGS = ['p', 'b', 'i', 'u', 'em', 'strong', 'a', 'li', 'h1', 'hr', 'table', 'tr', 'th', 'td',]
+BLEACH_ALLOWED_TAGS = ['p', 'b', 'i', 'u', 'em', 'strong', 'a', 'ul', 'li', 'hr', 'table', 'tr', 'th', 'td', 'br',]
 BLEACH_ALLOWED_ATTRIBUTES = ['href', 'title', 'style', 'class']
 BLEACH_STRIP_TAGS = True
