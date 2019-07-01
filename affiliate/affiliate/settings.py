@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['yoseflotter.pythonanywhere.com']
 
-ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -131,8 +131,8 @@ STATICFILES_DIRS = (
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA_URL ='/media/'
 
-# Test B
 
-BLEACH_ALLOWED_TAGS = ['p', 'b', 'i', 'u', 'em', 'strong', 'a', 'ul', 'li', 'hr', 'table', 'tr', 'th', 'td', 'br',]
+
+BLEACH_ALLOWED_TAGS = ['p', 'b', 'i', 'u', 'em', 'h4', 'a', 'ul', 'li', 'hr', 'table', 'tr', 'th', 'td', 'br',]
 BLEACH_ALLOWED_ATTRIBUTES = ['href', 'title', 'style', 'class']
 BLEACH_STRIP_TAGS = True
