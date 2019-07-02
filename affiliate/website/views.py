@@ -1,16 +1,11 @@
 from django.shortcuts import render, redirect
 
 from .models import  Lottery, Winner, Customer
-# Create your views here.
 
-
-
-def extra_lottery_page(request):
-	return render(request, 'extra_lottery_page.html')
 
 def index(request):
 	mini_list_lotteries = Lottery.objects.all()[:4]
-	winners = Winner.objects.all()[:0]
+	winners = Winner.objects.all()[:1]
 	context = {
 		'mini_list_lotteries': mini_list_lotteries,
 		'winners': winners,
@@ -62,10 +57,14 @@ def highest_jackpots(request):
 
 def lottery_detail(request, slug):
 	lottery = Lottery.objects.get(slug=slug)
-	winners = Winner.objects.filter(lottery_id=lottery.id)
+	winners_of_that_lottery = Winner.objects.filter(lottery_id=lottery.id)[:1]
+	mini_list_lotteries = Lottery.objects.all()[:4]
+	winner = Winner.objects.filter().last()
 	context = {
 		'lottery': lottery,
-		'winners': winners,
+		'winners_of_that_lottery': winners_of_that_lottery,
+		'mini_list_lotteries': mini_list_lotteries,
+		'winner': winner,
 	}
 	return render(request, 'lottery_page.html', context)
 
@@ -81,8 +80,8 @@ def winner_page(request, slug):
 	return render(request, 'winner_page.html', context)
 
 def faq_questions(request):
-	winners = Winner.objects.all()[:3]
-	mini_list_lotteries = Lottery.objects.all()[:5]
+	winners = Winner.objects.all()[:1]
+	mini_list_lotteries = Lottery.objects.all()[:4]
 	context = {
 		'winners':winners,
 		'mini_list_lotteries':mini_list_lotteries

@@ -114,33 +114,91 @@
 	</div>
 
 	<div class="col-lg-3">
-		<div class='page_wrapper'>
+		<div class="page_wrapper">
 
-			
-			<div class="winner_page  mt-2">
-				<label class="winner_label"> Vinnare </label>
-				{% for winner in winners %}
+			<div class="winner_mini_box  mt-2">
+
+				{% for winner in winners_of_that_lottery %}
+
+					<label class="winner_mini_box_label"> Vinnare hos {{winner.lottery.name_of_lottery }} </label>
+					{% if winner.profil_bild %}
+						<img class="center" src="{{winner.profil_bild.url}}">
+					{% endif %}
+
+					<div class="winner_mini_box_content">
+						<a href="{% url 'website:winner_page' slug=winner.slug  %}" >
+							<h5> {{ winner.welcome_title }} </h5>
+							<p> {{ winner.welcome_text }}<label style="color:#007bff;"> Läs vidare..</label></p>
+						</a>
+					</div>
+					<hr>
+
+				{% endfor %}
+				<center> <a href="{% url 'website:highest_jackpots'%}" style="color:#007bff;"> Läs fler artiklar</a></center>
+				<hr>
+
+			</div>
+
+			<div class="white_papper_mini mt-2">
+				<div class="list_of_links">
+					<h4> Artiklar </h4>
+					<ul>
+						<li><a href="{% url 'website:highest_jackpots' %}">  Undrar du vilket lotto som är bäst att spela på??  </a></li><hr>
+						<li><a href="{% url 'website:index' %}">  Spela lotto med vår lottoguide </a></li><hr>
+						<li><a href="{% url 'website:faq_questions' %}"> Här nedan finner du svar på de vanligast ställda frågorna om hur man spelar lotto online. </a></li><hr>
+					</ul>
+				</div>
+					<center> <a href="{% url 'website:highest_jackpots'%}" style="color:#007bff;"> Läs fler artiklar</a></center>
+			</div>
+
+			<div class="white_papper_mini mt-3">
+				<h4 id="lottery_mini_list_headline"> Lotterier på nätet </h4>
+				<hr>
+				{% for lottery in mini_list_lotteries %}
+					<div class="lottery_mini_list_box">
+						<div class="a_hover_box">
+
+							<a href="{% url 'website:lottery_detail' slug=lottery.slug %}">
+
+								<div class="lottery_mini_list_logo">
+									<img src="{{ lottery.logo.url }}" width="50" class="mt-2">
+								</div>
+
+								<div class="lottery_mini_list_content">
+									<ul>
+										<li><b> 	
+										{{ lottery.name_of_lottery }}</b></li>
+										<li>{{ lottery.mini_content }}</li>
+									</ul>
+								</div>
+							</a>
+
+						</div>		
+					</div>
+				{% endfor %}
+				<hr>
+				<center> <a href="{% url 'website:highest_jackpots'%}" style="color:#007bff;"> Se hela top listan</a></center>
+			</div>
+
+			<div class="winner_mini_box  mt-2">
+
+				<label class="winner_mini_box_label"> Vinnare </label>
+
 				{% if winner.profil_bild %}
 					<img class="center" src="{{winner.profil_bild.url}}">
 				{% endif %}
-				<div class="winner_content">
-					<a href="{% url 'website:winner_page' slug=winner.slug  %}"> 
+
+				<div class="winner_mini_box_content">
+					<a href="{% url 'website:winner_page' slug=winner.slug  %}" >
 						<h5> {{ winner.welcome_title }} </h5>
-						<p> {{ winner.welcome_text }}<label style="color:blue;"> Läs vidare..</label></p>
+						<p> {{ winner.welcome_text }}<label style="color:#007bff;"> Läs vidare..</label></p>
 					</a>
 				</div>
-				{% endfor %}
-
+				<hr>
+				<center> <a href="{% url 'website:highest_jackpots'%}" style="color:#007bff;"> Läs fler artiklar</a></center>
 				<hr>
 			</div>
-			<div class="list_of_links mt-2">
-				<h4> Artiklar </h4>
-				<ul>
-					<li><a href="{% url 'website:highest_jackpots' %}">  Undrar du vilket lotto som är bäst att spela på??  </a></li><hr>
-					<li><a href="{% url 'website:index' %}">  Spela lotto med vår lottoguide </a></li><hr>
-					<li><a href="{% url 'website:faq_questions' %}"> Här nedan finner du svar på de vanligast ställda frågorna om hur man spelar lotto online. </a></li><hr>
-				</ul>
-			</div>
+
 		</div>
 	</div>
 

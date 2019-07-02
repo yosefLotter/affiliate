@@ -17,22 +17,6 @@ h3{
 }
 
 
-.white_wrapper{
-	margin:0px;
-	padding:0px;
-	background-color:#FFFF;
-	padding:20px;
-	border-radius:15px;
-}
-
-.text_center{
-	text-align:center;
-}
-.lottery_page_content_wrapper{
-	padding:5px 150px 5px 90px;
-}
-
-
 .row{
 	margin:0px;
 }
@@ -40,9 +24,6 @@ h3{
 	margin:0px;
 	padding:0px;
 }
-
-
-
 .col-lg-3{
 	margin:0px;
 	padding:5px;
@@ -52,7 +33,37 @@ h3{
 	padding:0px;
 }
 
+.page_wrapper{
+	padding:0px 10px 10px 10px;
+}
+.white_papper{
+	background-color:#FFFF;
+	padding:20px;
+	border-radius:15px;
+	margin-bottom:50px;
+	max-height:100%;
+}
 
+/* Using in the Index Page */
+.white_wrapper{
+	margin:0px;
+	padding:0px;
+	background-color:#FFFF;
+	padding:20px;
+	border-radius:15px;
+}
+.index_content{
+	overflow:hidden;
+	margin-left: auto;
+  	margin-right: auto;
+	width:1000px;
+	max-width:100%;
+}
+
+
+
+
+/* Using at FQP page*/
 .content_wrapper{
 	max-width:100%;
 	width:850px;
@@ -71,12 +82,162 @@ h3{
 }
 
 
-/* page Highest Jackpotts */
+/* BELOW IS FOR SIDE PAGE */
+/* For Mini Lottery List box top 5 lottiers inside thebox*/
+
+.white_papper_mini{
+	margin:0px;
+	padding:0px;
+	background-color:#FFFF;
+	padding:20px;
+	border-radius:10px;
+}
+
+#lottery_mini_list_headline{
+	font-style:italic;
+	padding:5px;
+	color:#414141;
+}
+
+.lottery_mini_list_box{
+	margin:10px;
+}
+
+.lottery_mini_list_logo img{
+	margin:10px;
+	float:left;
+	width:55px;
+
+}
+
+.lottery_mini_list_content{
+	color:#414141;
+	max-width:100%;
+	min-width:100%;
+}
+
+.a_hover_box{
+	padding-bottom:1px;
+	border:1px solid #F5F5F5;
+	border-radius:10px;
+}
+
+.a_hover_box img{
+	height:45px;
+	max-height:100%;
+}
+
+.a_hover_box ul{
+	margin-bottom:0px;
+	list-style-type:none;
+}
+
+.a_hover_box:hover{
+	border-radius:10px;
+	cursor:pointer;
+	background-color:#F5F5F5;
+	transform:scale(1.02);
+
+}
+
+.a_hover_box a{
+	outline: none;
+	text-decoration: none;
+	color:black;
+}
+/* DONE with Mini Lottery Box------------------------------------*/
+
+
+/* Artiklar Box*/
+.list_of_links{
+	margin:0px;
+	padding:0px;
+	border-radius:5px;
+	text-align:center;
+	display:block;
+	font-size:17px;
+	font-weight:bold;
+
+}
+
+.list_of_links a:hover{
+	color:grey;
+}
+
+.list_of_links h4{
+	font-style:italic;
+	padding:5px;
+	background-color:#FAFAFA;
+	color:#414141;
+}
+
+.list_of_links ul{
+	list-style-type:none;
+}
+.list_of_links a{
+	color:#414141;
+	margin:0px;
+	text-decoration:none;
+}
+/* Done With Artiklar box------------------------------------------*/
+
+/* For Mini_Winner box for the sidepage */
+.winner_mini_box{
+	border-radius:5px;
+	background-color:white;
+
+}
+.winner_mini_box_content:hover{
+	cursor:pointer;
+	background-color:#F5F5F5;
+	transform:scale(1.02);
+
+}
+.winner_mini_box a{
+	outline: none;
+	text-decoration: none;
+	color:black;
+}
+.winner_mini_box img{
+	padding:5px;
+	border-radius:10px;
+	width:420px;
+	height:120px;
+	max-width:100%;
+	max-height:100%;
+}
+
+.winner_mini_box_label{
+	font-style:italic;
+	font-weight:bold;
+	margin:10px;
+	color:#DE2F48;
+
+}
+
+.winner_mini_box_content h5{
+	color:#414141;
+	margin-left:10px;
+	margin-bottom:0px;
+	background-color:#FAFAFA;
+
+}
+.winner_mini_box_content p{
+	color:#414141;
+	margin:0px 5px 0px 15px;
+}
+
+/* End of Mini Winner Box -----------------------------------------------*/
+
+
+
+
+
+/* This is Welcome Box at higehst up on the page*/
 .welcome{
 	border-radius:5px;
 	background-color:#096BB6;
 }
-
 .welcome_content{
 	padding:10px;
 	color:white;
@@ -84,7 +245,6 @@ h3{
 	letter-spacing:1px;
 	line-height:19px;
 }
-
 .welcome_content h4{
 	font-weight:bold;
 	margin:0px;
@@ -93,46 +253,32 @@ h3{
 .welcome_text{
 	padding:5px;
 }
+/* End of Welcome Box -----------------------------------------------------*/
 
 
-.no_bullets ul{
-	list-style-type:none;
-}
-.no_bullets{
-	list-style-type:none;
-}
-.lottery_list{
-	margin:5px;
-}
 
+
+/* For Lottery Rank List pages */
 .lottery_box{
+	margin:10px 0px 10px 0px;
+	max-width: 100%;
 	background-color:#FFFF;
 	box-shadow: 3px 2px #888888;
-	padding:20px;
 	border-radius:20px;
 }
-
-
-#lottery_logo{
-	position:auto;
-	width:150px;
-	max-height:100px;
-	max-width:100%;
+#big_rank_list_logo{
+	margin-top:25px;
+	text-align:center;
+	width:100px;
 }
-
-
-
-.ticket_button{
-	margin:10px;
-	padding:3px;
-	background-color:#64A836;
-	width:100%;
+.no_bullets{
+	padding:0px;
+	margin:0px;
+	list-style-type:none;
 }
-.ticket_button a{
-	color:white;
-	letter-spacing:1px;
+/* END Of Lottery Rank List Page----------------------------------------*/
 
-}
+
 
 /* To make the Image to be in the center of the div box. Using it in at Lottery article Page Banner */
 .center {
@@ -145,11 +291,6 @@ h3{
 }
 /* includes a flag and a name of the lottery. Using it at Best Lottery page and lottery article page. */
 
-.profile_box img{
-	margin:10px;
-	width:50px;
-	float:left;
-}
 
 
 /* For FAQ Page */
@@ -172,105 +313,28 @@ h3{
 }
 /* End of FAQ Page*/
 
-
-/* Using In Winner_Page*/
-.lotterier_mini_list{
-	max-width:100%;
-	background-color:white;
-	border-radius:10px;
-}
-.lotterier_mini_list ul{
-		list-style: none;
-}
-
-.lotterier_mini_list h4{
-	padding:5px;
-	font-style:italic;
-	font-weight:bold;
-	background-color:#096BB6;
-	color:white;
-}
-.lotterier_mini_list img{
-	margin-left:10px;
-	float:left;
-	margin-right:10px;
-}
-
-.a_hover_box img{
-	height:45px;
-}
-
-.a_hover_box ul{
-	margin-bottom:0px;
-}
-
-.a_hover_box:hover{
-	cursor:pointer;
-	background-color:#F5F5F5;
-	transform:scale(1.02);
-
-}
-.a_hover_box a{
-	outline: none;
-	text-decoration: none;
-	color:black;
+#loogo{
+	width:100px;
 }
 
 
-
-
-.list_of_links{
-	margin:0px;
-	padding:0px;
-	border-radius:5px;
+.info_content_test div{
 	text-align:center;
-	display:block;
-	font-size:17px;
-	font-weight:bold;
 
-}
-.list_of_links a{
-	margin:0px;
-
-	color:#414141;
-	text-decoration:none;
-}
-
-.list_of_links a:hover{
-	color:grey;
-}
-
-.list_of_links h4{
-	padding:5px;
-	background-color:#FAFAFA;
-	color:#414141;
-}
-
-/*FOR INDEX PAGE*/
-
-.index_content{
-	overflow:hidden;
-	margin-left: auto;
-  	margin-right: auto;
-	width:1000px;
 	max-width:100%;
+	margin-top:5px;
+	margin-right:50px;
+	width:25%;
+	float:right;
 }
-.special_dot_list ul{
 
-	list-style-type:disc;
-}
-/* THIS IS FOR LOTTERY_PAGE.HTML THAT I WILL TRANSFER SINGLE PAGE OF CSS*/
+.info_content_test img{
 
- .page_wrapper{
-	padding:0px 10px 10px 10px;
+	margin-left:20px;
+
 }
-.white_papper{
-	background-color:#FFFF;
-	padding:20px;
-	border-radius:15px;
-	margin-bottom:50px;
-	max-height:100%;
-}
+
+
 /* Part Header_box at Lottery Page.*/
 #logo{
 	width:140px;
@@ -339,59 +403,12 @@ h3{
 .lottery_content img{
 	float:right;
 }
-/* For Winners in Lottery Page*/
-.winner_page{
-	border-radius:5px;
-	background-color:white;
-
-}
-.winner_content:hover{
-	cursor:pointer;
-	background-color:#F5F5F5;
-	transform:scale(1.02);
-
-}
-.winner_page a{
-	outline: none;
-	text-decoration: none;
-	color:black;
-}
-.winner_page img{
-	padding:5px;
-	border-radius:10px;
-	width:420px;
-	height:120px;
-	max-width:100%;
-	max-height:100%;
-}
-
-.winner_label{
-	font-style:italic;
-	font-weight:bold;
-	margin:10px;
-	color:#DE2F48;
-}
-
-.winner_content h5{
-	color:#414141;
-	margin-left:10px;
-	margin-bottom:0px;
-	background-color:#FAFAFA;
-
-}
-.winner_content p{
-	color:#414141;
-	margin:0px 5px 0px 15px;
-}
 
 
-.list_of_links ul{
-	list-style-type:none;
-}
-.list_of_links a{
-	color:#414141;
-}
-/* END OF LOTTERY PAGE*/
+
+
+
+
 
 
 /* For Footer Page*/
@@ -449,3 +466,4 @@ table p{
 tbody{
 	text-align:center;
 }
+

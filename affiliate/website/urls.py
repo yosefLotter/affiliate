@@ -27,6 +27,4 @@ urlpatterns = [
 	path('faq-questions/', views.faq_questions, name='faq_questions'),
 
 
-path('fteetetettest/', views.extra_lottery_page, name='extra_lottery_page'),
-
 ]

@@ -9,22 +9,7 @@
 	<div class="col-lg-8">
 		<div class='page_wrapper'>
 			<div class="white_papper mt-2">
-				
-
-
-				<div class="header_box">
-					<div class="header_logo">
-						{% if winner.lottery_logo %}
-						<img src="{{ winner.lottery.logo.url }}" class="center">
-						{% endif %}
-					</div>
-				</div>
-
-				<div class="clear"></div>
-
 				<hr>
-
-
 				<div class="content_box">
 					<h3><b> {{ winner.lottery.name_of_lottery }} </b></h3>
 					<p>{{ winner.welcome_text }}</p>
@@ -41,7 +26,7 @@
 
 					<div class="lottery_content mt-4">
 						<h4> {{ winner.c_title }}</h4>
-						<p> {{ winner.c_content }}</p>
+						<p> {{ winner.c_content|safe }}</p>
 					</div>
 
 					<div class="clear"></div>
@@ -55,37 +40,17 @@
 						<h4> {{ winner.e_title }}</h4>
 						<p> {{ winner.e_content }}</p>
 					</div>
-
-					<img src="{{ winner.profil_bild.url }}" class="center">
+					<img src="{{ winner.profil_bild.url }}" class="center" style="border-radius:5px;">
 				</div>
 			</div>
 		</div>
 	</div>
 
 	<div class="col-lg-3">
-		<div class='page_wrapper'>
-			<div class="lotterier_mini_list mt-2">
-				<h4>Lotterier på nätet</h4>
-				{% for lottery in mini_list_lotteries %}
+		<div class="page_wrapper">
 
-				<div class="a_hover_box">
-					<a href="{% url 'website:lottery_detail' slug=lottery.slug %}">
-						<img src="{{ lottery.logo.url }}" width="50" class="mt-2">
-						<ul>
-							<li><b> {{ lottery.name_of_lottery }}</b></li>
-							<li>{{ lottery.mini_content }}</li>
-						</ul>
-						<br>
-					</a>
-				</div>
-				{% endfor %}
-
-				<hr>
-				<center> Se hela listan </center>
-				<hr>
-			</div>
-			<div class="white_papper mt-3">
-				<div class="list_of_links mt-2">
+			<div class="white_papper_mini mt-2">
+				<div class="list_of_links">
 					<h4> Artiklar </h4>
 					<ul>
 						<li><a href="{% url 'website:highest_jackpots' %}">  Undrar du vilket lotto som är bäst att spela på??  </a></li><hr>
@@ -93,9 +58,42 @@
 						<li><a href="{% url 'website:faq_questions' %}"> Här nedan finner du svar på de vanligast ställda frågorna om hur man spelar lotto online. </a></li><hr>
 					</ul>
 				</div>
+					<center> <a href="{% url 'website:highest_jackpots'%}" style="color:#007bff;"> Läs fler artiklar</a></center>
+			</div>
+
+			<div class="white_papper_mini mt-3">
+				<h4 id="lottery_mini_list_headline"> Lotterier på nätet </h4>
+				<hr>
+				{% for lottery in mini_list_lotteries %}
+					<div class="lottery_mini_list_box">
+						<div class="a_hover_box">
+
+							<a href="{% url 'website:lottery_detail' slug=lottery.slug %}">
+
+								<div class="lottery_mini_list_logo">
+									<img src="{{ lottery.logo.url }}" width="50" class="mt-2">
+								</div>
+
+								<div class="lottery_mini_list_content">
+									<ul>
+										<li><b> 	
+										{{ lottery.name_of_lottery }}</b></li>
+										<li>{{ lottery.mini_content }}</li>
+									</ul>
+								</div>
+							</a>
+
+						</div>		
+					</div>
+				{% endfor %}
+				<hr>
+				<center> <a href="{% url 'website:highest_jackpots'%}" style="color:#007bff;"> Se hela top listan</a></center>
 			</div>
 		</div>
 	</div>
+</div>
+
+
 </div>
 
 {% include "footer.html" %}
