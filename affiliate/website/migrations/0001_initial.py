@@ -5,12 +5,6 @@ import django.db.models.deletion
 import django_bleach.models
 
 
-
-
-from django_bleach.models import BleachField
-from django.utils.importlib import import_module
-
-
 class Migration(migrations.Migration):
 
     initial = True

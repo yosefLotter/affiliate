@@ -1,7 +1,7 @@
 from django.db import models
 
 from django_bleach.models import BleachField
-from django.utils.importlib import import_module
+
 
 # For Lottery Page the content
 class Lottery(models.Model):
@@ -94,7 +94,8 @@ class Winner(models.Model):
 	e_content = models.TextField(blank=True)
 
 	bild = models.ImageField(default=None, blank=True)
-	youtube_link = models.CharField(max_length=1000, blank=True)
+	youtube_link = models.TextField(blank=True)
+	
 	date = models.DateTimeField(auto_now_add=True)
 
 	def __str__(self):
@@ -105,14 +106,17 @@ class Winner(models.Model):
 
 
 class Customer(models.Model):
-	name = models.CharField(max_length=100)
-	email_adress = models.CharField(max_length=200, blank=True)
+	name = models.CharField(max_length=15)
+	efter_name = models.CharField(max_length=15, blank=True)
+	email_adress = models.CharField(max_length=50, blank=True)
+	phone_number = models.CharField(max_length=15, blank=True)
 	date_created = models.DateTimeField(auto_now_add=True)
 
 	def __str__(self):
 		return '{},{},{}'.format(
 			self.name,
 			self.email_adress,
+			self.phone_number,
 			self.date_created,
 		)
 

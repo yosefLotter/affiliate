@@ -79,6 +79,7 @@ h3{
 	font-weight:bold;
 	margin-right:180px;
 	color:white;
+}
 
 
 
@@ -201,8 +202,8 @@ h3{
 .winner_mini_box img{
 	padding:5px;
 	border-radius:10px;
-	width:420px;
-	height:120px;
+	width:410px;
+	height:180px;
 	max-width:100%;
 	max-height:100%;
 }
@@ -224,7 +225,7 @@ h3{
 }
 .winner_mini_box_content p{
 	color:#414141;
-	margin:0px 5px 0px 15px;
+	margin:0px 15px 0px 15px;
 }
 
 /* End of Mini Winner Box -----------------------------------------------*/
