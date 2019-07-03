@@ -80,6 +80,19 @@ h3{
 	margin-right:180px;
 	color:white;
 }
+/* YouTube Window At Winner Page */
+.youtube_window{
+	margin:20px;
+	display: block; 
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+
+
+}
+
+
+/* End Of YouTube Window----------------------------------*/
 
 
 /* BELOW IS FOR SIDE PAGE */

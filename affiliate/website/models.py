@@ -67,7 +67,6 @@ class Lottery(models.Model):
 
 
 
-
 # For Winner Page
 class Winner(models.Model):
 	slug = models.SlugField(unique=True)
@@ -95,6 +94,7 @@ class Winner(models.Model):
 	e_content = models.TextField(blank=True)
 
 	bild = models.ImageField(default=None, blank=True)
+	youtube_link = models.CharField(max_length=1000, blank=True)
 	date = models.DateTimeField(auto_now_add=True)
 
 	def __str__(self):
@@ -107,84 +107,13 @@ class Winner(models.Model):
 class Customer(models.Model):
 	name = models.CharField(max_length=100)
 	email_adress = models.CharField(max_length=200, blank=True)
+	date_created = models.DateTimeField(auto_now_add=True)
 
 	def __str__(self):
-		return '{},{}'.format(
+		return '{},{},{}'.format(
 			self.name,
 			self.email_adress,
+			self.date_created,
 		)
 
 
-# class Tabell(models.Model):
-# 	lottery = models.ForeignKey(Lottery, on_delete=models.CASCADE)
-
-# 	content = models.TextField(blank=True)
-
-# 	a_Vinstnivå = models.CharField(max_length=100, blank=True) 
-# 	a_vinnarodds = models.CharField(max_length=100, blank=True)
-# 	a_Matchningar = models.CharField(max_length=100, blank=True)
-
-# 	b_Vinstnivå = models.CharField(max_length=100, blank=True)
-# 	b_Matchningar = models.CharField(max_length=100, blank=True)
-# 	b_vinnarodds = models.CharField(max_length=100, blank=True)
-
-# 	c_Vinstnivå = models.CharField(max_length=100, blank=True)
-# 	c_Matchningar = models.CharField(max_length=100, blank=True)
-# 	c_vinnarodds = models.CharField(max_length=100, blank=True)
-	
-# 	d_Vinstnivå = models.CharField(max_length=100, blank=True)
-# 	d_Matchningar = models.CharField(max_length=100, blank=True)
-# 	d_vinnarodds = models.CharField(max_length=100, blank=True)
-
-# 	e_Vinstnivå = models.CharField(max_length=100, blank=True)
-# 	e_Matchningar = models.CharField(max_length=100, blank=True)
-# 	e_vinnarodds = models.CharField(max_length=100, blank=True)
-
-# 	f_Vinstnivå = models.CharField(max_length=100, blank=True)
-# 	f_Matchningar = models.CharField(max_length=100, blank=True)
-# 	f_vinnarodds = models.CharField(max_length=100, blank=True)
-
-# 	g_Vinstnivå = models.CharField(max_length=100, blank=True)
-# 	g_Matchningar = models.CharField(max_length=100, blank=True)
-# 	g_vinnarodds = models.CharField(max_length=100, blank=True)
-
-# 	h_Vinstnivå = models.CharField(max_length=100, blank=True)
-# 	h_Matchningar = models.CharField(max_length=100, blank=True)
-# 	h_vinnarodds = models.CharField(max_length=100, blank=True)
-
-# 	i_Vinstnivå = models.CharField(max_length=100, blank=True)
-# 	i_Matchningar = models.CharField(max_length=100, blank=True)
-# 	i_vinnarodds = models.CharField(max_length=100, blank=True)
-
-# 	j_Vinstnivå = models.CharField(max_length=100, blank=True)
-# 	j_Matchningar = models.CharField(max_length=100, blank=True)
-# 	j_vinnarodds = models.CharField(max_length=100, blank=True)
-
-# 	k_Vinstnivå = models.CharField(max_length=100, blank=True)
-# 	k_Matchningar = models.CharField(max_length=100, blank=True)
-# 	k_vinnarodds = models.CharField(max_length=100, blank=True)
-
-# 	l_Vinstnivå = models.CharField(max_length=100, blank=True)
-# 	l_Matchningar = models.CharField(max_length=100, blank=True)
-# 	l_vinnarodds = models.CharField(max_length=100, blank=True)
-
-# 	m_Vinstnivå = models.CharField(max_length=100, blank=True)
-# 	m_Matchningar = models.CharField(max_length=100, blank=True)
-# 	m_vinnarodds = models.CharField(max_length=100, blank=True)
-
-# 	n_Vinstnivå = models.CharField(max_length=100, blank=True)
-# 	n_Matchningar = models.CharField(max_length=100, blank=True)
-# 	n_vinnarodds = models.CharField(max_length=100, blank=True)
-
-# 	o_Vinstnivå = models.CharField(max_length=100, blank=True)
-# 	o_Matchningar = models.CharField(max_length=100, blank=True)
-# 	o_vinnarodds = models.CharField(max_length=100, blank=True)
-
-
-
-
-
-
-
-
-	
