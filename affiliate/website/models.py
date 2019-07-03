@@ -121,3 +121,14 @@ class Customer(models.Model):
 		)
 
 
+
+class Mini_lottery_list(models.Model):
+	lottery = models.ForeignKey(Lottery, on_delete=models.CASCADE)
+	name_of_lottery = models.CharField(max_length=100, blank=True)
+	mini_logo = models.ImageField(default=None, blank=True)
+	mini_content = models.CharField(max_length=100, blank=True)
+
+	def __str__(self):
+		return '{}'.format(
+			self.name_of_lottery,
+	)

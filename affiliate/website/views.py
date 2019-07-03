@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 
 
-from .models import  Lottery, Winner, Customer
+from .models import  Lottery, Winner, Customer, Mini_lottery_list
 
 
 def index(request):
