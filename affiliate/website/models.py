@@ -1,7 +1,7 @@
 from django.db import models
 
 from django_bleach.models import BleachField
-
+from django.utils.importlib import import_module
 
 # For Lottery Page the content
 class Lottery(models.Model):
