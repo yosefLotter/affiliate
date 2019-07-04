@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<div class='body_content'>
+<div class='body_main'>
+
+
+
+
+<div class="row">
+	<div class="col-lg-1">
+		<p> </p>
+	</div>
+
+	<div class="col-lg-8">
+
+		<div class='page_wrapper'>
+				<div class="welcome mt-3">
+
+					<div class="welcome_content">
+						<p class="welcome_text">
+						Som namnet LottoTellus (Tellus = värld, jord) antyder finns här på sajten lotterier från hela världen.
+						Du kan läsa om de olika lotterierna och kanske hittar du en favorit 
+						</p>
+					</div>
+				</div>
+
+
+			<div class="white_wrapper mt-2">
+				<div class="index_content">
+					<div class="welcome_text">
+
+						<h3> Kontakta oss </h3>
+						{% if messages %}
+        					<ul class="no_bullets">
+	            				{% for msg in messages %}
+	           						<li> 
+				               			<div class="alert alert-success" role="alert">
+				                    		{{msg.message}}
+				                		</div>
+	            					</li>
+	            				{% endfor %}
+        					</ul>
+       					{% endif %}
+
+						<form class="site_form_contact_page" method="post" enctype="multipart/form-data">
+    						{% csrf_token %}
+
+    						{{form}}
+
+    						<input type='submit' value="Skicka">
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-lg-3">
+		<div class="page_wrapper">
+
+			<div class="white_papper_mini mt-3">
+				<h4 id="lottery_mini_list_headline"> Lotterier på nätet </h4>
+				<hr>
+				{% for lottery in mini_list_lotteries %}
+					<div class="lottery_mini_list_box">
+						<div class="a_hover_box">
+
+							<a href="{% url 'website:lottery_detail' slug=lottery.slug %}">
+
+								<div class="lottery_mini_list_logo">
+									<img src="{{ lottery.logo.url }}" width="50" class="mt-2">
+								</div>
+
+								<div class="lottery_mini_list_content">
+									<ul>
+										<li><b> 	
+										{{ lottery.name_of_lottery }}</b></li>
+										<li>{{ lottery.mini_content }}</li>
+									</ul>
+								</div>
+							</a>
+
+						</div>		
+					</div>
+				{% endfor %}
+				<hr>
+				<center> <a href="{% url 'website:highest_jackpots'%}"  style="color:#007bff;"> Se hela top listan</a></center>
+			</div>
+
+			<div class="white_papper_mini mt-2">
+				<div class="list_of_links">
+					<h4> Artiklar </h4>
+					<ul>
+						<li><a href="{% url 'website:highest_jackpots' %}">  Undrar du vilket lotto som är bäst att spela på??  </a></li><hr>
+						<li><a href="{% url 'website:index' %}">  Spela lotto med vår lottoguide </a></li><hr>
+						<li><a href="{% url 'website:faq_questions' %}"> Här nedan finner du svar på de vanligast ställda frågorna om hur man spelar lotto online. </a></li><hr>
+					</ul>
+				</div>
+				<center> <a href="{% url 'website:highest_jackpots'%}" style="color:#007bff;"> Läs fler artiklar</a></center>
+			</div>
+		</div>
+	</div>
+</div>
+
+</div>
+</div>
+{% include "footer.html" %}
+{% endblock %}
+
+

@@ -1,8 +1,12 @@
 from django.shortcuts import render, redirect
 
-
 from .models import  Lottery, Winner, Customer, Mini_lottery_list
 
+from .forms import ContactForm
+# For Flash Messages
+from django.contrib import messages
+# To send Email to my Outlook Account.
+from django.core.mail import send_mail
 
 def index(request):
     mini_list_lotteries = Lottery.objects.all()[:4]
@@ -46,14 +50,12 @@ def amerika(request):
     return render(request, 'amerika_list.html', context)
 
 
-# For Best_lottery Page
 def highest_jackpots(request):
     lotteries = Lottery.objects.all().order_by('-jackpot')
     context = {
         'lotteries' : lotteries
     }
     return render(request, 'highest_jackpots.html', context)
-
 
 
 def lottery_detail(request, slug):
@@ -80,6 +82,7 @@ def winner_page(request, slug):
     }
     return render(request, 'winner_page.html', context)
 
+
 def faq_questions(request):
     winners = Winner.objects.all()[:1]
     mini_list_lotteries = Lottery.objects.all()[:4]
@@ -88,3 +91,30 @@ def faq_questions(request):
         'mini_list_lotteries':mini_list_lotteries
     }
     return render(request, 'faq.html', context)
+
+
+def contact_page(request):
+    mini_list_lotteries = Lottery.objects.all()[:4]
+    if request.method == 'POST':
+        # create a form instance and populate it with data from the request:
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form = form.save(commit=False)
+            send_mail('Customer {} sent an Email'.format(form.email_adress),
+            form.text,
+            # Yosef is the email it sends from.
+            'yosef.lotter@outlook.com',
+            # Yossi is the Reciver can add more Recivers if its needed.
+            ['yossi.kayhko@gmail.com'],
+            fail_silently=True)
+            form.save()
+            messages.add_message(request, messages.SUCCESS, 'We will be in touch {}'.format(form.namn))
+            return redirect('website:contact_page')
+    # if a GET (or any other method) we'll create a blank form
+    else:
+        form = ContactForm()
+        context = {
+            'form': form,
+            'mini_list_lotteries': mini_list_lotteries,
+        }
+    return render(request, 'contact_page.html', context)

@@ -8,6 +8,7 @@ class Lottery(models.Model):
 	slug = models.SlugField(unique=True)
 	name_of_lottery = models.CharField(max_length=100)
 	continent = models.CharField(max_length=100)
+	provider = models.CharField(max_length=50, blank=True)
 	jackpot = models.CharField(max_length=40, blank=True)
 	odds = models.CharField(max_length=100, blank=True)
 	dragnings_datum = models.CharField(max_length=400)
@@ -106,17 +107,18 @@ class Winner(models.Model):
 
 
 class Customer(models.Model):
-	name = models.CharField(max_length=15)
-	efter_name = models.CharField(max_length=15, blank=True)
+	namn = models.CharField(max_length=15)
+	efternamn = models.CharField(max_length=15, blank=True)
 	email_adress = models.CharField(max_length=50, blank=True)
-	phone_number = models.CharField(max_length=15, blank=True)
+	telefonnummer = models.CharField(max_length=15, blank=True)
+	text = models.TextField(blank=True)
 	date_created = models.DateTimeField(auto_now_add=True)
 
 	def __str__(self):
 		return '{},{},{}'.format(
-			self.name,
+			self.namn,
 			self.email_adress,
-			self.phone_number,
+			self.telefonnummer,
 			self.date_created,
 		)
 

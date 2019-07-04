@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['yoseflotter.pythonanywhere.com']
 
-#ALLOWED_HOSTS = []
+ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -132,7 +132,16 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA_URL ='/media/'
 
 
-
+# Allow me to put in tags in Admin Django.
 BLEACH_ALLOWED_TAGS = ['p', 'b', 'i', 'u', 'em', 'h4', 'a', 'ul', 'li', 'hr', 'table', 'tr', 'th', 'td', 'br', 'iframe',]
 BLEACH_ALLOWED_ATTRIBUTES = ['href', 'title', 'style', 'class']
 BLEACH_STRIP_TAGS = True
+
+
+# For Contact Page so I Will be Aible to get Email from My customers.
+EMAIL_HOST = 'smtp.live.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'yosef.lotter@outlook.com'
+EMAIL_HOST_PASSWORD = 'wgnp22pb'
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False

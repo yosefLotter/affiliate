@@ -26,5 +26,6 @@ urlpatterns = [
 
 	path('faq-questions/', views.faq_questions, name='faq_questions'),
 
+	path('contact-page/', views.contact_page, name='contact_page'),
 
 ]
