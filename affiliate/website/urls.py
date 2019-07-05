@@ -30,4 +30,6 @@ urlpatterns = [
 	path('contact-page/', views.contact_page, name='contact_page'),
 
 	path('spela-ansvarsfullt/', views.spela_ansvarsfullt, name='spela_ansvarsfullt'),
+
+	path('artiklar/', views.all_article_page, name='all_article_page')
 ]

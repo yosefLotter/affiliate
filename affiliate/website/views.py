@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect
 
-from .models import  Lottery, Winner, Customer, Mini_lottery_list
+from .models import  Lottery, Winner, Contact_us, Mini_lottery_list, Montly_subscribes
 
-from .forms import ContactForm
+from .forms import ContactForm, Subscribers
 # For Flash Messages
 from django.contrib import messages
 # To send Email to my Outlook Account.
@@ -93,6 +93,7 @@ def faq_questions(request):
     return render(request, 'faq.html', context)
 
 
+
 def contact_page(request):
     mini_list_lotteries = Lottery.objects.all()[:4]
     if request.method == 'POST':
@@ -100,7 +101,7 @@ def contact_page(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form = form.save(commit=False)
-            send_mail('Customer {} sent an Email'.format(form.email_adress),
+            send_mail('Customer Contacted us {} '.format(form.email_adress),
             form.text,
             # Yosef is the email it sends from.
             'yosef.lotter@outlook.com',
@@ -124,3 +125,14 @@ def spela_ansvarsfullt(request):
     return render(request, 'spela_ansvarfullt.html')
 
 
+def all_article_page(request):
+    form = Subscribers()
+    if request.method == 'POST':
+        form = Subscribers(request.POST)
+        if form.is_valid():
+            Montly_subscriber = form.save()
+            return redirect('website:all_article_page')
+    context = {
+        'form':form
+    }
+    return render(request, 'all_article_page.html', context)

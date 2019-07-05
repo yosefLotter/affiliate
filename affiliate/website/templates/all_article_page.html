@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class="row">
+	<div class="col-lg-1">
+		<p> </p>
+	</div>
+
+	<div class="col-lg-8">
+
+
+		<div class="page_wrapper">
+			<div class="welcome mt-3">
+				<div class="welcome_content">
+					<h4> Roligt att du vill lasa mera av vora artiklar</h4>
+					<p class="welcome_text">
+						Man kan gradera ett lotteri efter dess jackpottar, vinnarodds, pris för spelrader, skatter och så vidare. Många spelare tittar på jackpottarnas storlek eftersom de drömmer om att vinna en hisnande jackpot för att sedan uppfylla alla sina drömmar. Här nedan kan du se en lista på de 10 lotterier som brukar ha de högsta jackpottarna. Överst är det lotteri som brukar ha de största jackpottarna och på andra plats det lotteri som brukar ha näst största jackpotten och så vidare. 
+					</p>
+				</div>
+			</div>
+			<div class="white_papper mt-2">
+				<div class="content_wrapper">
+					<h3> <b> Artiklar </b></h3>
+					<div class="faq_box">
+						<h5 class=""> Roligt att du vill lasa mera av vora artiklar</h5>
+						<p> Innan du börjar spela lotto online måste du se till att lotteritjänsten har svensk spellicens. Lottoland
+						är en lotteritjänst online som är säker och de har en svensk spellicens.
+						<p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-lg-3">
+		<div class="page_wrapper">
+
+			<form class="site_form_contact_page" method="post" enctype="multipart/form-data">
+    			{% csrf_token %}
+
+    			{{form}}
+
+    			<input type='submit' value="Skicka">
+			</form>
+			
+		</div>
+	</div>
+</div>
+
+{% include "footer.html" %}
+{% endblock %}
+
+
+

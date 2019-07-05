@@ -106,7 +106,18 @@ class Winner(models.Model):
 		)
 
 
-class Customer(models.Model):
+class Mini_lottery_list(models.Model):
+	lottery = models.ForeignKey(Lottery, on_delete=models.CASCADE)
+	name_of_lottery = models.CharField(max_length=100, blank=True)
+	mini_logo = models.ImageField(default=None, blank=True)
+	mini_content = models.CharField(max_length=100, blank=True)
+
+	def __str__(self):
+		return '{}'.format(
+			self.name_of_lottery,
+	)
+
+class Contact_us(models.Model):
 	namn = models.CharField(max_length=15)
 	efternamn = models.CharField(max_length=15, blank=True)
 	email_adress = models.CharField(max_length=50, blank=True)
@@ -122,15 +133,7 @@ class Customer(models.Model):
 			self.date_created,
 		)
 
-
-
-class Mini_lottery_list(models.Model):
-	lottery = models.ForeignKey(Lottery, on_delete=models.CASCADE)
-	name_of_lottery = models.CharField(max_length=100, blank=True)
-	mini_logo = models.ImageField(default=None, blank=True)
-	mini_content = models.CharField(max_length=100, blank=True)
-
-	def __str__(self):
-		return '{}'.format(
-			self.name_of_lottery,
-	)
+class Montly_subscribes(models.Model):
+	namn = models.CharField(max_length=50, blank=True)
+	email_adress = models.CharField(max_length=100, blank=True)
+	date_created = models.DateTimeField(auto_now_add=True)
