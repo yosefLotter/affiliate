@@ -2,7 +2,7 @@
 
 <footer id="footer">
 	<div class="image_box">
-		<label class="mr-3"> Spelar du för mycket? Ring Stödlinjen: 020-81 91 00 </label>
+		<label class="mr-3">Ring Stödlinjen: 020-81 91 00 </label>
 		<a href="https://stodlinjen.se/#!/" target="_blank"> 
 			<img src="{% static 'stodlinjen.png' %}">
 		</a>
@@ -10,7 +10,8 @@
 		<a href="https://www.spelpaus.se/" target="_blank">
 			<img src="{% static 'spelpaus.png' %}">
 		</a>
-	<p class="center">  LottoTellus är en obunden jämförelsesajt för lotterier på nätet. Informationen på sajten är ämnad för underhållning och utbildning. Tredje part kan ändra eller avbryta bonusar/erbjudanden och LottoTellus kan ej hållas ansvariga för felaktig information. Erbjudanden gäller enbart personer över 18 år 
-	</p>
+		<a href="{% url 'website:spela_ansvarsfullt' %}" style="color:#FAFAFA"> Spel kan vara beroendeframkallande. Spela ansvarsfullt! </a>
+		<p class="center">  LottoTellus är en obunden jämförelsesajt för lotterier på nätet. Informationen på sajten är ämnad för underhållning och utbildning. Tredje part kan ändra eller avbryta bonusar/erbjudanden och LottoTellus kan ej hållas ansvariga för felaktig information. Erbjudanden gäller enbart personer över 18 år 
+		</p>
 	</div>
 </footer>

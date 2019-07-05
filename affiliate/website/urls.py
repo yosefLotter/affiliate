@@ -5,6 +5,7 @@ from django.urls import include, path
 from .import views
 
 app_name = 'website'
+
 urlpatterns = [
 	path('', views.index, name="index"),
 	# For Europe_list Page.
@@ -28,4 +29,5 @@ urlpatterns = [
 
 	path('contact-page/', views.contact_page, name='contact_page'),
 
+	path('spela-ansvarsfullt/', views.spela_ansvarsfullt, name='spela_ansvarsfullt'),
 ]

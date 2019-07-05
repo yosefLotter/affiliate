@@ -118,3 +118,9 @@ def contact_page(request):
             'mini_list_lotteries': mini_list_lotteries,
         }
     return render(request, 'contact_page.html', context)
+
+
+def spela_ansvarsfullt(request):
+    return render(request, 'spela_ansvarfullt.html')
+
+

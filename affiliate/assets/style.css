@@ -16,7 +16,13 @@ h3{
 	color:#414141;
 }
 
-
+#LottoTellus{
+	color:white;
+	font-weight:bold;
+	font-style:italic;
+	font-family:"Helvetica";
+	font-size:20px;
+}
 .row{
 	margin:0px;
 }
@@ -476,3 +482,24 @@ tbody{
 .site_form_contact_page input, .site_form_contact_page textarea{ 
 	display:block;
 }
+
+
+/* For Spela Ansvarsfullt Page */
+.spela_ansvarsfullt img{
+	width:200px;
+}
+.spela_ansvarsfullt{
+	margin-top:50px;
+  	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+  	width: 70%;
+}
+/* End of Spela Ansvarfullt Page ------------------------------------------*/
+
+
+
+
+
+
+

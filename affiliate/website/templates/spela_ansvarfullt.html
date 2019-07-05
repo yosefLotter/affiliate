@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<div class="row">
+	<div class="col-lg-1">
+		<p> </p>
+	</div>
+
+	<div class="col-lg-8">
+
+		<div class='page_wrapper'>
+
+			<div class="white_wrapper mt-5">
+				<div class="index_content">
+					<div class="welcome_text">
+						<h3> Ansvarsfullt spelande </h3>
+						<p class="mt-2">
+						Spel ska vara ett nöje, men tyvärr kan det ibland bli lite för mycket och därför ska alla som spelar vara vaksamma på sitt spelande. För att hålla koll på spelandet kan du använda dig lotteritjänsternas insättningsgräns och egenuteslutning.
+
+						</p>
+
+
+						<h3> Insättningsgräns </h3>
+						<p>
+							Bestäm i förväg hur mycket du vill spela för och sätta en  insättningsgräns för en bestämd tid på ditt spelkonto hos lotteritjänsten. När du har nått den gränsen kan du inte sätta in mer pengar. Om du villsänka din insättningsgräns ytterligare är det bara att kontakta lotteritjänsten och gränsen sänks omgående. Men om du vill höja din insättningsgräns tar det 24 timmar, så att du får betänketid.
+
+						</p>
+
+						<h3> Egenuteslutning </h3>
+						<p>
+							Om du tycker att du spelar alldeles för mycket kan du även utesluta dig själv från all spel under några månader eller till och med under några år. Under din uteslutningstid kommer du inte att kunna logga in på ditt spelkonto och du kommer att tas bort från databasen för marknadsföring.
+
+						</p>
+
+						<h3> Inga spelare under 18 årInga spelare under 18 år </h3>
+						<p>
+							Enligt svensk lag får inte minderåriga spela om pengar och därför är lotteritjänsterna strikta med att spelare måste kunna bevisa att de är fyllda 18 år när de registrerar sig. 
+
+						</p>
+
+						<h3> Hjälp att få </h3>
+						<p>
+							Om du tycker att du spelar för mycket och att spelandet påverkar negativt ditt liv finns det hjälp att få. På stodlinjen.se och spelberoende.se finns ett självtest som du kan göra för att se om du är i  riskzonen för att utveckla spelberoende. Du kan även kontakta både stödlinjen och spelberoendes förening om du behöver någon att prata med om ditt spelande.
+						</p>
+
+							<div class="spela_ansvarsfullt">
+								<label class="mr-3">Ring Stödlinjen: 020-81 91 00 </label>
+								<a href="https://stodlinjen.se/#!/" target="_blank"> 
+									<img src="{% static 'stodlinjen.png' %}">
+								</a>
+
+								<a href="https://www.spelpaus.se/" target="_blank">
+									<img src="{% static 'spelpaus.png' %}">
+								</a>
+							</div>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-lg-3">
+
+	</div>
+
+</div>
+
+{% include "footer.html" %}
+{% endblock %}
+
+
