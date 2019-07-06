@@ -108,7 +108,7 @@ h3{
 }
 
 .lottery_mini_list_box{
-	margin:10px;
+	margin:20px;
 }
 
 .lottery_mini_list_logo img{
@@ -510,3 +510,56 @@ tbody{
 }
 /* End of Spela Ansvarfullt Page ------------------------------------------*/
 
+
+
+/* For Levrantor Box in Index Page*/
+
+.no_margin_no_padding h2{
+	border-radius:5px;
+	font-style:italic;
+	margin:0px;
+}
+.levrantor_box{
+	max-height:100%;
+	width:100%;
+	margin:5px;
+	background-color:#FFFF;
+	padding:15px;
+	border-radius:15px;
+
+
+}
+
+.levrantor_content{
+	margin:0px;
+	padding:0px;
+}
+.levrantor_content img{
+	max-width:100%;
+	padding-left:0px;
+	margin:0px;
+	width:200px;
+	height:100px;
+
+}
+
+
+.levrantor_content h5{
+	font-weight:bold;
+	font-style: italic;
+	color:#414141;
+}
+.levrantor_content p{
+	margin:2px;
+}
+
+.levrantor_box button{
+	background-color:#73CD49;
+	color:#FAFAFA;
+	border-radius:10px;
+	width:150px;
+	height:50px;
+	margin:30px;
+}
+
+/* End of Levrantor box -------------------------------------*/

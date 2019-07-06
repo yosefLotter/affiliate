@@ -105,6 +105,43 @@
 					</div>
 				</div>
 			</div>
+
+
+
+
+			<div class="container mt-3">
+			<div class="no_margin_no_padding">
+				<h2 class="alert alert-danger"> Lotteri leverantörer </h2>
+			</div>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="levrantor_box">
+							<div class="levrantor_content">
+								<img src="{% static 'multilotto-logo.jpg' %}">
+								<button class="levrantor_button"> Till Spelbolaget </button>
+								<h5 class="mt-1"> MultiLotto </h5>
+								<p> Lottobonusar behöver endast omsättas 1 gång </p>
+								<p> Enkelt att köpa en, fler eller prenumeration </p>
+								<p>Spela ansvarsfullt | Stödlinjen.se | +18 | Villkor & regler gäller</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-6">
+						<div class="levrantor_box">
+							<div class="levrantor_content">
+								<img src="{% static 'lottoland-logo.jpg' %}">
+								<button class="levrantor_button"> Till Spelbolaget </button>
+								<h5 class="mt-1"> LottoLAnd </h5>
+								<p> Lottobonusar behöver endast omsättas 1 gång </p>
+								<p> Enkelt att köpa en, fler eller prenumeration </p>
+								<p>Spela ansvarsfullt | Stödlinjen.se | +18 | Villkor & regler gäller</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
 		</div>
 
 	</div>
@@ -133,11 +170,11 @@
 									</ul>
 								</div>
 							</a>
-
 						</div>		
 					</div>
 				{% endfor %}
 				<hr>
+
 				<center> <a href="{% url 'website:highest_jackpots'%}"  style="color:#007bff;"> Se hela top listan</a></center>
 			</div>
 
@@ -183,3 +220,85 @@
 {% endblock %}
 
 
+<div class="test">
+
+					<div class="levrantor_box mt-5">
+						<div class="levrantor_image">
+							<img src="{% static 'multilotto-logo.jpg' %}">
+						</div>
+			
+						<div class="levrantor_content">
+							<h5> MultiLotto </h5>
+							<p> Lottobonusar behöver endast omsättas 1 gång </p>
+							<p> Enkelt att köpa en, fler eller prenumeration </p>
+							<p>Spela ansvarsfullt | Stödlinjen.se | +18 | Villkor & regler gäller</p>
+
+						</div>
+						<div class="clearfix"></div>
+					</div>
+
+
+										<div class="levrantor_box mt-5">
+						<div class="levrantor_image">
+							<img src="{% static 'multilotto-logo.jpg' %}">
+						</div>
+			
+						<div class="levrantor_content">
+							<h5> MultiLotto </h5>
+							<p> Lottobonusar behöver endast omsättas 1 gång </p>
+							<p> Enkelt att köpa en, fler eller prenumeration </p>
+							<p>Spela ansvarsfullt | Stödlinjen.se | +18 | Villkor & regler gäller</p>
+
+						</div>
+						<div class="clearfix"></div>
+					</div>
+</div>
+
+/* Testar for levrantor box */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.levrantor_box{
+	width:45%;
+	margin:0px;
+	padding:0px;
+	background-color:#FFFF;
+	padding:20px;
+	border-radius:15px;
+
+
+}
+.levrantor_image img{
+	max-width:100%;
+	float:left;
+	border:1px solid black;
+	padding-left:0px;
+	margin:0px;
+	width:200px;
+	height:100px;
+
+}
+.levrantor_content{
+	float:left;
+	margin:5px;
+}
+.levrantor_content h5{
+	margin:0px;
+}
+.levrantor_content p{
+	margin:0px;
+}
+
+.levrantor_button{
+	width:150px;
+	border:1px solid black;
+	background-color:#73CD40;
+}
+
+
+.test div{
+	margin:5px;
+	float:left;
+}
