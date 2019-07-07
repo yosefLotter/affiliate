@@ -132,7 +132,9 @@ def all_article_page(request):
         if form.is_valid():
             Montly_subscriber = form.save()
             return redirect('website:all_article_page')
+    winners = Winner.objects.all()
     context = {
-        'form':form
+        'form':form,
+        'winners': winners,
     }
     return render(request, 'all_article_page.html', context)

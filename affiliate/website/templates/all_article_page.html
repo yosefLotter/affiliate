@@ -10,39 +10,101 @@
 
 
 		<div class="page_wrapper">
-			<div class="welcome mt-3">
-				<div class="welcome_content">
-					<h4> Roligt att du vill lasa mera av vora artiklar</h4>
-					<p class="welcome_text">
-						Man kan gradera ett lotteri efter dess jackpottar, vinnarodds, pris för spelrader, skatter och så vidare. Många spelare tittar på jackpottarnas storlek eftersom de drömmer om att vinna en hisnande jackpot för att sedan uppfylla alla sina drömmar. Här nedan kan du se en lista på de 10 lotterier som brukar ha de högsta jackpottarna. Överst är det lotteri som brukar ha de största jackpottarna och på andra plats det lotteri som brukar ha näst största jackpotten och så vidare. 
-					</p>
-				</div>
-			</div>
-			<div class="white_papper mt-2">
+			<div class="white_article_papper mt-3">
 				<div class="content_wrapper">
-					<h3> <b> Artiklar </b></h3>
+
 					<div class="faq_box">
-						<h5 class=""> Roligt att du vill lasa mera av vora artiklar</h5>
+						<h3>  Roligt att du vill lasa mera av vora artiklar</h3>
 						<p> Innan du börjar spela lotto online måste du se till att lotteritjänsten har svensk spellicens. Lottoland
 						är en lotteritjänst online som är säker och de har en svensk spellicens.
 						<p>
 					</div>
+
+					<div class="row">
+
+						<div class="col-sm-4">
+							<a href="#"> Här finner du svar på de vanligast ställda frågorna om hur man spelar lotto online.  </a>
+
+						</div>
+
+						<div class="col-sm-4">
+							<a href="#"> Spela lotto med vår lottoguide  </a>
+						</div>
+
+						<div class="col-sm-4">
+							<a href="#"> Undrar du vilket lotto som är bäst att spela på?? </a>
+						</div>
+
+
+					</div>
+
+					<div class="row mt-4">
+
+						{% for winner in winners %}
+						<div class="col-sm-4">
+
+							<div class="winner_mini_box  mt-2">
+								<div class="winner_mini_box_content">
+									<a href="{% url 'website:winner_page' slug=winner.slug  %}" >
+										<h5> {{ winner.welcome_title }} </h5>
+									</a>
+								</div>
+								{% if winner.profil_bild %}
+									<img class="center" src="{{winner.profil_bild.url}}">
+								{% endif %}
+								<hr>
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+
+
+					<div class="mini_levrantor_text_box">
+						<label> Lotteri Levrantör </label><br>
+						<a href="#"> MultiLotto </a>
+						<a href="#"> LottoLand </a>
+					</div>
 				</div>
 			</div>
+
 		</div>
 	</div>
 
 	<div class="col-lg-3">
 		<div class="page_wrapper">
 
-			<form class="site_form_contact_page" method="post" enctype="multipart/form-data">
-    			{% csrf_token %}
 
-    			{{form}}
-
-    			<input type='submit' value="Skicka">
-			</form>
 			
+			<div class="row">
+				
+				<div class="levrantor_box_side_bar">
+					<label class="levrantor_box_label"> Lotteri Levrantör </label><br>
+					<img src="{% static 'multilotto-logo.jpg' %}">
+					<h5 class="mt-1"> MultiLotto </h5>
+					<p> Lottobonusar behöver endast omsättas 1 gång </p>
+					<p> Enkelt att köpa en, fler eller prenumeration </p>
+					<button class="levrantor_button"> Till Spelbolaget </button>
+					<p>Spela ansvarsfullt | Stödlinjen.se | +18 | Villkor & regler gäller</p>
+				</div>
+
+				<form class="monthly_subscriber_form" method="post" enctype="multipart/form-data">
+	    			{% csrf_token %}
+	    			<p> Premunnera på våran månads Email</p>
+	    			{{form}}
+
+	    			<input type='submit' value="Skicka">
+				</form>
+
+				<div class="levrantor_box_side_bar">
+					<label class="levrantor_box_label" > Lotteri Levrantör </label><br>
+					<img src="{% static 'lottoland-logo.jpg' %}" style="margin:10px">
+					<h5 class="mt-1"> LottoLand </h5>
+					<p> Lottobonusar behöver endast omsättas 1 gång </p>
+					<p> Enkelt att köpa en, fler eller prenumeration </p>
+					<button class="levrantor_button"> Till Spelbolaget </button>
+					<p>Spela ansvarsfullt | Stödlinjen.se | +18 | Villkor & regler gäller</p>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

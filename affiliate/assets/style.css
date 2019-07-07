@@ -288,7 +288,7 @@ h3{
 
 
 
-/* To make the Image to be in the center of the div box. Using it in at Lottery article Page Banner */
+
 .center {
   display: block;
   margin-left: auto;
@@ -324,7 +324,6 @@ h3{
 
 .info_content_test div{
 	text-align:center;
-
 	max-width:100%;
 	margin-top:5px;
 	margin-right:50px;
@@ -409,8 +408,44 @@ h3{
 }
 
 
+/* For Winner Page */
+.levrantor_box_side_bar_winner_page{
+	margin-left:auto;
+	margin-right:auto;
+	max-width:100%;
+	background-color:white;
+	border-radius:10px;
+	margin-top:10px;
+	padding:20px
 
+}
+.levrantor_box_label{
+	margin:0px;
+	padding:0px;
+	font-style:italic;
+	font-weight:bold;
+	color:#DE2F48;
 
+}
+.levrantor_box_side_bar_winner_page h5{
+	font-weight:bold;
+	font-style: italic;
+	color:#414141;
+}
+
+.levrantor_box_side_bar_winner_page p{
+	margin:1px;
+}
+
+.levrantor_box_side_bar_winner_page button{
+	width:200px;
+	padding:5px;
+	margin:5px 0px 5px 0px;
+	background-color:#73CD49;
+	color:#FAFAFA;
+	border-radius:10px;
+}
+/* End of Winner Page -----------------------------------------------*/
 
 
 
@@ -514,7 +549,7 @@ tbody{
 
 /* For Levrantor Box in Index Page*/
 
-.no_margin_no_padding h2{
+.no_margin_no_padding h4{
 	border-radius:5px;
 	font-style:italic;
 	margin:0px;
@@ -563,3 +598,91 @@ tbody{
 }
 
 /* End of Levrantor box -------------------------------------*/
+
+
+/* For Article page */
+
+.white_article_papper{
+	background-color:#FFFF;
+	padding:20px;
+	border-radius:15px;
+	margin-bottom:5px;
+	max-height:100%;
+}
+
+
+.monthly_subscriber_form{
+	margin-left:auto;
+	margin-right:auto;
+	max-width:100%;
+	width:350px;
+	background-color:white;
+	border-radius:10px;
+	margin-top:10px;
+	padding:20px
+
+}
+
+
+
+.monthly_subscriber_form input, .monthly_subscriber_form textarea{
+	display:block;
+}
+
+.mini_levrantor_text_box{
+	margin:20px;
+}
+.mini_levrantor_text_box a{
+	font-size: 20px;
+	margin-left:50px;
+}
+.mini_levrantor_text_box label{
+	margin:0px;
+	padding:0px;
+	font-style:italic;
+	font-weight:bold;
+	color:#DE2F48;
+
+}
+
+.levrantor_box_side_bar{
+	margin-left:auto;
+	margin-right:auto;
+	max-width:100%;
+	width:350px;
+	background-color:white;
+	border-radius:10px;
+	margin-top:10px;
+	padding:20px
+
+}
+
+.levrantor_box_label{
+	margin:0px;
+	padding:0px;
+	font-style:italic;
+	font-weight:bold;
+	color:#DE2F48;
+
+}
+}
+.levrantor_box_side_bar h5{
+	font-weight:bold;
+	font-style: italic;
+	color:#414141;
+}
+
+.levrantor_box_side_bar p{
+	margin:1px;
+}
+
+.levrantor_box_side_bar button{
+	width:200px;
+	padding:5px;
+	margin:5px 0px 5px 0px;
+	background-color:#73CD49;
+	color:#FAFAFA;
+	border-radius:10px;
+}
+
+
