@@ -137,3 +137,30 @@ class Montly_subscribes(models.Model):
 	namn = models.CharField(max_length=50, blank=True)
 	email_adress = models.CharField(max_length=100, blank=True)
 	date_created = models.DateTimeField(auto_now_add=True)
+
+
+class Lottery_supplier(models.Model):
+	Lottery = models.ForeignKey(Lottery, on_delete=models.CASCADE)
+	slug = models.SlugField(unique=True)
+	logo = models.ImageField(default=None, blank=True)
+	content_box_1 = models.TextField(blank=True)
+	content_box_2 = models.TextField(blank=True)
+	content_box_3 = models.TextField(blank=True)
+	content_box_4 = models.TextField(blank=True)
+	content_box_5 = models.TextField(blank=True)
+	content_box_6 = models.TextField(blank=True)
+
+# A Model That Handle All The Article Links in One Place.
+# Only A tags in this model And a SlugField. No Need For a Slug.
+# This way You Will Be Able To Shuffle as Well Top First And Last.
+class Article_links(models.Model):
+	article_1 = models.CharField(max_length=200, blank=True)
+	article_2 = models.CharField(max_length=200, blank=True)
+	article_3 = models.CharField(max_length=200, blank=True)
+	article_4 = models.CharField(max_length=200, blank=True)
+	article_5 = models.CharField(max_length=200, blank=True)
+	article_6 = models.CharField(max_length=200, blank=True)
+	article_7 = models.CharField(max_length=200, blank=True)
+	article_8 = models.CharField(max_length=200, blank=True)
+	article_9 = models.CharField(max_length=200, blank=True)
+	article_10 = models.CharField(max_length=200, blank=True)
