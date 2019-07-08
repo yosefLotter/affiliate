@@ -146,9 +146,9 @@ class Lottery_supplier(models.Model):
 	content_box_1 = models.TextField(blank=True)
 	content_box_2 = models.TextField(blank=True)
 	content_box_3 = models.TextField(blank=True)
-	link_1 = BleachField(blank=True)
-	link_2 = BleachField(blank=True)
-	link_3 = BleachField(blank=True)
+	content_box_4 = models.TextField(blank=True)
+
+
 
 # A Model That Handle All The Article Links in One Place.
 # Only A tags in this model And a SlugField. No Need For a Slug.
