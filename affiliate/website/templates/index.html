@@ -111,33 +111,23 @@
 
 			<div class="container mt-3">
 				<div class="row">
+					{% for supplier in lottery_supplier %}
 					<div class="col-sm-6">
 						<div class="levrantor_box">
 							<label class="levrantor_box_label"> Lotteri Levrantör </label>
 							<div class="levrantor_content">
 								<img src="{% static 'multilotto-logo.jpg' %}">
 								<button class="levrantor_button"> Till Spelbolaget </button>
-								<h5 class="mt-1"> MultiLotto </h5>
-								<p> Lottobonusar behöver endast omsättas 1 gång </p>
-								<p> Enkelt att köpa en, fler eller prenumeration </p>
+								<h5 class="mt-1"> {{ supplier.namn }} </h5>
+								<p> {{ supplier.content_box_1 }} </p>
+								<p>{{ supplier.content_box_2 }}  </p>
 								<p>Spela ansvarsfullt | Stödlinjen.se | +18 | Villkor & regler gäller</p>
 							</div>
 						</div>
 					</div>
+						{% endfor %}
 
-					<div class="col-sm-6">
-						<div class="levrantor_box">
-							<label class="levrantor_box_label"> Lotteri Levrantör </label>
-							<div class="levrantor_content">
-								<img src="{% static 'lottoland-logo.jpg' %}">
-								<button class="levrantor_button"> Till Spelbolaget </button>
-								<h5 class="mt-1"> LottoLand </h5>
-								<p> Lottobonusar behöver endast omsättas 1 gång </p>
-								<p> Enkelt att köpa en, fler eller prenumeration </p>
-								<p>Spela ansvarsfullt | Stödlinjen.se | +18 | Villkor & regler gäller</p>
-							</div>
-						</div>
-					</div>
+					
 				</div>
 			</div>
 
@@ -203,11 +193,14 @@
 			<div class="white_papper_mini mt-2">
 				<div class="list_of_links">
 					<h4> Artiklar </h4>
+					{% for link in article_links %}
 					<ul>
+						<li><a href="{{link.article_1}}"> {{ link.label_1 }}</a></li><hr>
 						<li><a href="{% url 'website:highest_jackpots' %}">  Undrar du vilket lotto som är bäst att spela på??  </a></li><hr>
 						<li><a href="{% url 'website:index' %}">  Spela lotto med vår lottoguide </a></li><hr>
 						<li><a href="{% url 'website:faq_questions' %}"> Här nedan finner du svar på de vanligast ställda frågorna om hur man spelar lotto online. </a></li><hr>
 					</ul>
+					{% endfor %}
 				</div>
 				<center> <a href="{% url 'website:all_article_page'%}" style="color:#007bff;"> Läs fler artiklar</a></center>
 			</div>

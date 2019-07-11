@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 
-from .models import  Lottery, Winner, Contact_us, Mini_lottery_list, Montly_subscribes
+from .models import  Lottery, Winner, Contact_us, Mini_lottery_list, Montly_subscribes, Meta_tags_for_lottery, Lottery_supplier, Article_links
 
 from .forms import ContactForm, Subscribers
 # For Flash Messages
@@ -8,10 +8,16 @@ from django.contrib import messages
 # To send Email to my Outlook Account.
 from django.core.mail import send_mail
 
+
+
 def index(request):
+    article_links = Article_links.objects.all()
+    lottery_supplier = Lottery_supplier.objects.all()
     mini_list_lotteries = Lottery.objects.all()[:4]
     winners = Winner.objects.all()[:1]
     context = {
+        'article_links': article_links,
+        'lottery_supplier': lottery_supplier,
         'mini_list_lotteries': mini_list_lotteries,
         'winners': winners,
     }
@@ -59,11 +65,16 @@ def highest_jackpots(request):
 
 
 def lottery_detail(request, slug):
+    article_links = Article_links.objects.all()
     lottery = Lottery.objects.get(slug=slug)
+    meta_tags = Meta_tags_for_lottery.objects.filter(lottery_id=lottery.id)
+    print(meta_tags)
     winners_of_that_lottery = Winner.objects.filter(lottery_id=lottery.id)[:1]
     mini_list_lotteries = Lottery.objects.all()[:4]
     winner = Winner.objects.filter().last()
     context = {
+        'article_links': article_links,
+        'meta_tags': meta_tags,
         'lottery': lottery,
         'winners_of_that_lottery': winners_of_that_lottery,
         'mini_list_lotteries': mini_list_lotteries,
@@ -74,19 +85,22 @@ def lottery_detail(request, slug):
 
 def winner_page(request, slug):
     winner = Winner.objects.get(slug=slug)
-    print(winner.lottery.logo)
+    article_links = Article_links.objects.all()
     mini_list_lotteries = Lottery.objects.all()[:5]
     context = {
         'winner': winner,
+        'article_links': article_links,
         'mini_list_lotteries': mini_list_lotteries
     }
     return render(request, 'winner_page.html', context)
 
 
 def faq_questions(request):
+    article_links = Article_links.objects.all()
     winners = Winner.objects.all()[:1]
     mini_list_lotteries = Lottery.objects.all()[:4]
     context = {
+        'article_links': article_links,
         'winners':winners,
         'mini_list_lotteries':mini_list_lotteries
     }
@@ -95,6 +109,7 @@ def faq_questions(request):
 
 
 def contact_page(request):
+    article_links = Article_links.objects.all()
     mini_list_lotteries = Lottery.objects.all()[:4]
     if request.method == 'POST':
         # create a form instance and populate it with data from the request:
@@ -116,6 +131,7 @@ def contact_page(request):
         form = ContactForm()
         context = {
             'form': form,
+            'article_links': article_links,
             'mini_list_lotteries': mini_list_lotteries,
         }
     return render(request, 'contact_page.html', context)

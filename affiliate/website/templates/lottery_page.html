@@ -1,6 +1,26 @@
 {% extends 'base.html' %}
+
+
+{% block title %}
+
+{% for meta_tag in meta_tags %}
+{{ meta_tag.meta_title|safe }} 
+{% endfor %}
+
+{% endblock %}
+
+{% block extra_head %}
+
+{% for meta_tag in meta_tags %}
+{{ meta_tag.meta_description|safe }}
+{% endfor %}
+
+{% endblock %}
+
+
 {% block content %}
-{% load bleach_tags %}
+
+
 <div class="row">
 	<div class="col-lg-1">
 
@@ -56,7 +76,6 @@
 					<div class="lottery_content mt-4">
 						<h4> {{ lottery.b_title }}</h4>
 						<p> {{ lottery.b_content|safe  }}</p>
-						<p>{{ project_code|bleach }} </p>
 					</div>
 
 					<div class="lottery_content mt-4">
@@ -133,10 +152,10 @@
 					</div>
 					<hr>
 
-				{% endfor %}
 				<center> <a href="{% url 'website:all_article_page'%}" style="color:#007bff;"> Läs fler artiklar</a></center>
 				<hr>
 
+				{% endfor %}
 			</div>
 
 			<div class="white_papper_mini mt-2">

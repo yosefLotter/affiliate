@@ -140,27 +140,61 @@ class Montly_subscribes(models.Model):
 
 
 class Lottery_supplier(models.Model):
-	Lottery = models.ForeignKey(Lottery, on_delete=models.CASCADE)
-	slug = models.SlugField(unique=True)
+	namn = models.CharField(max_length=100)
 	logo = models.ImageField(default=None, blank=True)
 	content_box_1 = models.TextField(blank=True)
 	content_box_2 = models.TextField(blank=True)
 	content_box_3 = models.TextField(blank=True)
-	content_box_4 = models.TextField(blank=True)
+	content_box_4 = BleachField(blank=True)
 
+	def __str__(self):
+		return '{}'.format(
+			self.namn,
+		)
 
 
 # A Model That Handle All The Article Links in One Place.
 # Only A tags in this model And a SlugField. No Need For a Slug.
 # This way You Will Be Able To Shuffle as Well Top First And Last.
 class Article_links(models.Model):
-	article_1 = BleachField(blank=True)
-	article_2 = BleachField(blank=True)
-	article_3 = BleachField(blank=True)
-	article_4 = BleachField(blank=True)
-	article_5 = BleachField(blank=True)
-	article_6 = BleachField(blank=True)
-	article_7 = BleachField(blank=True)
-	article_8 = BleachField(blank=True)
-	article_9 = BleachField(blank=True)
-	article_10 = BleachField(blank=True)
+	label_1 = models.CharField(max_length=300, blank=True)
+	article_1 = models.CharField(max_length=300, blank=True)
+
+	label_2 = models.CharField(max_length=300, blank=True)
+	article_2 = models.CharField(max_length=300, blank=True)
+
+	label_3 = models.CharField(max_length=300, blank=True)
+	article_3 = models.CharField(max_length=300, blank=True)
+
+	label_4 = models.CharField(max_length=300, blank=True)
+	article_4 = models.CharField(max_length=300, blank=True)
+
+	label_5 = models.CharField(max_length=300, blank=True)
+	article_5 = models.CharField(max_length=300, blank=True)
+
+	label_6 = models.CharField(max_length=300, blank=True)
+	article_6 = models.CharField(max_length=300, blank=True)
+
+	label_7 = models.CharField(max_length=300, blank=True)
+	article_7 = models.CharField(max_length=300, blank=True)
+
+	label_8 = models.CharField(max_length=300, blank=True)
+	article_8 = models.CharField(max_length=300, blank=True)
+
+	label_9 = models.CharField(max_length=300, blank=True)
+	article_9 = models.CharField(max_length=300, blank=True)
+
+	label_10 = models.CharField(max_length=300, blank=True)
+	article_10 = models.CharField(max_length=300, blank=True)
+
+
+class Meta_tags_for_lottery(models.Model):
+	lottery = models.ForeignKey(Lottery, on_delete=models.CASCADE)
+	meta_title = BleachField(blank=True)
+	meta_description = BleachField(blank=True)
+
+	def __str__(self):
+		return '{},{}'.format(
+			self.lottery,
+			self.meta_title,
+		)
