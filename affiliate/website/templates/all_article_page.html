@@ -76,36 +76,32 @@
 		<div class="page_wrapper">
 
 
-			
-			<div class="row">
-				
-				<div class="levrantor_box_side_bar">
-					<label class="levrantor_box_label"> Lotteri Levrantör </label><br>
-					<img src="{% static 'multilotto-logo.jpg' %}">
-					<h5 class="mt-1"> MultiLotto </h5>
-					<p> Lottobonusar behöver endast omsättas 1 gång </p>
-					<p> Enkelt att köpa en, fler eller prenumeration </p>
-					<button class="levrantor_button"> Till Spelbolaget </button><br>
-					<a href="{% url 'website:spela_ansvarsfullt' %}">Spela ansvarsfullt</a> | <a href="https://www.spelpaus.se/" target="_blank"> Stödlinjen.se </a> | +18 |<a href="https://www.lottoland.se/allmannakampanjvillkor?" target="_blank"> Villkor & regler gäller </a></p>
-				</div>
 
 				<form class="monthly_subscriber_form" method="post" enctype="multipart/form-data">
 	    			{% csrf_token %}
-	    			<p> Premunnera på våran månads Email</p>
+	    			<p> Jag vill få ”LottoTellus månadsbrev” en gång i månaden.</p>
+
 	    			{{form}}
 
 	    			<input type='submit' value="Skicka">
 				</form>
 
-				<div class="levrantor_box_side_bar">
-					<label class="levrantor_box_label" > Lotteri Levrantör </label><br>
-					<img src="{% static 'lottoland-logo.jpg' %}" style="margin:10px">
-					<h5 class="mt-1"> LottoLand </h5>
-					<p> Lottobonusar behöver endast omsättas 1 gång </p>
-					<p> Enkelt att köpa en, fler eller prenumeration </p>
-					<button class="levrantor_button"> Till Spelbolaget </button><br>
-					<a href="{% url 'website:spela_ansvarsfullt' %}">Spela ansvarsfullt</a> | <a href="https://www.spelpaus.se/" target="_blank" style="color:black;"> Stödlinjen.se </a> | +18 |<a href="https://www.lottoland.se/allmannakampanjvillkor?" target="_blank"> Villkor & regler gäller </a></p>
-				</div>
+
+					{% for supplier in lottery_supplier %}
+						<div class="levrantor_box">
+							<label class="levrantor_box_label"> Lotteri Levrantör </label>
+							<div class="levrantor_content">
+								<img src="{{ supplier.logo.url }}">
+								<button class="levrantor_button"> Till Spelbolaget </button>
+								<h5 class="mt-1"> {{ supplier.namn }} </h5>
+								<p> {{ supplier.content_box_1 }} </p>
+								<p>{{ supplier.content_box_2 }}  </p>
+								<a href="{% url 'website:spela_ansvarsfullt' %}" style="color:black;">Spela ansvarsfullt</a> | <a href="https://www.spelpaus.se/" target="_blank" style="color:black;"> Stödlinjen.se </a> | +18 |<a href="https://www.lottoland.se/allmannakampanjvillkor?" target="_blank" style="color:black;"> Villkor & regler gäller </a>
+							</div>
+						</div>
+
+					{% endfor %}
+
 			</div>
 		</div>
 	</div>

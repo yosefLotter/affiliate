@@ -9,16 +9,16 @@ app_name = 'website'
 urlpatterns = [
 	path('', views.index, name="index"),
 	# For Europe_list Page.
-	path('europe/', views.europe, name='europe'),
+	path('europeiska-lotter/', views.europe, name='europe'),
 	# For Sydamerika_list page
-	path('sydamerika/', views.sydamerika, name='sydamerika'),
+	path('sydamrikanska-lotter/', views.sydamerika, name='sydamerika'),
 	# For Amerika list page
-	path('amerika/', views.amerika, name='amerika'),
+	path('amrikanska-lotter/', views.amerika, name='amerika'),
 	# Asien Page
-	path('asien/', views.asien, name='asien'),
+	path('asiatiska-lotter/', views.asien, name='asien'),
 
 	#For the highest_jackpots page
-	path('highest-jackpots/', views.highest_jackpots, name='highest_jackpots'),
+	path('top-jackpottar/', views.highest_jackpots, name='highest_jackpots'),
 
 	path('lottery-<slug>/', views.lottery_detail, name='lottery_detail'),
 

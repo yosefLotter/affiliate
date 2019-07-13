@@ -1,4 +1,8 @@
 {% extends 'base.html' %}
+{% block title %}
+Kontakta oss
+{% endblock %}
+
 {% block content %}
 {% load static %}
 
@@ -19,9 +23,10 @@
 				<div class="welcome mt-3">
 
 					<div class="welcome_content">
-						<h1 class="welcome_text">
-							Känn dig fri att kontakta oss.
-						</h1>
+						<p class="welcome_text">
+							Har du några frågor, synpunkter eller önskemål? Kontakta LottoTellus. Fyll i ditt namn, e-mail och
+							din fråga/feedback i rutorna nedan och vi återkommer så snart som möjligt.
+						</p>
 					</div>
 				</div>
 
@@ -29,8 +34,6 @@
 			<div class="white_wrapper mt-2">
 				<div class="index_content">
 					<div class="welcome_text">
-
-						<h3> Kontakta oss </h3>
 						{% if messages %}
         					<ul class="no_bullets">
 	            				{% for msg in messages %}
@@ -91,11 +94,15 @@
 			<div class="white_papper_mini mt-2">
 				<div class="list_of_links">
 					<h4> Artiklar </h4>
+					{% for link in article_links %}
 					<ul>
-						<li><a href="{% url 'website:highest_jackpots' %}">  Undrar du vilket lotto som är bäst att spela på??  </a></li><hr>
-						<li><a href="{% url 'website:index' %}">  Spela lotto med vår lottoguide </a></li><hr>
-						<li><a href="{% url 'website:faq_questions' %}"> Här nedan finner du svar på de vanligast ställda frågorna om hur man spelar lotto online. </a></li><hr>
+						<li><a href="{{link.article_1}}"> {{ link.label_1 }}</a></li><hr>
+						<li><a href="{{link.article_2}}"> {{ link.label_2 }}</a></li><hr>
+						<li><a href="{{link.article_3}}"> {{ link.label_3 }}</a></li><hr>
+						<li><a href="{{link.article_4}}"> {{ link.label_4 }}</a></li><hr>
+						<li><a href="{{link.article_5}}"> {{ link.label_5 }}</a></li><hr>
 					</ul>
+					{% endfor %}
 				</div>
 				<center> <a href="{% url 'website:all_article_page'%}" style="color:#007bff;"> Läs fler artiklar</a></center>
 			</div>

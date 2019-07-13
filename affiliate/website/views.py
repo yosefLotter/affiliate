@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 
-from .models import  Lottery, Winner, Contact_us, Mini_lottery_list, Montly_subscribes, Meta_tags_for_lottery, Lottery_supplier, Article_links
+from .models import  Lottery, Winner, Contact_us, Mini_lottery_list, Montly_subscribes, Meta_tags_for_lottery, Lottery_supplier, Article_links, Meta_tags_for_winner
 
 from .forms import ContactForm, Subscribers
 # For Flash Messages
@@ -65,15 +65,16 @@ def highest_jackpots(request):
 
 
 def lottery_detail(request, slug):
-    article_links = Article_links.objects.all()
     lottery = Lottery.objects.get(slug=slug)
+    article_links = Article_links.objects.all()
+    lottery_supplier = Lottery_supplier.objects.filter(id=lottery.id)
     meta_tags = Meta_tags_for_lottery.objects.filter(lottery_id=lottery.id)
-    print(meta_tags)
     winners_of_that_lottery = Winner.objects.filter(lottery_id=lottery.id)[:1]
     mini_list_lotteries = Lottery.objects.all()[:4]
     winner = Winner.objects.filter().last()
     context = {
         'article_links': article_links,
+        'lottery_supplier': lottery_supplier,
         'meta_tags': meta_tags,
         'lottery': lottery,
         'winners_of_that_lottery': winners_of_that_lottery,
@@ -85,9 +86,11 @@ def lottery_detail(request, slug):
 
 def winner_page(request, slug):
     winner = Winner.objects.get(slug=slug)
+    meta_tags = Meta_tags_for_winner.objects.get(winner_id=winner.id)
     article_links = Article_links.objects.all()
     mini_list_lotteries = Lottery.objects.all()[:5]
     context = {
+        'meta_tags': meta_tags,
         'winner': winner,
         'article_links': article_links,
         'mini_list_lotteries': mini_list_lotteries
@@ -142,6 +145,7 @@ def spela_ansvarsfullt(request):
 
 
 def all_article_page(request):
+    lottery_supplier = Lottery_supplier.objects.all()
     form = Subscribers()
     if request.method == 'POST':
         form = Subscribers(request.POST)
@@ -151,6 +155,7 @@ def all_article_page(request):
     winners = Winner.objects.all()
     context = {
         'form':form,
+        'lottery_supplier': lottery_supplier,
         'winners': winners,
     }
     return render(request, 'all_article_page.html', context)

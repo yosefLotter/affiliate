@@ -6,10 +6,10 @@
 <head>
 	{% load bleach_tags %}
 	<meta charset="utf-8">
-	{% block extra_head %}{% endblock %}
+	
 
 	<title>{% block title %}{% endblock %}</title>
-	
+	{% block extra_head %}{% endblock %}
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	{# Two if this link arae for Favicon for iphone and Desktop #}
 	<link rel="shortcut icon" type="image/jpg" href="{% static 'favicon.jpg'%}">

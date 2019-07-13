@@ -1,4 +1,8 @@
 {% extends 'base.html' %}
+{% block title %}
+LottoTellus
+{% endblock %}
+
 {% block content %}
 {% load static %}
 
@@ -116,18 +120,16 @@
 						<div class="levrantor_box">
 							<label class="levrantor_box_label"> Lotteri Levrantör </label>
 							<div class="levrantor_content">
-								<img src="{% static 'multilotto-logo.jpg' %}">
+								<img src="{{ supplier.logo.url }}">
 								<button class="levrantor_button"> Till Spelbolaget </button>
 								<h5 class="mt-1"> {{ supplier.namn }} </h5>
 								<p> {{ supplier.content_box_1 }} </p>
 								<p>{{ supplier.content_box_2 }}  </p>
-								<p>Spela ansvarsfullt | Stödlinjen.se | +18 | Villkor & regler gäller</p>
+								<a href="{% url 'website:spela_ansvarsfullt' %}" style="color:black;">Spela ansvarsfullt</a> | <a href="https://www.spelpaus.se/" target="_blank" style="color:black;"> Stödlinjen.se </a> | +18 |<a href="https://www.lottoland.se/allmannakampanjvillkor?" target="_blank" style="color:black;"> Villkor & regler gäller </a>
 							</div>
 						</div>
 					</div>
-						{% endfor %}
-
-					
+					{% endfor %}
 				</div>
 			</div>
 
@@ -196,9 +198,10 @@
 					{% for link in article_links %}
 					<ul>
 						<li><a href="{{link.article_1}}"> {{ link.label_1 }}</a></li><hr>
-						<li><a href="{% url 'website:highest_jackpots' %}">  Undrar du vilket lotto som är bäst att spela på??  </a></li><hr>
-						<li><a href="{% url 'website:index' %}">  Spela lotto med vår lottoguide </a></li><hr>
-						<li><a href="{% url 'website:faq_questions' %}"> Här nedan finner du svar på de vanligast ställda frågorna om hur man spelar lotto online. </a></li><hr>
+						<li><a href="{{link.article_2}}"> {{ link.label_2 }}</a></li><hr>
+						<li><a href="{{link.article_3}}"> {{ link.label_3 }}</a></li><hr>
+						<li><a href="{{link.article_4}}"> {{ link.label_4 }}</a></li><hr>
+						<li><a href="{{link.article_5}}"> {{ link.label_5 }}</a></li><hr>
 					</ul>
 					{% endfor %}
 				</div>

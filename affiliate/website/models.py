@@ -3,9 +3,24 @@ from django.db import models
 from django_bleach.models import BleachField
 
 
-# For Lottery Page the content
+class Lottery_supplier(models.Model):
+	namn = models.CharField(max_length=100)
+	logo = models.ImageField(default=None, blank=True)
+	content_box_1 = models.TextField(blank=True)
+	content_box_2 = models.TextField(blank=True)
+	content_box_3 = models.TextField(blank=True)
+	link = models.CharField(max_length=200, blank=True)
+
+	def __str__(self):
+		return '{}'.format(
+			self.namn,
+		)
+
+
+
 class Lottery(models.Model):
 	slug = models.SlugField(unique=True)
+	supplier = models.ForeignKey(Lottery_supplier, on_delete=models.CASCADE)
 	name_of_lottery = models.CharField(max_length=100)
 	continent = models.CharField(max_length=100)
 	provider = models.CharField(max_length=50, blank=True)
@@ -95,8 +110,7 @@ class Winner(models.Model):
 	e_content = models.TextField(blank=True)
 
 	bild = models.ImageField(default=None, blank=True)
-	youtube_link = models.TextField(blank=True)
-	
+
 	date = models.DateTimeField(auto_now_add=True)
 
 	def __str__(self):
@@ -139,18 +153,6 @@ class Montly_subscribes(models.Model):
 	date_created = models.DateTimeField(auto_now_add=True)
 
 
-class Lottery_supplier(models.Model):
-	namn = models.CharField(max_length=100)
-	logo = models.ImageField(default=None, blank=True)
-	content_box_1 = models.TextField(blank=True)
-	content_box_2 = models.TextField(blank=True)
-	content_box_3 = models.TextField(blank=True)
-	content_box_4 = BleachField(blank=True)
-
-	def __str__(self):
-		return '{}'.format(
-			self.namn,
-		)
 
 
 # A Model That Handle All The Article Links in One Place.
@@ -190,11 +192,23 @@ class Article_links(models.Model):
 
 class Meta_tags_for_lottery(models.Model):
 	lottery = models.ForeignKey(Lottery, on_delete=models.CASCADE)
-	meta_title = BleachField(blank=True)
-	meta_description = BleachField(blank=True)
+	meta_title = models.CharField(max_length=100, blank=True)
+	meta_description = models.TextField(blank=True)
 
 	def __str__(self):
 		return '{},{}'.format(
 			self.lottery,
+			self.meta_title,
+		)
+
+
+class Meta_tags_for_winner(models.Model):
+	winner = models.ForeignKey(Winner, on_delete=models.CASCADE)
+	meta_title = models.CharField(max_length=100, blank=True)
+	meta_description = models.TextField(blank=True)
+
+	def __str__(self):
+		return '{},{}'.format(
+			self.winner,
 			self.meta_title,
 		)
