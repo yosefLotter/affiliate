@@ -223,22 +223,19 @@
 			</div>
 
 
-					{% for supplier in lottery_supplier %}
-						<div class="levrantor_box">
-							<label class="levrantor_box_label"> Lotteri Levrantör </label>
-							<div class="levrantor_content">
-								<img src="{{ supplier.logo.url }}">
-								<button class="levrantor_button"> Till Spelbolaget </button>
-								<h5 class="mt-1"> {{ supplier.namn }} </h5>
-								<p> {{ supplier.content_box_1 }} </p>
-								<p>{{ supplier.content_box_2 }}  </p>
-								<a href="{% url 'website:spela_ansvarsfullt' %}" style="color:black;">Spela ansvarsfullt</a> | <a href="https://www.spelpaus.se/" target="_blank" style="color:black;"> Stödlinjen.se </a> | +18 |<a href="https://www.lottoland.se/allmannakampanjvillkor?" target="_blank" style="color:black;"> Villkor & regler gäller </a>
-							</div>
-						</div>
-
-					{% endfor %}
-
-
+			{% for supplier in lottery_supplier %}
+			<div class="levrantor_box">
+				<label class="levrantor_box_label"> Lotteri Levrantör </label>
+				<div class="levrantor_content">
+					<img src="{{ supplier.logo.url }}">
+					<button class="levrantor_button"> Till Spelbolaget </button>
+					<h5 class="mt-1"> {{ supplier.namn }} </h5>
+					<p> {{ supplier.content_box_1 }} </p>
+					<p>{{ supplier.content_box_2 }}  </p>
+					<a href="{% url 'website:spela_ansvarsfullt' %}" style="color:black;">Spela ansvarsfullt</a> | <a href="https://www.spelpaus.se/" target="_blank" style="color:black;"> Stödlinjen.se </a> | +18 |<a href="https://www.lottoland.se/allmannakampanjvillkor?" target="_blank" style="color:black;"> Villkor & regler gäller </a>
+				</div>
+			</div>
+			{% endfor %}
 		</div>
 	</div>
 
