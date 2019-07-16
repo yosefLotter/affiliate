@@ -1,4 +1,9 @@
 Django==2.2
 Pillow==2.2.1
 
+pip3 install django-bleach
 
+
+
+
+python3 -m pip3 install  --user django-bleach
