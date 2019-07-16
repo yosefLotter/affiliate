@@ -26,6 +26,7 @@ def index(request):
 # Europa sida
 def europe(request):
     europe_list = Lottery.objects.filter(continent='Europa')
+    print(europe_list)
     context = {
         'europe_list': europe_list,
     }

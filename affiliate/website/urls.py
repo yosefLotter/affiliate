@@ -33,3 +33,4 @@ urlpatterns = [
 
 	path('artiklar/', views.all_article_page, name='all_article_page')
 ]
+
