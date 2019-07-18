@@ -182,11 +182,11 @@
 						<div class="a_hover_box">
 
 							<a href="{% url 'website:lottery_detail' slug=lottery.slug %}">
-
+								{% if lottery.logo %}
 								<div class="lottery_mini_list_logo">
 									<img src="{{ lottery.logo.url }}" width="50" class="mt-2">
 								</div>
-
+								{% endif %}
 								<div class="lottery_mini_list_content">
 									<ul>
 										<li><b> 	
