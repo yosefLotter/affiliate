@@ -70,6 +70,7 @@ def lottery_detail(request, slug):
     article_links = Article_links.objects.all()
     lottery_supplier = Lottery_supplier.objects.filter(id=lottery.id)
     meta_tags = Meta_tags_for_lottery.objects.filter(lottery_id=lottery.id)
+    print(meta_tags)
     winners_of_that_lottery = Winner.objects.filter(lottery_id=lottery.id)[:1]
     mini_list_lotteries = Lottery.objects.all()[:4]
     winner = Winner.objects.filter().last()

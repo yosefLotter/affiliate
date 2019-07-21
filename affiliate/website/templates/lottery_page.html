@@ -12,7 +12,7 @@
 {% block extra_head %}
 
 {% for meta_tag in meta_tags %}
-<meta name="description" content="{{ meta_tags.meta_description }}" >
+<meta name="description" content="{{meta_tag.meta_description}}" >
 {% endfor %}
 
 {% endblock %}
