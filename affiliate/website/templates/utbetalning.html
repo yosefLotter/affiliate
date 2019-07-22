@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+
+{% for meta_tag in meta_tags %}
+Utbetalning av lotteri 
+{% endfor %}
+
+{% endblock %}
+
+{% block extra_head %}
+
+{% for meta_tag in meta_tags %}
+<meta name="description" content="Utbetalning av US Powerball, Mega Millions och SuperEnalotto jackpott vinst" >
+{% endfor %}
+
+{% endblock %}
+
+
+{% block content %}
+
+
+
+<div class="row">
+	<div class="col-lg-1">
+
+	</div>
+
+	<div class="col-lg-8">
+		<div class='page_wrapper'>
+			<div class="white_papper mt-2">
+				
+
+				<div class="content_box">
+		
+				<h1> Utbetalning av US Powerball, Mega Millions och SuperEnalotto jackpott vinst</h1>
+				<hr>
+
+
+					<div class="lottery_content mt-4">
+						
+						<p> Utbetalning av US Powerball, Mega Millions och SuperEnalotto jackpott vinsten kan ske på två
+							sätt; årliga utbetalningar under 30 år, s.k. livränta alternativet eller i en klumpsumma. Om vinsten
+							betalas ut under 30 år görs den första utbetalningen ut så snart som möjligt efter dragningen och de
+							resterande 29 betalningarna med ett årsintervaller. För varje år stiger utbetalningen med några
+							procent. Om vinsten betalas ut i en klumpsumma är vinsten efter reserverade rabatter diskonterade.
+							Diskonteringsräntan är 40%, det vill säga klumpsumman är 60% av det årliga livränta-värdet. EU
+							Lotto beslutar om hur jackpott vinsten utbetalas.
+							38% minskning av jackpott vinst
+							EU Lotto gör avdrag på 38% på vinsterna i de tre högsta priskategorierna i Mega Millions, US
+							Powerball och SuperEnalotto, eftersom spelare ska ha liknande ekonomisk position som om de hade
+							spelat det underliggande lotteriet.
+						</p>
+						
+						<h4 id="lottery_mini_list_headline"> Lotterier på nätet </h4>
+						<hr>
+						{% for lottery in mini_list_lotteries %}
+							<div class="lottery_mini_list_box">
+								<div class="a_hover_box">
+
+									<a href="{% url 'website:lottery_detail' slug=lottery.slug %}">
+										{% if lottery.logo %}
+										<div class="lottery_mini_list_logo">
+											<img src="{{ lottery.logo.url }}" width="50" class="mt-2">
+										</div>
+										{% endif %}
+										<div class="lottery_mini_list_content">
+											<ul>
+												<li><b> 	
+												{{ lottery.name_of_lottery }}</b></li>
+												<li>{{ lottery.mini_content }}</li>
+											</ul>
+										</div>
+									</a>
+
+								</div>		
+							</div>
+						{% endfor %}
+						<hr>
+						<center> <a href="http://www.lottotellus.com/top-jackpottar/" style="color:#007bff;"> Se hela top listan</a></center>
+					</div>
+
+					<p class="mt-5"> Spela ansvarsfullt
+						Spela aldrig för mer pengar än du har råd att avvara! Om du misstänker att du har spelproblem läs
+						vidare i <a href="http://www.lottotellus.com/spela-ansvarsfullt/">Spela ansvarsfullt!</a> LottoTellus.com kan inte hållas ansvarigt för pengar överförda till
+						lotteritjänster eller för satsade pengar.<br>
+						Om du har frågor, vänligen kontakta oss!
+					</p>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-lg-3">
+		<div class="page_wrapper">
+			<div class="white_papper_mini mt-2">
+				<div class="list_of_links">
+					<h4> Artiklar </h4>
+					{% for link in article_links %}
+					<ul>
+						<li><a href="{{link.article_1}}"> {{ link.label_1 }}</a></li><hr>
+						<li><a href="{{link.article_2}}"> {{ link.label_2 }}</a></li><hr>
+						<li><a href="{{link.article_3}}"> {{ link.label_3 }}</a></li><hr>
+						<li><a href="{{link.article_4}}"> {{ link.label_4 }}</a></li><hr>
+						<li><a href="{{link.article_5}}"> {{ link.label_5 }}</a></li><hr>
+					</ul>
+					{% endfor %}
+				</div>
+				<center> <a href="http://www.lottotellus.com/artiklar/" style="color:#007bff;"> Läs fler artiklar</a></center>
+			</div>
+
+			{% for supplier in lottery_supplier %}
+			<div class="levrantor_box">
+				<label class="levrantor_box_label"> Lotteri Levrantör </label>
+				<div class="levrantor_content">
+					<img src="{{ supplier.logo.url }}">
+					<button class="levrantor_button"> Till Spelbolaget </button>
+					<h5 class="mt-1"> {{ supplier.namn }} </h5>
+					<p> {{ supplier.content_box_1 }} </p>
+					<p>{{ supplier.content_box_2 }}  </p>
+					<a href="http://www.lottotellus.com/spela-ansvarsfullt" style="color:black;">Spela ansvarsfullt</a> | <a href="https://www.spelpaus.se/" target="_blank" style="color:black;"> Stödlinjen.se </a> | +18 |<a href="https://www.lottoland.se/allmannakampanjvillkor?" target="_blank" style="color:black;"> Villkor & regler gäller </a>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+
+</div>
+
+{% include "footer.html" %}
+{% endblock %}
+
+
+
+
+		
+
+

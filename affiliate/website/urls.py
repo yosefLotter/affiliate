@@ -25,12 +25,15 @@ urlpatterns = [
 
 	path('winner/<slug>/', views.winner_page, name='winner_page'),
 
-	path('faq-questions/', views.faq_questions, name='faq_questions'),
+	path('faq-fragor/', views.faq_questions, name='faq_questions'),
 
 	path('contact-page/', views.contact_page, name='contact_page'),
 
 	path('spela-ansvarsfullt/', views.spela_ansvarsfullt, name='spela_ansvarsfullt'),
 
-	path('artiklar/', views.all_article_page, name='all_article_page')
+	path('artiklar/', views.all_article_page, name='all_article_page'),
+
+	path('utbetalning/', views.utbetalning, name='utbetalning'),
+
 ]
 

@@ -147,6 +147,7 @@ def spela_ansvarsfullt(request):
 
 
 def all_article_page(request):
+    article_links = Article_links.objects.all()
     lottery_supplier = Lottery_supplier.objects.all()
     form = Subscribers()
     if request.method == 'POST':
@@ -157,7 +158,21 @@ def all_article_page(request):
     winners = Winner.objects.all()
     context = {
         'form':form,
+        'article_links': article_links,
         'lottery_supplier': lottery_supplier,
         'winners': winners,
     }
     return render(request, 'all_article_page.html', context)
+
+def utbetalning(request):
+    article_links = Article_links.objects.all()
+    lottery_supplier = Lottery_supplier.objects.all()
+    mini_list_lotteries = Lottery.objects.all()[:4]
+    winners = Winner.objects.all()[:1]
+    context = {
+        'article_links': article_links,
+        'lottery_supplier': lottery_supplier,
+        'mini_list_lotteries': mini_list_lotteries,
+        'winners': winners,
+    }
+    return render(request, 'utbetalning.html', context)
