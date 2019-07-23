@@ -59,10 +59,10 @@ Utbetalning av lotteri
 							<div class="lottery_mini_list_box">
 								<div class="a_hover_box">
 
-									<a href="{% url 'website:lottery_detail' slug=lottery.slug %}">
-										{% if lottery.logo %}
+									<a href="{% url 'website:lottery_detail' slug=lottery.lottery.slug %}">
+										{% if lottery.lottery.logo %}
 										<div class="lottery_mini_list_logo">
-											<img src="{{ lottery.logo.url }}" width="50" class="mt-2">
+											<img src="{{ lottery.lottery.logo.url }}" width="50" class="mt-2">
 										</div>
 										{% endif %}
 										<div class="lottery_mini_list_content">

@@ -12,9 +12,7 @@ body{
 } 
 
 @media (max-width:500px){
-	p{
-		color:red;
-	}
+
 	.mobile_image_box img{
 		width:300px;
 	}

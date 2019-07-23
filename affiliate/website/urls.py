@@ -22,7 +22,6 @@ urlpatterns = [
 
 	path('lottery-<slug>/', views.lottery_detail, name='lottery_detail'),
 
-
 	path('winner/<slug>/', views.winner_page, name='winner_page'),
 
 	path('faq-fragor/', views.faq_questions, name='faq_questions'),

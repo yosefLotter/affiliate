@@ -70,7 +70,6 @@ def lottery_detail(request, slug):
     article_links = Article_links.objects.all()
     lottery_supplier = Lottery_supplier.objects.filter(id=lottery.id)
     meta_tags = Meta_tags_for_lottery.objects.filter(lottery_id=lottery.id)
-    print(meta_tags)
     winners_of_that_lottery = Winner.objects.filter(lottery_id=lottery.id)[:1]
     mini_list_lotteries = Lottery.objects.all()[:4]
     winner = Winner.objects.filter().last()
@@ -167,7 +166,7 @@ def all_article_page(request):
 def utbetalning(request):
     article_links = Article_links.objects.all()
     lottery_supplier = Lottery_supplier.objects.all()
-    mini_list_lotteries = Lottery.objects.all()[:4]
+    mini_list_lotteries = Mini_lottery_list.objects.all()[:3]
     winners = Winner.objects.all()[:1]
     context = {
         'article_links': article_links,
