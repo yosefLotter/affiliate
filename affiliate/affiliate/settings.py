@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['www.lottotellus.com']
 
-ALLOWED_HOSTS = ['lottotellus.com']
+
 
 #ALLOWED_HOSTS = []
 
