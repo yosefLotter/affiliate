@@ -25,11 +25,11 @@ Sydamerikanska lotter
 			{% for lottery in sydamerika_list %}
 				<div class="lottery_box mt-2">
 					<div class="row">
-
+						{% if lottery.logo %}
 						<div class="col-lg-1">
 							<img src="{{ lottery.logo.url }}" id="lottery_logo" class="center">
 						</div>
-
+						{% endif %}
 						<div class="col-lg-9" >
 
 							<div class="row no_bullets">
