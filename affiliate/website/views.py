@@ -42,6 +42,7 @@ def asien(request):
 
 def sydamerika(request):
     sydamerika_list = Lottery.objects.filter(continent='Sydamerika')
+    print(sydamerika_list)
     context = {
         'sydamerika_list': sydamerika_list,
     }

@@ -1,8 +1,8 @@
+
 {% extends 'base.html' %}
 {% block title %}
 Asiatiska lotterier
 {% endblock %}
-
 {% block content %}
 {% load static %}
 <div class="row">
@@ -23,50 +23,37 @@ Asiatiska lotterier
 
 		<div class="lottery_list">
 			{% for lottery in asien_list %}
-				<div class="lottery_box mt-2">
-					<div class="row ">
+				<div class="lottery_box">
+					<div class="row">
 
 						<div class="col-lg-1">
-							<img src="{{ lottery.logo.url }}" id="lottery_logo" class="center">
+							{% if lottery.logo %}
+							<img src="{{ lottery.logo.url }}" id="big_rank_list_logo" class="center">
+							{% endif %}
 						</div>
 
-						<div class="col-lg-9" >
+						<div class="col-lg-10" >
 
-							<div class="row no_bullets">
-								<ul class="col-sm-4">
+							<div class="row text_center mt-2">
+
+								<ul class="col-sm-4 no_bullets">
 									<b> Jackpot </b>
 									<li> {{ lottery.jackpot }} </li>
-					
 								</ul>
 						
-								<ul class="col-sm-4">
-									<b class="margin_0">Dragning</b>
-									<p>{{  lottery.dragnings_datum }}</p>
+								<ul class="col-sm-4 no_bullets">
+									<b>Dragning</b>
+									<li>{{  lottery.dragnings_datum }}</li>
 								</ul>
 
-
-
-								<ul class="col-sm-4">
+								<ul class="col-sm-4 no_bullets">
 									<b>Jackpotodds</b>
 									<li> {{  lottery.odds }}</li>
 								</ul>
 							</div>
-
-							<ul class="no_bullets">
-								<li >
-									{{  lottery.intro_content }}
-									<label style="color:blue;"> <a href="{% url 'website:lottery_page' lottery_id=lottery.id  %}"> Läs mer.. </a> </label>
-								</li>
-							</ul>
-						
-						</div>
-
-
-						<div class="col-lg-2">
-							<button class="ticket_button mt-4"><a href="https://www.powerball.com/" target="blank">  Satsa nu </a></button>
+							<p class="mt-2 ml-5"> {{  lottery.intro_content }} <a href="{% url 'website:lottery_detail' slug=lottery.slug  %}"> Läs mer.. </a></p>
 						</div>
 					</div>
-
 				</div>
 			{% endfor %}
 		</div>
