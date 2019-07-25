@@ -28,6 +28,9 @@ h3{
 	color:#414141;
 }
 
+
+/* For 18+ logo */
+
 #LottoTellus{
 	color:white;
 	font-weight:bold;
@@ -488,49 +491,38 @@ h3{
 
 
 /* For Footer Page*/
-#footer{
-	margin-bottom:0px;
-	min-height:100%;
-	max-height:100%;
-	margin-top:200px;
-   	position:relative;
-   	left: 0;
-   	bottom: 0;
-   	width: 100%;
+
+.footer_img_container{
+  display: flex;
+  flex-wrap: wrap;
+  background-color:#A9A9A9;
+  justify-content:center;
+}
+
+.footer_img_container img{
+  width: 170px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+
+footer{
+	margin-top:100px;
+	width:100%;
    	background-color:#A9A9A9;
-   	color: #FAFAFA;
-   	text-align: center;
-
-}
-#footer p{
-	margin:0px;
-	padding:10px;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top:10px;
-
 }
 
-.image_box{
-	margin:0px;
-	margin-left:auto;
-	margin-right:auto;
+.footer_content_container{
+	text-align:center;
+	width: 80%;
+	display:inline-block;
+	align-items:center;
 }
-.image_box img{
-	margin:0px 40px 0px 0px;
-	width:200px;
+.footer_content_container p{
+	margin-top:5px;
+	color:#FAFAFA;
 }
-.image_box label{
-	margin-top:0px;
-}
-.image_box p{
-	max-width:100%;
-	width:1000px;
-}
-
-
-
 
 
 
