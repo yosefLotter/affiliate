@@ -108,6 +108,7 @@ LottoTellus
 						</div>
 					</div>
 				</div>
+				<a href="{% url 'website:loser_page' slug='jonathan-vargas'%}">Loser Page </a>
 			</div>
 
 
@@ -118,7 +119,7 @@ LottoTellus
 					{% for supplier in lottery_supplier %}
 					<div class="col-sm-6">
 						<div class="levrantor_box">
-							<label class="levrantor_box_label"> Lotteri Levrantör </label>
+							<label class="levrantor_box_label"> Lotteritjänst </label>
 							<div class="levrantor_content">
 								<img src="{{ supplier.logo.url }}">
 								<button class="levrantor_button"><a href="{{ supplier.link }}" target="_blank" style="color:#FAFAFA;"> Till Spelbolaget </a></button>

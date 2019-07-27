@@ -25,10 +25,10 @@ SECRET_KEY = 'uh9wgj6r8+hi(2e5*yam+00+ule$omu!)s#wd-$cd+ahrj_20d'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.lottotellus.com']
+#ALLOWED_HOSTS = ['www.lottotellus.com']
 
 
-#ALLOWED_HOSTS = []
+ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -134,7 +134,7 @@ MEDIA_URL ='/media/'
 
 
 # Allow me to put in tags in Admin Django.
-BLEACH_ALLOWED_TAGS = ['p', 'b', 'i', 'u', 'em', 'h4', 'a', 'ul', 'li', 'hr', 'table', 'tr', 'th', 'td', 'br', 'meta',]
+BLEACH_ALLOWED_TAGS = ['p', 'b', 'i', 'u', 'em', 'h4', 'a', 'ul', 'li', 'hr', 'table', 'tr', 'th', 'td', 'br', 'meta', 'h1', 'h3',]
 BLEACH_ALLOWED_ATTRIBUTES = ['href', 'title', 'style', 'class', 'name', 'content',]
 BLEACH_STRIP_TAGS = True
 

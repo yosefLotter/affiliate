@@ -19,42 +19,15 @@
 	<div class="col-lg-8">
 		<div class='page_wrapper'>
 			<div class="white_papper mt-2">
-				<img src="{{ winner.lottery.logo.url }}" class="winner_page_logo">
 				<hr>
 				<div class="content_box">
 
 					<div class="lottery_content mt-4">
-						<h1> {{ winner.a_title }}</h1>
-						<p> {{ winner.a_content }}</p>
+						
+						<p> {{ loser.content|safe  }}</p>
 					</div>
 
-					<div class="mobile_image_box">
-						<img src="{{ winner.profil_bild.url }}" class="center" style="border-radius:5px;">
-					</div>
 					
-					<div class="lottery_content mt-4">
-						<h4> {{ winner.b_title }}</h4>
-						<p> {{ winner.b_content }}</p>
-					</div>
-
-					<div class="lottery_content mt-4">
-						<h4> {{ winner.c_title }}</h4>
-						<p> {{ winner.c_content|safe }}</p>
-					</div>
-
-					<div class="clear"></div>
-
-					<div class="lottery_content mt-4">
-						<h4> {{ winner.d_title }}</h4>
-						<p> {{ winner.d_content }}</p>
-					</div>
-
-					<div class="lottery_content mt-4">
-						<h4> {{ winner.e_title }}</h4>
-						<p> {{ winner.e_content }}</p>
-					</div>
-					 
-
 				</div>
 			</div>
 		</div>

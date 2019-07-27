@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 
-from .models import  Lottery, Winner, Contact_us, Mini_lottery_list, Montly_subscribes, Meta_tags_for_lottery, Lottery_supplier, Article_links, Meta_tags_for_winner
+from .models import  Lottery, Winner, Contact_us, Mini_lottery_list, Montly_subscribes, Meta_tags_for_lottery, Lottery_supplier, Article_links, Meta_tags_for_winner, Loser
 
 from .forms import ContactForm, Subscribers
 # For Flash Messages
@@ -98,6 +98,21 @@ def winner_page(request, slug):
         'mini_list_lotteries': mini_list_lotteries
     }
     return render(request, 'winner_page.html', context)
+
+def loser_page(request, slug):
+    loser = Loser.objects.get(slug=slug)
+    print(loser)
+    article_links = Article_links.objects.all()
+    mini_list_lotteries = Lottery.objects.all()[:5]
+    context = {
+        'loser':loser,
+        'article_links': article_links,
+        'mini_list_lotteries': mini_list_lotteries
+    }
+    return render(request, 'loser.html', context)
+
+
+
 
 
 def faq_questions(request):

@@ -24,6 +24,8 @@ urlpatterns = [
 
 	path('vinnare/<slug>/', views.winner_page, name='winner_page'),
 
+	path('forlorare/<slug>/', views.loser_page, name='loser_page'),
+	
 	path('faq-fragor/', views.faq_questions, name='faq_questions'),
 
 	path('kontakta-oss/', views.contact_page, name='contact_page'),

@@ -120,6 +120,24 @@ class Winner(models.Model):
 		)
 
 
+class Loser(models.Model):
+	slug = models.SlugField(unique=True)
+	meta_title = models.CharField(max_length=100, blank=True)
+	meta_description = models.TextField(blank=True)
+	profil_bild = models.ImageField(default=None, blank=True)
+	welcome_title = models.CharField(max_length=100, blank=True)
+	welcome_text = models.TextField(blank=True)
+	content = BleachField(blank=True)
+
+	date = models.DateTimeField(auto_now_add=True)
+
+	def __str__(self):
+			return '{}'.format(
+				self.welcome_title,
+			)
+
+
+
 class Mini_lottery_list(models.Model):
 	lottery = models.ForeignKey(Lottery, on_delete=models.CASCADE)
 	name_of_lottery = models.CharField(max_length=100, blank=True)
@@ -212,3 +230,9 @@ class Meta_tags_for_winner(models.Model):
 			self.winner,
 			self.meta_title,
 		)
+
+
+
+
+
+
