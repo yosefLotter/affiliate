@@ -18,7 +18,7 @@ urlpatterns = [
 	path('asiatiska-lotter/', views.asien, name='asien'),
 
 	#For the highest_jackpots page
-	path('top-jackpottar/', views.highest_jackpots, name='highest_jackpots'),
+	path('jackpot-toppen/', views.highest_jackpots, name='highest_jackpots'),
 
 	path('lottery-<slug>/', views.lottery_detail, name='lottery_detail'),
 
