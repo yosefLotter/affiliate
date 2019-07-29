@@ -101,7 +101,6 @@ def winner_page(request, slug):
 
 def loser_page(request, slug):
     loser = Loser.objects.get(slug=slug)
-    print(loser)
     article_links = Article_links.objects.all()
     mini_list_lotteries = Lottery.objects.all()[:5]
     context = {
@@ -171,11 +170,13 @@ def all_article_page(request):
             Montly_subscriber = form.save()
             return redirect('website:all_article_page')
     winners = Winner.objects.all()
+    losers = Loser.objects.all()    
     context = {
         'form':form,
         'article_links': article_links,
         'lottery_supplier': lottery_supplier,
         'winners': winners,
+        'losers' : losers,
     }
     return render(request, 'all_article_page.html', context)
 

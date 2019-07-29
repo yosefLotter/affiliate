@@ -499,12 +499,13 @@ h3{
   justify-content:center;
 }
 
+
 .footer_img_container img{
   width: 170px;
   margin: 10px;
-  text-align: center;
   line-height: 75px;
   font-size: 30px;
+
 }
 
 footer{
@@ -638,6 +639,26 @@ tbody{
 	margin-bottom:5px;
 	max-height:100%;
 }
+.links_article{
+	display:flex;
+}
+.links_article a{
+	margin:15px;
+}
+
+@media only screen and (max-width: 500px){
+
+  	.links_article{
+	  display:block;
+	  width:100%;
+  	}
+  	.links_article a{
+  		display:block;
+  	}
+}
+
+
+
 
 
 .monthly_subscriber_form{

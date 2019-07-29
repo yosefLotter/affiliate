@@ -26,8 +26,10 @@
 						
 						<p> {{ loser.content|safe  }}</p>
 					</div>
-
-					
+					<br>
+					{% if loser.profil_bild %}
+						<img src="{{ loser.profil_bild.url }}" class="center" style="border-radius:5px;">
+					{% endif %}
 				</div>
 			</div>
 		</div>

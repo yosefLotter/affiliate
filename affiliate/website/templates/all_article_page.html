@@ -29,31 +29,31 @@
 						<a href="#"> LottoLand </a>
 					</div>
 
-					<div class="row">
 
-						<div class="col-sm-4">
-							<a href="http://www.lottotellus.com/faq-fragor/">  Här finner du svar på de vanligast ställda frågorna om hur man spelar lotto online.   </a>
+
+						<div class="links_article">
+			
+								<a href="http://www.lottotellus.com/faq-fragor/">  Här finner du svar på de vanligast ställda frågorna om hur man spelar lotto online.   </a>
+	
+
+								<a href="http://www.lottotellus.com/top-jackpottar/"> Undrar du vilket lotto som är bäst att spela på?? </a>
+
+
+
+								<a href="http://www.lottotellus.com/utbetalning/">Utbetalning av US Powerball, Mega Millions och SuperEnalotto jackpott vinst </a>
+
 						</div>
 
-						<div class="col-sm-4">
-							<a href="http://www.lottotellus.com/top-jackpottar/"> Undrar du vilket lotto som är bäst att spela på?? </a>
-						</div>
 
-						<div class="col-sm-4">
-							<a href="http://www.lottotellus.com/utbetalning/">Utbetalning av US Powerball, Mega Millions och SuperEnalotto jackpott vinst </a>
-						</div>
-
-					</div>
 
 					<div class="row mt-4">
-
 						{% for winner in winners %}
 						<div class="col-sm-4">
 
 							<div class="winner_mini_box  mt-2">
 								<div class="winner_mini_box_content">
 									<a href="{% url 'website:winner_page' slug=winner.slug  %}" >
-										<h5> {{ winner.welcome_title }} </h5>
+									<h5> {{ winner.welcome_title }} </h5>
 								</div>
 								{% if winner.profil_bild %}
 									<img class="center" src="{{winner.profil_bild.url}}">
@@ -71,10 +71,23 @@
 							</p>
 						</div>
 
+						{% for loser in losers %}
+						<div class="col-sm-4">
+
+							<div class="winner_mini_box  mt-2">
+								<div class="winner_mini_box_content">
+									<a href="{% url 'website:loser_page' slug=loser.slug %}" >
+										<h5> {{ loser.welcome_title }} </h5>
+								</div>
+								{% if loser.profil_bild %}
+									<img class="center" src="{{loser.profil_bild.url}}">
+								{% endif %}
+									</a>
+								<hr>
+							</div>
+						</div>
+						{% endfor %}
 					</div>
-
-
-					
 				</div>
 			</div>
 
