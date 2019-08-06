@@ -87,30 +87,16 @@ class Lottery(models.Model):
 class Winner(models.Model):
 	slug = models.SlugField(unique=True)
 	lottery = models.ForeignKey(Lottery, on_delete=models.CASCADE)
+	meta_title = models.CharField(max_length=100, blank=True)
+	meta_description = models.TextField(blank=True)
 	amount_they_won = models.CharField(max_length=400, blank=True)
 	profil_bild = models.ImageField(default=None, blank=True)
-
 	welcome_title = models.CharField(max_length=100, blank=True)
 	welcome_text = models.TextField(blank=True)
 
-	a_title = models.CharField(max_length=200, blank=True)
-	a_content = models.TextField(blank=True)
-
-	b_title = models.CharField(max_length=200, blank=True)
-	b_content = models.TextField(blank=True)
-	b_image = models.ImageField(default=None, blank=True)
-	
-	c_title = models.CharField(max_length=200, blank=True)
-	c_content = models.TextField(blank=True)
-
-	d_title = models.CharField(max_length=200, blank=True)
-	d_content = models.TextField(blank=True)
-
-	e_title = models.CharField(max_length=200, blank=True)
-	e_content = models.TextField(blank=True)
+	content = BleachField(blank=True)
 
 	bild = models.ImageField(default=None, blank=True)
-
 	date = models.DateTimeField(auto_now_add=True)
 
 	def __str__(self):

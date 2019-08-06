@@ -134,7 +134,7 @@ MEDIA_URL ='/media/'
 
 
 # Allow me to put in tags in Admin Django.
-BLEACH_ALLOWED_TAGS = ['p', 'b', 'i', 'u', 'em', 'h4', 'a', 'ul', 'li', 'hr', 'table', 'tr', 'th', 'td', 'br', 'meta', 'h1', 'h3',]
+BLEACH_ALLOWED_TAGS = ['p', 'b', 'i', 'u', 'em', 'h4', 'a', 'ul', 'li', 'hr', 'table', 'tr', 'th', 'td', 'br', 'meta', 'h1', 'h3', 'h4']
 BLEACH_ALLOWED_ATTRIBUTES = ['href', 'title', 'style', 'class', 'name', 'content',]
 BLEACH_STRIP_TAGS = True
 

@@ -25,7 +25,7 @@ def index(request):
 
 # Europa sida
 def europe(request):
-    europe_list = Lottery.objects.filter(continent='Europa')
+    europe_list = Lottery.objects.filter(continent='Europa').order_by('name_of_lottery')
     print(europe_list)
     context = {
         'europe_list': europe_list,
@@ -33,7 +33,7 @@ def europe(request):
     return render(request, 'europe_list.html', context)
 
 def asien(request):
-    asien_list = Lottery.objects.filter(continent='Asien')
+    asien_list = Lottery.objects.filter(continent='Asien').order_by('name_of_lottery')
     context = {
         'asien_list':asien_list,
     }
@@ -41,7 +41,7 @@ def asien(request):
 
 
 def sydamerika(request):
-    sydamerika_list = Lottery.objects.filter(continent='Sydamerika')
+    sydamerika_list = Lottery.objects.filter(continent='Sydamerika').order_by('name_of_lottery')
     print(sydamerika_list)
     context = {
         'sydamerika_list': sydamerika_list,
@@ -51,7 +51,7 @@ def sydamerika(request):
 
 
 def amerika(request):
-    amerika_list = Lottery.objects.filter(continent='Amerika')
+    amerika_list = Lottery.objects.filter(continent='Amerika').order_by('name_of_lottery')
     context = {
         'amerika_list': amerika_list,
     }
@@ -88,11 +88,10 @@ def lottery_detail(request, slug):
 
 def winner_page(request, slug):
     winner = Winner.objects.get(slug=slug)
-    meta_tags = Meta_tags_for_winner.objects.get(winner_id=winner.id)
+    #meta_tags = Meta_tags_for_winner.objects.get(winner_id=winner.id)
     article_links = Article_links.objects.all()
     mini_list_lotteries = Lottery.objects.all()[:5]
     context = {
-        'meta_tags': meta_tags,
         'winner': winner,
         'article_links': article_links,
         'mini_list_lotteries': mini_list_lotteries
