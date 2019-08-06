@@ -56,10 +56,14 @@ Europeiska lotter
 								<ul class="col-sm-4 no_bullets">
 									<b>Jackpotodds</b>
 									<li> {{  lottery.odds }}</li>
-								</ul>
+								</ul>			
 							</div>
 							<p class="mt-2 ml-5"> {{  lottery.intro_content }} <a href="{% url 'website:lottery_detail' slug=lottery.slug  %}"> Läs mer.. </a></p>
 						</div>
+
+					</div>
+					<div class="lottery_price_tag">
+						{{  lottery.pris_biljett }}
 					</div>
 				</div>
 			{% endfor %}

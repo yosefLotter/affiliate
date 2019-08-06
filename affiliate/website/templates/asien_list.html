@@ -1,8 +1,9 @@
 
 {% extends 'base.html' %}
 {% block title %}
-Asiatiska lotterier
+Asiatiska lotter
 {% endblock %}
+
 {% block content %}
 {% load static %}
 <div class="row">
@@ -12,16 +13,16 @@ Asiatiska lotterier
 
 	<div class="col-lg-8">
 
-		<div class="welcome mt-3">	
+		<div class="welcome mt-3">
 			<div class="welcome_content">
 				<h1> Lotterier från Asien </h1>
 				<p class="welcome_text">
-					Asiaterna älskar också att spela lotto, men tyvärr finns det endast ett lotteri som lotterifans världen
-					över kan spela online; Hong Kong Mark Six Lotto. Lotteriet är mycket populärt i hemlandet Hong
-					Kong. Jackpottarna ligger, om man räknar i svensk valuta, på flera miljoner kronor. Det är lätt att
-					tro att oddsen måste vara höga, men jämfört med lotterier, som har liknande jackpottar är oddsen
-					schyssta. Det ska bli spännande att se när fler asiatiska länder öppnar upp sina lotterier för
-					lottospelare på nätet.
+				Asiaterna älskar också att spela lotto, men tyvärr finns det endast ett lotteri som lotterifans världen
+				över kan spela online; Hong Kong Mark Six Lotto. Lotteriet är mycket populärt i hemlandet Hong
+				Kong. Jackpottarna ligger, om man räknar i svensk valuta, på flera miljoner kronor. Det är lätt att
+				tro att oddsen måste vara höga, men jämfört med lotterier, som har liknande jackpottar är oddsen
+				schyssta. Det ska bli spännande att se när fler asiatiska länder öppnar upp sina lotterier för
+				lottospelare på nätet.
 				</p>
 			</div>
 		</div>
@@ -54,10 +55,14 @@ Asiatiska lotterier
 								<ul class="col-sm-4 no_bullets">
 									<b>Jackpotodds</b>
 									<li> {{  lottery.odds }}</li>
-								</ul>
+								</ul>			
 							</div>
 							<p class="mt-2 ml-5"> {{  lottery.intro_content }} <a href="{% url 'website:lottery_detail' slug=lottery.slug  %}"> Läs mer.. </a></p>
 						</div>
+
+					</div>
+					<div class="lottery_price_tag">
+						{{  lottery.pris_biljett }}
 					</div>
 				</div>
 			{% endfor %}

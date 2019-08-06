@@ -292,6 +292,7 @@ h3{
 /* For Lottery Rank List pages */
 
 .lottery_box{
+	position:relative;
 	margin:10px 0px 10px 0px;
 	max-width: 100%;
 	background-color:#FFFF;
@@ -299,7 +300,7 @@ h3{
 	border-radius:20px;
 }
 #big_rank_list_logo{
-	margin-top:25px;
+	margin-top:30px;
 	text-align:center;
 	width:100px;
 }
@@ -308,10 +309,22 @@ h3{
 	margin:0px;
 	list-style-type:none;
 }
-/* END Of Lottery Rank List Page----------------------------------------*/
+.lottery_price_tag{
+	max-width:100%;
+	position:absolute;
+	border-bottom-left-radius:5px;
+	border-top-left-radius:5px;
+	border-top-right-radius:20px;
+	box-shadow: 3px 2px #888888;
+	background-color:green;
+	color:white;
+	padding:5px;
+	font-weight:bold;
+	right:0;
+	top:0;
+}
 
-
-
+/* End of Lottery List Box -----------------------------------------------------*/
 
 .center {
   display: block;
@@ -701,7 +714,7 @@ tbody{
 
 
 
-
+/* For footer page */
 #warning_overplaying{
 	color:#FAFAFA;
 	text-decoration:underline;
