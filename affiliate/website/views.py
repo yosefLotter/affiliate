@@ -63,7 +63,7 @@ def highest_jackpots(request):
     context = {
         'lotteries' : lotteries
     }
-    return render(request, 'highest_jackpots.html', context)
+    return render(request, '10-topp.html', context)
 
 
 def lottery_detail(request, slug):
