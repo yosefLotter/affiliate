@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 
-from .models import  Lottery, Winner, Contact_us, Mini_lottery_list, Montly_subscribes, Meta_tags_for_lottery, Lottery_supplier, Article_links, Meta_tags_for_winner, Loser
+from .models import  Lottery, Winner, Contact_us, Mini_lottery_list, Montly_subscribes, Meta_tags_for_lottery, Lottery_supplier, Article_links, Loser, Topp_10
 
 from .forms import ContactForm, Subscribers
 # For Flash Messages
@@ -26,7 +26,6 @@ def index(request):
 # Europa sida
 def europe(request):
     europe_list = Lottery.objects.filter(continent='Europa').order_by('name_of_lottery')
-    print(europe_list)
     context = {
         'europe_list': europe_list,
     }
@@ -60,8 +59,11 @@ def amerika(request):
 
 def highest_jackpots(request):
     lotteries = Lottery.objects.all().order_by('-jackpot')
+    topp_10 = Topp_10.objects.all()
+    print(topp_10)
     context = {
-        'lotteries' : lotteries
+        'lotteries' : lotteries,
+        'topp_10': topp_10,
     }
     return render(request, '10-topp.html', context)
 

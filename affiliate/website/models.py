@@ -135,6 +135,16 @@ class Mini_lottery_list(models.Model):
 			self.name_of_lottery,
 	)
 
+
+class Topp_10(models.Model):
+	lottery = models.ForeignKey(Lottery, on_delete=models.CASCADE)
+
+	def __str__(self):
+		return '{}'.format(
+			self.lottery
+		)
+
+
 class Contact_us(models.Model):
 	namn = models.CharField(max_length=15)
 	efternamn = models.CharField(max_length=15, blank=True)

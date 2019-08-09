@@ -1,7 +1,15 @@
 {% extends 'base.html' %}
 {% block title %}
-Högsta jackpottar
+Topp 10 lista över lotterier med de bästa jackpottarna
 {% endblock %}
+
+
+{% block extra_head %}
+<meta name="description" content="Vill du spela lotto med stora jackpottar? Läs om de topp 10 online lotterierna
+som har de bästa jackpottarna. Jackpottrekorden ligger på över 1,5 miljarder $.">
+{% endblock %}
+
+
 {% block content %}
 {% load static %}
 
@@ -16,19 +24,25 @@ Högsta jackpottar
 			<div class="welcome_content">
 				<h1 style="color:white;"> Högsta jackpottar </h1>
 				<p class="welcome_text">
-					I Amerika finns det en uppsjö av både små och stora lotterier och här kan du läsa om de populäraste lotterierna. När du har bekantat dig med dem är du säkert redo för att pröva lyckan och kanske finner du en egen favorit bland dem.
+					Man kan gradera ett lotto efter dess jackpottar, vinnarodds, kostnad för spelrader och så vidare. Men
+					de flesta spelare tittar nog på hur stora jackpottarna är. Här nedan finns en lista över de 10 lotterier,
+					som LottoTellus rekommenderar om du är ute efter höga jackpottar. De absolut två största
+					lotterierna är amerikanska US Powerball och Mega Millions. EuroMillions och SuperEnalotto är två
+					europeiska giganter på lottomarknaden. Även La Primiva är ett europeiskt lotto som brukar ha
+					jackpottar på flera miljoner euro euro. Samtliga dessa lotterier kan du spela online via Lottoland
+					eller <a href="https://www.multilotto.com/se?ml=myk4d7g6" style="color:white; text-decoration:underline;">Multilotto</a>.
 				</p>
 			</div>
 		</div>
 
 		<div class="lottery_list">
-			{% for lottery in lotteries %}
+			{% for lottery in topp_10 %}
 				<div class="lottery_box">
 					<div class="row">
 
 						<div class="col-lg-1">
-							{% if lottery.logo %}
-							<img src="{{ lottery.logo.url }}" id="big_rank_list_logo" class="center">
+							{% if  lottery.lottery.logo %}
+							<img src="{{  lottery.lottery.logo.url }}" id="big_rank_list_logo" class="center">
 							{% endif %}
 						</div>
 
@@ -38,20 +52,20 @@ Högsta jackpottar
 
 								<ul class="col-sm-4 no_bullets">
 									<b> Jackpot nu </b>
-									<li> {{ lottery.jackpot }} </li>
+									<li> {{ lottery.lottery.jackpot }} </li>
 								</ul>
 						
 								<ul class="col-sm-4 no_bullets">
 									<b>Dragning</b>
-									<li>{{  lottery.dragnings_datum }}</li>
+									<li>{{ lottery.lottery.dragnings_datum }}</li>
 								</ul>
 
 								<ul class="col-sm-4 no_bullets">
 									<b>Jackpotodds</b>
-									<li> {{  lottery.odds }}</li>
+									<li> {{ lottery.lottery.odds }}</li>
 								</ul>
 							</div>
-							<p class="mt-2 ml-5"> {{  lottery.intro_content }} <a href="{% url 'website:lottery_detail' slug=lottery.slug  %}"> Läs mer... </a></p>
+							<p class="mt-2 ml-5"> {{ lottery.lottery.intro_content }} <a href="{% url 'website:lottery_detail' slug=lottery.lottery.slug  %}"> Läs mer... </a></p>
 						</div>
 					</div>
 				</div>
