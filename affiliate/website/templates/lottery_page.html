@@ -63,7 +63,7 @@
 				<div class="content_box">
 		
 					<h3><b> {{ lottery.name_of_lottery }} </b></h3>
-					<p>{{ lottery.welcome_text }}</p>
+					<p>{{ lottery.welcome_text|safe }}</p>
 
 					<div class="lottery_content mt-4">
 						<h4> {{ lottery.a_title }}</h4>

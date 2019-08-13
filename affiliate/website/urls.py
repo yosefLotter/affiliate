@@ -36,5 +36,6 @@ urlpatterns = [
 
 	path('utbetalning/', views.utbetalning, name='utbetalning'),
 
+	path('anvandarvillkor', views.anvandarvillkor, name='anvandarvillkor'),
 ]
 

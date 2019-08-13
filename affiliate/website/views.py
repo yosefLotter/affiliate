@@ -160,6 +160,9 @@ def contact_page(request):
 def spela_ansvarsfullt(request):
     return render(request, 'spela_ansvarfullt.html')
 
+def anvandarvillkor(request):
+    return render(request, 'anvandarvillkor.html')
+    
 
 def all_article_page(request):
     article_links = Article_links.objects.all()

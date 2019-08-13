@@ -720,7 +720,16 @@ tbody{
 }
 
 
+/* For anvandarvillkor Page */
 
+.anvandarvillkor_page{
+	margin-left:auto;
+	margin-right:auto;
+	width:60%;
+	border-radius:15px;
+	background-color:#fff;
+	max-height:100%;
+}
 
 
 /* For footer page */
@@ -728,3 +737,4 @@ tbody{
 	color:#FAFAFA;
 	text-decoration:underline;
 }
+
