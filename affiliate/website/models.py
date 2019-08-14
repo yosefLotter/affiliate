@@ -28,7 +28,7 @@ class Lottery(models.Model):
 	odds = models.CharField(max_length=100, blank=True)
 	dragnings_datum = models.CharField(max_length=400)
 	pris_biljett = models.CharField(max_length=100, blank=True)
-	intro_content = models.TextField(max_length=500, blank=True)
+	intro_content = models.TextField(max_length=550, blank=True)
 	logo = models.ImageField(default=None, blank=True)
 
 	mini_content = models.CharField(max_length=100, blank=True)
