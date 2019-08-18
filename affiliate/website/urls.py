@@ -7,6 +7,7 @@ from .import views
 app_name = 'website'
 
 urlpatterns = [
+
 	path('', views.index, name="index"),
 	# For Europe_list Page.
 	path('europeiska-lotter/', views.europe, name='europe'),

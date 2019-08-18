@@ -738,3 +738,6 @@ tbody{
 	text-decoration:underline;
 }
 
+.warning_link_label{
+	font-size:14px;
+}
