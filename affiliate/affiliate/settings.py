@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'uh9wgj6r8+hi(2e5*yam+00+ule$omu!)s#wd-$cd+ahrj_20d'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['www.lottotellus.com']
+#ALLOWED_HOSTS = ['www.lottotellus.com']
 
 
 ALLOWED_HOSTS = []
@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'website',
     'django_bleach',
-
+    
 ]
 
 MIDDLEWARE = [
