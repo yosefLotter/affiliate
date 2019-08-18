@@ -31,12 +31,14 @@ def europe(request):
     }
     return render(request, 'europe_list.html', context)
 
-def asien(request):
-    asien_list = Lottery.objects.filter(continent='Asien').order_by('name_of_lottery')
+
+
+def afrika_asien(request):
+    afrika_list = Lottery.objects.filter(continent='Afrika').order_by('name_of_lottery')
     context = {
-        'asien_list':asien_list,
+        'afrika_list': afrika_list,
     }
-    return render(request, 'asien_list.html', context)
+    return render(request, 'afrika-asien.html', context)
 
 
 def sydamerika(request):
@@ -60,7 +62,6 @@ def amerika(request):
 def highest_jackpots(request):
     lotteries = Lottery.objects.all().order_by('-jackpot')
     topp_10 = Topp_10.objects.all()
-    print(topp_10)
     context = {
         'lotteries' : lotteries,
         'topp_10': topp_10,
@@ -71,7 +72,8 @@ def highest_jackpots(request):
 def lottery_detail(request, slug):
     lottery = Lottery.objects.get(slug=slug)
     article_links = Article_links.objects.all()
-    lottery_supplier = Lottery_supplier.objects.filter(id=lottery.id)
+    print(lottery.supplier)
+    lottery_supplier = Lottery_supplier.objects.filter(namn=lottery.supplier)
     meta_tags = Meta_tags_for_lottery.objects.filter(lottery_id=lottery.id)
     winners_of_that_lottery = Winner.objects.filter(lottery_id=lottery.id)[:1]
     mini_list_lotteries = Lottery.objects.all()[:4]

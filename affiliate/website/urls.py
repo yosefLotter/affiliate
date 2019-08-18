@@ -15,7 +15,7 @@ urlpatterns = [
 	# For Amerika list page
 	path('amrikanska-lotter/', views.amerika, name='amerika'),
 	# Asien Page
-	path('asiatiska-lotter/', views.asien, name='asien'),
+	path('afrikanska-asiatiska-lotter/', views.afrika_asien, name='afrika-asien'),
 
 	#For the highest_jackpots page
 	path('jackpot-toppen/', views.highest_jackpots, name='highest_jackpots'),
