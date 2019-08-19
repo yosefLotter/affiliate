@@ -28,7 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['www.lottotellus.se']
 
 
-ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = []
 
 # Application definition
 
