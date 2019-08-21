@@ -28,6 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'www.lottotellus.se',
     'www.lottotellus.com',
+    '*'
 ]
 
 
