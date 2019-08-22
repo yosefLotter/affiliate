@@ -18,6 +18,18 @@ body{
 	}
 }
 
+@media (max-width:480px){
+
+	.banner_square_supplier{
+		display:none;
+	}
+
+	.lottery_content iframe{
+		display:none;
+	}
+
+}
+
 h1{
 	font-weight:bold;
 	font-size:30px;
@@ -35,6 +47,15 @@ h4{
 	font-weight:bold;
 	font-style: italic;
 	color:#414141;
+}
+
+
+.banner_square_supplier iframe{
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+
+  	margin-bottom:20px;
 }
 
 
@@ -453,7 +474,21 @@ h4{
 .lottery_content img{
 	float:right;
 }
+.lottery_content iframe{
+	margin-left:15px;
+	float:right;
+	clear:both;
+}
 
+
+
+
+.suppler_logo_cirle img{
+	width:130px;
+}
+
+
+/* ------------------------------ end of Lottery Page ------------------ */
 
 /* For Winner Page */
 

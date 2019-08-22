@@ -10,7 +10,6 @@ class Lottery_supplier(models.Model):
 	content_box_2 = models.TextField(blank=True)
 	content_box_3 = models.TextField(blank=True)
 	link = models.CharField(max_length=200, blank=True)
-
 	def __str__(self):
 		return '{}'.format(
 			self.namn,
@@ -40,8 +39,7 @@ class Lottery(models.Model):
 
 	b_title = models.CharField(max_length=200, blank=True)
 	b_content = BleachField(blank=True)
-	b_image = models.ImageField(default=None, blank=True)
-	
+		
 	c_title = models.CharField(max_length=200, blank=True)
 	c_content = BleachField(blank=True)
 
@@ -73,7 +71,9 @@ class Lottery(models.Model):
 	l_title = models.CharField(max_length=200, blank=True)
 	l_content = BleachField(blank=True)
 
+	supplier_logo = models.ImageField(default=None, blank=True)
 
+	supplier_banner = BleachField(blank=True)
 
 	def __str__(self):
 		return '{},{}'.format(

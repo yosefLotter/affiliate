@@ -72,7 +72,7 @@ def highest_jackpots(request):
 def lottery_detail(request, slug):
     lottery = Lottery.objects.get(slug=slug)
     article_links = Article_links.objects.all()
-    print(lottery.supplier)
+    print(lottery.supplier.link)
     lottery_supplier = Lottery_supplier.objects.filter(namn=lottery.supplier)
     meta_tags = Meta_tags_for_lottery.objects.filter(lottery_id=lottery.id)
     winners_of_that_lottery = Winner.objects.filter(lottery_id=lottery.id)[:1]

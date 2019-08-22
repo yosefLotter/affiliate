@@ -30,8 +30,6 @@
 		<div class='page_wrapper'>
 			<div class="white_papper mt-2">
 				
-
-
 				<div class="header_box">
 					<div class="header_logo">
 						{% if lottery.logo %}
@@ -59,7 +57,6 @@
 
 				<hr>
 
-
 				<div class="content_box">
 		
 					<h3><b> {{ lottery.name_of_lottery }} </b></h3>
@@ -67,8 +64,8 @@
 
 					<div class="lottery_content mt-4">
 						<h4> {{ lottery.a_title }}</h4>
-						{% if lottery.a_content_image_right %}
-						<img src="{{ lottery.a_content_image_right.url }}" width="300" class="mr-2">
+						{% if lottery.supplier_banner %}
+						<iframe width="250" height="250" src="{{lottery.supplier_banner}}" frameborder="0"></iframe>
 						{% endif %}
 						<p> {{ lottery.a_content|safe  }}</p>
 					</div>
@@ -127,9 +124,15 @@
 						<h4> {{ lottery.l_title }}</h4>
 						<p> {{ lottery.l_content|safe }}</p>
 					</div>
-					
+						<div class="suppler_logo_cirle">
+							{% if lottery.supplier_logo %}
+							<a href="{{ lottery.supplier.link}}" target="_blank">
+								<img src="{{ lottery.supplier_logo.url }}" class="center">
+							</a>
+							{% endif %}
+						</div>
+					</div>
 				</div>
-			</div>
 		</div>
 	</div>
 
