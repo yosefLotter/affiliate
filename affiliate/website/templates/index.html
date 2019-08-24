@@ -34,10 +34,12 @@ LottoTellus
 			<div class="white_wrapper mt-2">
 				<div class="index_content">
 					<div class="welcome_text">
-												<div class="banner_square_supplier">
+
+						<div class="banner_square_supplier">
 							<iframe class="banner_square_supplier" width="728" height="90" src="https://s3-eu-west-1.amazonaws.com/multilotto.ads/lottery-no-bonus-horizontal-2/se/index.html?ml=s1s5n9r6&adid=70687" frameborder="0">
 							</iframe>
 						</div>
+						
 						<h3> Svensk spellicens </h3>
 						<p class="mt-2">
 							Du undrar säkert om det är säkert att spela på lotterier? Ja, det är det, men.... Det finns alltid ett
@@ -51,7 +53,7 @@ LottoTellus
 						<h3> Lottobetting </h3>
 						<p>
 							Den svenska spellagen från 1 januari 2019 tillåter betting på lotteriers utfall, slutresultat. När
-							spleare väljer att spela ett visst lotto, bettar hen på lotteriets slutresultat. Spelaren får ingen
+							spelare väljer att spela ett visst lotto, bettar hen på lotteriets slutresultat. Spelaren får ingen
 							spelkupong från det officiella lotteriet.
 							<br>
 							Spelprocessen är likadan som när man spelar lotto på ”vanligt” sätt. Spelaren börjar med att välja ut
@@ -63,10 +65,10 @@ LottoTellus
 						</p>
 
 
-						<h3> Lotteritjänster </h3>
+						<h3> Lotteribettingtjänster </h3>
 						<p>
-							De lotterier som rekommenderas här kan spelas från två pålitliga och säkra lotteritjänster: Lottoland
-							och Multilotto. Båda lotteritjänsterna har svensk spellicens och följer de regler som är uppsatta av
+							De lotterier som rekommenderas här kan spelas från två pålitliga och säkra lotteribettingtjänster: Lottoland
+							och Multilotto. Båda lotteribettingtjänsterna har svensk spellicens och följer de regler som är uppsatta av
 							den svenska spelinspektionen. De har därtill väl fungerande dygnet runt support på flera olika språk.
 						</p>
 
@@ -103,11 +105,11 @@ LottoTellus
 									Det är säkert att spela lotto på nätet, så länge de har svensk spellicens.
 								</li>
 								<li>
-									Du missar inte att hämta ut priser. Lotteritjänsterna har koll på dina vinster och sätter in dem
+									Du missar inte att hämta ut priser. lotteribettingtjänsterna har koll på dina vinster och sätter in dem
 									på ditt spelkonto. Inga vinster blir outhämtade.
 								</li>
 								<li>
-									Du behöver inte bege dig ner till affären och stå i kö för att lämna in dina lotto rader.
+									Du behöver inte bege dig ner till affären och stå i kö för att lämna in dina lottorader.
 								</li>
 							</ul>
 						</div>
@@ -123,7 +125,7 @@ LottoTellus
 					{% for supplier in lottery_supplier %}
 					<div class="col-sm-6">
 						<div class="levrantor_box">
-							<label class="levrantor_box_label"> Lotteritjänst </label>
+							<label class="levrantor_box_label"> Lotteribettingtjänst </label>
 							<div class="levrantor_content">
 								<img src="{{ supplier.logo.url }}">
 								<a href="{{ supplier.link }}" target="_blank" style="color:#FAFAFA;"><button class="levrantor_button"> Till {{ supplier.namn }} </button></a>
@@ -142,26 +144,18 @@ LottoTellus
 
 			<div class="white_wrapper mt-3">
 				<div class="index_content">
-					<h3> Lotteritjänsterna </h3>
+					<h3> Lotteribettingtjänsterna </h3>
 
 					<div class="lottery_content">
 						<iframe width="250" height="250" src="https://s3-eu-west-1.amazonaws.com/multilotto.ads/lottery-no-bonus-square-2/se/index.html?ml=s1s5n9r6&adid=70686" frameborder="0"></iframe>
 						<p>
-							De lotterier, som du kan läsa om på LottoTellus kan du spela online på lotteritjänsterna Lottoland
-							och Multilotto. Båda lotteritjänsterna är säkra och trygga att spela på. Här nedan finns lite
-							information om de båda lotteritjänsterna. För med information kan du vända dig direkt till
-							lotteritjänsterna eller kontakta oss.
+							De lotterier, som du kan läsa om på LottoTellus kan du spela online på lotteribettingtjänsterna Lottoland
+							och Multilotto. Båda är säkra och trygga att spela på. Här nedan finns lite
+							information om de båda bettingtjänsterna. För med information kan du vända dig direkt till
+							lotteribettingtjänsterna eller kontakta oss.
 						</p>
 					</div>
-					<h3> Lottoland </h3>
-					<p>
-						Lottoland grundades 2013 och är idag ett av de största lotteritjänsterna online. Företaget har säte på
-						Gibraltar och har över 150 anställda. När företaget grundades var syftet att göra det möjligt för
-						kunder världen över att spela online på lotterier från världens all hörn. Lottoland blev utnämnd till
-						Årets lotterioperatör i februari 2017. För att kunna agera på den svenska marknaden har Lottoland
-						en svensk spellicens och följer den svenska spellagens regler och bestämmelser.
-					</p>
-						
+
 					<h3> Multilotto </h3>
 					<p>
 						Lotteritjänsten <a href="https://www.multilotto.se/se?ml=myk4d7g6" target="_blank">Multilotto</a> grundades 2012 och har sitt huvudkontor på Malta. Verksamhetens syfte
@@ -170,6 +164,16 @@ LottoTellus
 						främst riktat sig mot den nordiska marknaden. Företaget har en spellicens från både Malta Gaming
 						Authority och en svensk spellicens, som krävs enligt den svenska spellagen.
 					</p>	
+					<h3> Lottoland </h3>
+					<p>
+						Lottoland grundades 2013 och är idag ett av de största lotteribettingtjänsterna online. Företaget har säte på
+						Gibraltar och har över 150 anställda. När företaget grundades var syftet att göra det möjligt för
+						kunder världen över att spela online på lotterier från världens all hörn. Lottoland blev utnämnd till
+						Årets lotterioperatör i februari 2017. För att kunna agera på den svenska marknaden har Lottoland
+						en svensk spellicens och följer den svenska spellagens regler och bestämmelser.
+					</p>
+						
+					
 				</div>
 			</div>
 
@@ -208,7 +212,7 @@ LottoTellus
 				{% endfor %}
 				<hr>
 
-				<center> <a href="http://www.lottotellus.se/jackpot-toppen/"  style="color:#007bff;"> Se hela top listan</a></center>
+				<center> <a href="http://www.lottotellus.se/jackpot-toppen/"  style="color:#007bff;"> Se hela topp listan</a></center>
 			</div>
 
 			{% for winner in winners %}
@@ -229,7 +233,7 @@ LottoTellus
 						</div>
 						<hr>
 
-					<center> <a href="http://www.lottotellus.se/artiklar/" style="color:#007bff;"> Läs fler artiklar</a></center>
+					<center> <a href="http://www.lottotellus.se/artiklar/" style="color:#007bff;"> Fler artiklar</a></center>
 					<hr>
 				</div>
 			{% endfor %}

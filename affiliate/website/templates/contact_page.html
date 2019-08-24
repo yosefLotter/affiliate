@@ -20,42 +20,44 @@ Kontakta oss
 	<div class="col-lg-8">
 
 		<div class='page_wrapper'>
-				<div class="welcome mt-3">
+			<div class="welcome mt-3">
 
-					<div class="welcome_content">
-						<p class="welcome_text">
-							Har du några frågor, synpunkter eller önskemål? Kontakta LottoTellus. Fyll i ditt namn, e-mail och
-							din fråga/feedback i rutorna nedan och vi återkommer så snart som möjligt.
-						</p>
-					</div>
-				</div>
-
-
-			<div class="white_wrapper mt-2">
-				<div class="index_content">
-					<div class="welcome_text">
-						{% if messages %}
-        					<ul class="no_bullets">
-	            				{% for msg in messages %}
-	           						<li> 
-				               			<div class="alert alert-success" role="alert">
-				                    		{{msg.message}}
-				                		</div>
-	            					</li>
-	            				{% endfor %}
-        					</ul>
-       					{% endif %}
-
-						<form class="site_form_contact_page" method="post" enctype="multipart/form-data">
-    						{% csrf_token %}
-
-    						{{form}}
-
-    						<input type='submit' value="Skicka">
-						</form>
-					</div>
+				<div class="welcome_content">
+					<p class="welcome_text">
+						Har du några frågor, synpunkter eller önskemål? Kontakta LottoTellus. Fyll i ditt namn, e-mail och
+						din fråga/feedback i rutorna nedan och vi återkommer så snart som möjligt.
+					</p>
 				</div>
 			</div>
+			
+			<div class="container_contact_page">
+				<div class="contact_form">	
+					{% if messages %}
+    					<ul class="no_bullets">
+            				{% for msg in messages %}
+           						<li> 
+			               			<div class="alert alert-success" role="alert">
+			                    		{{msg.message}}
+			                		</div>
+            					</li>
+            				{% endfor %}
+    					</ul>
+   					{% endif %}
+
+					<form class="site_form_contact_page" method="post" enctype="multipart/form-data">
+						{% csrf_token %}
+
+						{{form}}
+						<br>
+						<input type='submit' value="Skicka">
+					</form>
+				</div>
+			</div>
+
+			<div class="banner_square_supplier_w970_h250 mt-5">
+				<iframe width="728" height="90" src="https://s3-eu-west-1.amazonaws.com/multilotto.ads/lottery-no-bonus-horizontal-2/se/index.html?ml=s1s5n9r6&adid=70687" frameborder="0"></iframe>
+			</div>
+
 		</div>
 	</div>
 
@@ -88,7 +90,7 @@ Kontakta oss
 					</div>
 				{% endfor %}
 				<hr>
-				<center> <a href="{% url 'website:all_article_page'%}"  style="color:#007bff;"> Se hela top listan</a></center>
+				<center> <a href="http://www.lottotellus.se/jackpot-toppen/"  style="color:#007bff;"> Se hela topp listan</a></center>
 			</div>
 
 			<div class="white_papper_mini mt-2">
@@ -104,7 +106,7 @@ Kontakta oss
 					</ul>
 					{% endfor %}
 				</div>
-				<center> <a href="{% url 'website:all_article_page'%}" style="color:#007bff;"> Läs fler artiklar</a></center>
+				<center> <a href="{% url 'website:all_article_page'%}" style="color:#007bff;"> Fler artiklar</a></center>
 			</div>
 		</div>
 	</div>

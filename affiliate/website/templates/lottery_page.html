@@ -139,6 +139,8 @@
 	<div class="col-lg-3">
 		<div class="page_wrapper">
 
+
+
 			<div class="winner_mini_box  mt-2">
 
 				{% for winner in winners_of_that_lottery %}
@@ -162,6 +164,7 @@
 				{% endfor %}
 			</div>
 
+
 			<div class="white_papper_mini mt-2">
 				<div class="list_of_links">
 					<h4> Artiklar </h4>
@@ -175,7 +178,7 @@
 					</ul>
 					{% endfor %}
 				</div>
-				<center> <a href="http://www.lottotellus.se/artiklar/" style="color:#007bff;"> Läs fler artiklar</a></center>
+				<center> <a href="http://www.lottotellus.se/artiklar/" style="color:#007bff;"> Fler artiklar</a></center>
 			</div>
 
 			<div class="white_papper_mini mt-3">
@@ -204,9 +207,13 @@
 					</div>
 				{% endfor %}
 				<hr>
-				<center> <a href="{% url 'website:highest_jackpots'%}" style="color:#007bff;"> Se hela top listan</a></center>
+				<center> <a href="{% url 'website:highest_jackpots'%}" style="color:#007bff;"> Se hela topp listan</a></center>
 			</div>
 
+			<div class="side_bar_supplier_banner_square">
+				<iframe width="336" height="280" src="https://s3-eu-west-1.amazonaws.com/multilotto.ads/lottery-no-bonus-square-2/se/index.html?ml=s1s5n9r6&adid=70686" frameborder="0"></iframe>
+			</div>
+			
 			<div class="winner_mini_box  mt-2">
 
 				<label class="winner_mini_box_label"> Vinnare </label>
@@ -222,14 +229,14 @@
 					</a>
 				</div>
 				<hr>
-				<center> <a href="{% url 'website:all_article_page'%}" style="color:#007bff;"> Läs fler artiklar</a></center>
+				<center> <a href="{% url 'website:all_article_page'%}" style="color:#007bff;"> Fler artiklar</a></center>
 				<hr>
 			</div>
 
 
 			{% for supplier in lottery_supplier %}
 			<div class="levrantor_box">
-				<label class="levrantor_box_label"> Lotteritjänst </label>
+				<label class="levrantor_box_label"> Lotteribettingtjänst </label>
 				<div class="levrantor_content">
 					<img src="{{ supplier.logo.url }}">
 					<a href="{{ supplier.link }}" target="_blank" style="color:#FAFAFA;"><button class="levrantor_button"> Till {{ supplier.namn }} </button></a>

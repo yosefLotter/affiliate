@@ -11,11 +11,27 @@ body{
   zoom: 1.0 ;
 } 
 
+
+@media (max-width:850px){
+	.side_banner_loser_page_w169_h600 iframe{ 
+		display:none;
+	}
+}
+
 @media (max-width:500px){
 
 	.mobile_image_box img{
 		width:300px;
 	}
+	.links_article{
+	  display:block;
+	  width:100%;
+  	}
+  	.links_article a{
+  		display:block;
+  	}
+
+
 }
 
 @media (max-width:480px){
@@ -28,6 +44,20 @@ body{
 		display:none;
 	}
 
+	.site_form_contact_page input, .site_form_contact_page textarea{ 
+		display:block;
+		width:300px;
+	}
+
+	.banner_square_supplier_w970_h250{
+		display: none;
+	}
+}
+
+@media (max-width:800px){
+	.banner_square_supplier_w970_h250 iframe{
+  		width:750px;
+  	}
 }
 
 h1{
@@ -51,10 +81,11 @@ h4{
 
 
 .banner_square_supplier iframe{
+	border-radius:5px;
+	box-shadow: 3px 2px #888888;
 	display: block;
   	margin-left: auto;
   	margin-right: auto;
-
   	margin-bottom:20px;
 }
 
@@ -608,6 +639,17 @@ tbody{
 
 /* For Contact Page */
 
+
+.container_contact_page{
+	display:flex;
+	border-radius:10px;
+	background-color:white;
+	justify-content:center;
+}
+.contact_form{
+	margin:10px;
+	padding:20px;
+}
 .site_form_contact_page{
 	margin-top:10px;
 	padding:10px;
@@ -703,16 +745,6 @@ tbody{
 	margin:15px;
 }
 
-@media only screen and (max-width: 500px){
-
-  	.links_article{
-	  display:block;
-	  width:100%;
-  	}
-  	.links_article a{
-  		display:block;
-  	}
-}
 
 
 
@@ -775,4 +807,35 @@ tbody{
 
 .warning_link_label{
 	font-size:14px;
+}
+
+
+.utbetalning_page_supplier_banner_end_of_page iframe{
+	border-radius:5px;
+	box-shadow: 3px 2px #888888;
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+  	margin-bottom:40px;
+  	margin-top:40px;
+}
+
+.banner_square_supplier_w970_h250 iframe{
+	border-radius:5px;
+	box-shadow: 3px 2px #888888;
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+  	margin-bottom:40px;
+  	margin-top:40px;
+}
+
+.side_bar_supplier_banner_square iframe{
+	border-radius:5px;
+	box-shadow: 3px 2px #888888;
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+  	margin-bottom:auto;
+  	margin-top:15px;
 }
